@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Zenex Group</title>
+
+    <style>
+      #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background-color: #ffffff;
+        transition: opacity 0.3s;
+
+        &.loading-ended {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loader"></div>
+
+    <div class="overlay"></div>
+
+    <header class="header">
+      <a href="/" class="header__logo">
+        <img src="/src/assets/images/logo.svg" alt="" />
+      </a>
+
+      <ul class="header__nav">
+        <li><a href="index.html">Main</a></li>
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+
+      <a href="" class="header__button">Become a partner</a>
+
+      <button class="header__menu-button">
+        <svg
+          width="47"
+          height="46"
+          viewBox="0 0 47 46"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.5 17H31.5"
+            stroke="#05ACA4"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M15.5 23H31.5"
+            stroke="#05ACA4"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M15.5 29H31.5"
+            stroke="#05ACA4"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+        <svg
+          width="46"
+          height="46"
+          viewBox="0 0 46 46"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17 28.3137L28.3137 17"
+            stroke="#05ACA4"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M17.3428 17.3431L28.6565 28.6568"
+            stroke="#05ACA4"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <div class="menu">
+      <div class="menu__inner">
+        <ul class="menu__nav">
+          <li>
+            <a href="index.html">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.6667 3.81599V1.33333C14.6667 0.965327 14.3687 0.666661 14 0.666661C13.6313 0.666661 13.3333 0.965327 13.3333 1.33333V2.91066L9.86467 0.569994C8.732 -0.194006 7.268 -0.194006 6.13533 0.569994L1.46867 3.71933C0.549333 4.33999 0 5.37266 0 6.48266V12.6667C0 14.5047 1.49533 16 3.33333 16H4.66667C5.03533 16 5.33333 15.7013 5.33333 15.3333V9.33333C5.33333 8.96599 5.632 8.66666 6 8.66666H10C10.368 8.66666 10.6667 8.96599 10.6667 9.33333V15.3333C10.6667 15.7013 10.9647 16 11.3333 16H12.6667C14.5047 16 16 14.5047 16 12.6667V6.48266C16 5.42866 15.504 4.44399 14.6667 3.81599Z"
+                  fill="currentColor"
+                />
+              </svg>
+              Main
+            </a>
+          </li>
+          <li>
+            <a href="/#projects">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 11.8413V2.33333C0 1.04467 1.04467 0 2.33333 0C2.88533 0 3.33333 0.448 3.33333 1V10.3333C3.33333 10.8853 2.88533 11.3333 2.33333 11.3333H1.66667C1.05 11.3333 0.477333 11.5213 0 11.8413ZM16 6V12.6667C16 14.5073 14.5073 16 12.6667 16H1.762C0.89 16 0.096 15.3727 0.00866667 14.5053C-0.0913333 13.508 0.689333 12.6667 1.66667 12.6667H2.33333C3.622 12.6667 4.66667 11.622 4.66667 10.3333V2.66667H12.6667C14.5073 2.66667 16 4.15933 16 6ZM12.6667 5.33333H10.6667C10.2987 5.33333 10 5.632 10 6C10 6.368 10.2987 6.66667 10.6667 6.66667H12.6667V11.3333H11.3333V9.33333C11.3333 8.96533 11.0347 8.66667 10.6667 8.66667C10.2987 8.66667 10 8.96533 10 9.33333V11.3333H8V6C8 5.632 7.70133 5.33333 7.33333 5.33333C6.96533 5.33333 6.66667 5.632 6.66667 6V11.3333C6.66667 12.07 7.26333 12.6667 8 12.6667H12.6667C13.4033 12.6667 14 12.07 14 11.3333V6.66667C14 5.93 13.4033 5.33333 12.6667 5.33333Z"
+                  fill="currentColor"
+                />
+              </svg>
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="career.html">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.7953 3.406C11.9747 6.504 7.15067 12.0887 1.14867 12.9893C1.098 12.9973 1.04867 13.0007 0.998667 13.0007C0.512 13.0007 0.0853333 12.6453 0.0113333 12.1493C-0.0706667 11.6033 0.305333 11.094 0.852 11.012C6.012 10.238 10.3253 5.22933 11.9473 2.596L10.8687 2.12267C10.4253 1.928 10.438 1.29467 10.8893 1.11867L13.5813 0.0673333C13.9807 -0.0886667 14.43 0.108667 14.586 0.508L15.636 3.2C15.812 3.65133 15.3547 4.09 14.9113 3.89533L13.7953 3.406ZM0 4C0 1.794 1.794 0 4 0C6.206 0 8 1.794 8 4C8 6.206 6.206 8 4 8C1.794 8 0 6.206 0 4ZM2.66667 2.66667C2.66667 3.40333 3.26333 4 4 4C4.73667 4 5.33333 3.40333 5.33333 2.66667C5.33333 1.93 4.73667 1.33333 4 1.33333C3.26333 1.33333 2.66667 1.93 2.66667 2.66667ZM2.02267 5.77333C2.51133 6.31733 3.212 6.66667 4 6.66667C4.788 6.66667 5.48867 6.31733 5.97733 5.77333C5.56533 5.11133 4.83733 4.66667 4 4.66667C3.16267 4.66667 2.43467 5.11133 2.02267 5.77333ZM15 6C14.4473 6 14 6.448 14 7V15C14 15.552 14.4473 16 15 16C15.5527 16 16 15.552 16 15V7C16 6.448 15.5527 6 15 6ZM11.6667 8.66667C11.114 8.66667 10.6667 9.11467 10.6667 9.66667V15C10.6667 15.552 11.114 16 11.6667 16C12.2193 16 12.6667 15.552 12.6667 15V9.66667C12.6667 9.11467 12.2193 8.66667 11.6667 8.66667ZM8.33333 11.3333C7.78067 11.3333 7.33333 11.7813 7.33333 12.3333V15C7.33333 15.552 7.78067 16 8.33333 16C8.886 16 9.33333 15.552 9.33333 15V12.3333C9.33333 11.7813 8.886 11.3333 8.33333 11.3333ZM5 13.3333C4.44733 13.3333 4 13.7813 4 14.3333V15C4 15.552 4.44733 16 5 16C5.55267 16 6 15.552 6 15V14.3333C6 13.7813 5.55267 13.3333 5 13.3333ZM0.666667 15C0.666667 15.552 1.11467 16 1.66667 16C2.21867 16 2.66667 15.552 2.66667 15C2.66667 14.448 2.21867 14 1.66667 14C1.11467 14 0.666667 14.448 0.666667 15Z"
+                  fill="currentColor"
+                />
+              </svg>
+              Career
+            </a>
+          </li>
+          <li>
+            <a href="news.html">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6667 3.99999H6.698L14.2253 1.29399C14.572 1.16932 14.752 0.787987 14.6273 0.441321C14.5027 0.094654 14.1207 -0.087346 13.7747 0.0393207L2.30133 4.16399C0.967333 4.59932 0 5.85599 0 7.33332V12.6667C0 14.5047 1.49533 16 3.33333 16H12.6667C14.5047 16 16 14.5047 16 12.6667V7.33332C16 5.49532 14.5047 3.99999 12.6667 3.99999ZM5.33333 13.3333H3.33333C2.96533 13.3333 2.66667 13.0347 2.66667 12.6667C2.66667 12.2987 2.96533 12 3.33333 12H5.33333C5.70133 12 6 12.2987 6 12.6667C6 13.0347 5.70133 13.3333 5.33333 13.3333ZM5.33333 10.6667H3.33333C2.96533 10.6667 2.66667 10.368 2.66667 9.99999C2.66667 9.63199 2.96533 9.33332 3.33333 9.33332H5.33333C5.70133 9.33332 6 9.63199 6 9.99999C6 10.368 5.70133 10.6667 5.33333 10.6667ZM5.33333 7.99999H3.33333C2.96533 7.99999 2.66667 7.70132 2.66667 7.33332C2.66667 6.96532 2.96533 6.66665 3.33333 6.66665H5.33333C5.70133 6.66665 6 6.96532 6 7.33332C6 7.70132 5.70133 7.99999 5.33333 7.99999ZM10.6667 13C9.01267 13 7.66667 11.654 7.66667 9.99999C7.66667 8.34599 9.01267 6.99999 10.6667 6.99999C12.3207 6.99999 13.6667 8.34599 13.6667 9.99999C13.6667 11.654 12.3207 13 10.6667 13ZM12.3333 9.99999C12.3333 10.9187 11.5853 11.6667 10.6667 11.6667C9.748 11.6667 9 10.9187 9 9.99999C9 9.08132 9.748 8.33332 10.6667 8.33332C11.5853 8.33332 12.3333 9.08132 12.3333 9.99999Z"
+                  fill="currentColor"
+                />
+              </svg>
+              News
+            </a>
+          </li>
+          <li>
+            <a href="#footer">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.1546 1.89666C14.0859 1.68199 13.9132 1.51666 13.6959 1.45732C13.5779 1.42532 10.7832 0.666656 8.62056 0.666656C6.3979 0.666656 3.65656 1.42599 3.54123 1.45866C3.31656 1.52132 3.14056 1.69732 3.07856 1.92266C3.07056 1.95266 3.01457 2.15666 2.93657 2.49599H2.4259C1.87323 2.49599 1.4259 2.94332 1.4259 3.49599C1.4259 4.04866 1.87323 4.49599 2.4259 4.49599H2.56057C2.5139 4.81066 2.46923 5.14666 2.43056 5.49866H2.0459C1.49323 5.49866 1.0459 5.94599 1.0459 6.49866C1.0459 7.05132 1.49323 7.49866 2.0459 7.49866H2.2939C2.2899 7.66466 2.2879 7.83132 2.2879 7.99999C2.2879 8.16866 2.2899 8.33532 2.2939 8.50132H2.0459C1.49323 8.50132 1.0459 8.94866 1.0459 9.50132C1.0459 10.054 1.49323 10.5013 2.0459 10.5013H2.43056C2.46923 10.8533 2.5139 11.1893 2.56057 11.504H2.42523C1.87257 11.504 1.42523 11.9513 1.42523 12.504C1.42523 13.0567 1.87257 13.504 2.42523 13.504H2.93657C3.01457 13.8433 3.0699 14.0467 3.07856 14.0767C3.1399 14.2987 3.31123 14.474 3.53256 14.5387C3.64256 14.5713 6.25056 15.3327 8.62123 15.3327C10.9919 15.3327 13.5992 14.5707 13.7092 14.5387C13.9212 14.476 14.0886 14.3127 14.1559 14.1013C14.1886 13.9987 14.9546 11.5513 14.9546 7.99932C14.9546 4.44732 14.1886 1.99799 14.1552 1.89599L14.1546 1.89666ZM6.45723 4.51332C6.62256 4.02199 7.0139 3.63066 7.50523 3.46532C8.24523 3.21666 8.9959 3.21732 9.7359 3.46532C10.2272 3.63066 10.6186 4.02199 10.7839 4.51332C11.0319 5.25332 11.0319 6.00399 10.7839 6.74399C10.6186 7.23532 10.2272 7.62666 9.7359 7.79199C9.3659 7.91599 8.99323 7.97799 8.62123 7.97799C8.24923 7.97799 7.8759 7.91599 7.5059 7.79199C7.01456 7.62666 6.62323 7.23532 6.4579 6.74399C6.2099 6.00399 6.2099 5.25332 6.4579 4.51332H6.45723ZM10.9219 12.7207C10.5539 12.7207 10.2552 12.422 10.2552 12.054C10.2552 11.1527 9.5219 10.4193 8.62056 10.4193C7.71923 10.4193 6.98523 11.1527 6.98523 12.054C6.98523 12.422 6.68656 12.7207 6.31856 12.7207C5.95056 12.7207 5.6519 12.422 5.6519 12.054C5.6519 10.4173 6.9839 9.08599 8.62056 9.08599C10.2572 9.08599 11.5886 10.4173 11.5886 12.054C11.5886 12.422 11.2899 12.7207 10.9219 12.7207Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M7.92925 6.52734C8.39458 6.68334 8.84658 6.68401 9.31125 6.52734C9.40858 6.49467 9.48658 6.41667 9.51925 6.32001C9.67525 5.85467 9.67525 5.40267 9.51925 4.93734C9.48658 4.84001 9.40858 4.76267 9.31125 4.73001C8.84658 4.57401 8.39458 4.57401 7.92925 4.73001C7.83191 4.76267 7.75391 4.84067 7.72125 4.93734C7.56525 5.40267 7.56525 5.85467 7.72125 6.32001C7.75391 6.41734 7.83191 6.49467 7.92925 6.52734Z"
+                  fill="currentColor"
+                />
+              </svg>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+      <section class="text-section">
+        <div class="container">
+          <div class="text-section__inner">
+            <span class="text-section__date">January 27, 2025</span>
+            <h1 class="text-section__title">Terms and Conditions</h1>
+            <div class="text-section__text">
+              <p>LAST UPDATED: May 2024</p>
+              <p>
+                IMPORTANT, READ CAREFULLY: Customer’s use of and access to the
+                Gong Revenue Intelligence™ platform (and any associated
+                software and websites) and products and services described on
+                Customer’s order form(s) (collectively, the “Services”) provided
+                by Gong.io Inc. and its affiliates (“Gong”) is conditioned upon
+                Customer’s compliance with and acceptance of these Terms and
+                Conditions, including use in accordance with the current version
+                of any supporting technical documentation provided to Customer
+                by Gong or available on Gong’s websites.
+              </p>
+              <p>
+                BY ACCEPTING THIS AGREEMENT—WHETHER BY (1) CLICKING A BOX TO
+                INDICATE ACCEPTANCE, (2) SIGNING AN ORDER FORM THAT REFERENCES
+                THIS AGREEMENT, OR (3) USING THE EVALUATION SERVICES—THE
+                CUSTOMER AGREES TO BE BOUND BY ITS TERMS. IF THE INDIVIDUAL
+                ACCEPTING THIS AGREEMENT IS DOING SO ON BEHALF OF A COMPANY OR
+                OTHER LEGAL ENTITY, THEY REPRESENT THAT THEY HAVE THE AUTHORITY
+                TO BIND THAT ENTITY TO THESE TERMS AND CONDITIONS. IN SUCH
+                CASES, “CUSTOMER” REFERS TO THE ENTITY. IF THE INDIVIDUAL DOES
+                NOT HAVE THIS AUTHORITY OR DOES NOT AGREE TO THESE TERMS, THEY
+                MUST NOT ACCEPT THIS AGREEMENT OR USE THE SERVICES.
+              </p>
+              <p>
+                BY PURCHASING, USING, OR OTHERWISE ACCESSING ANY OF THE
+                SERVICES, CUSTOMER EXPRESSLY AGREES TO BE BOUND BY THESE TERMS
+                AND CONDITIONS AND ALL ORDER FORMS AND POLICIES INCORPORATED
+                HEREIN BY REFERENCE (THE “AGREEMENT”). THE SERVICES ARE NOT
+                AVAILABLE TO PERSONS WHO ARE NOT LEGALLY ELIGIBLE TO BE BOUND BY
+                THESE TERMS.
+              </p>
+              <p>1. Gong Services</p>
+              <p>1.1 Provision and Access</p>
+              <p>
+                Gong will make the Services available to Customer pursuant to
+                this Agreement and the applicable Order Form and then-current
+                version of any supporting technical documentation provided to
+                Customer by Gong or available on Gong’s website
+                (“Documentation”). The Services are provided on a subscription
+                basis for the applicable subscription term. Gong hereby grants
+                to Customer a non-exclusive, non-transferable, worldwide right
+                during the subscription term to access and use the Services
+                solely for Customer’s internal business purposes and pursuant to
+                the Documentation, including any restrictions designated on an
+                applicable Order Form. Customer may provide users with user IDs
+                and passwords to access and use the Services (“Permitted
+                Users”).
+              </p>
+              <p>1.2 Affiliate Access and Use</p>
+              <p>
+                “Affiliate” means any entity that directly or indirectly
+                controls, is controlled by, or is under common control with the
+                subject entity. “Control,” for purposes of this definition,
+                means direct or indirect ownership or control of more than 50%
+                of the voting interests of the subject entity.
+              </p>
+              <p>1.2.1 Access Through Customer</p>
+              <p>
+                Customer may, at its option, provide access and use rights to
+                the Services to one or more Customer Affiliates, subject to all
+                terms in this Agreement. If Customer provides such access and
+                use rights, Customer will be wholly responsible for the acts and
+                omissions of the Customer Affiliate. No Customer Affiliate shall
+                have the right to take any legal action against Gong under this
+                Agreement or any Order Form hereunder who has not entered into a
+                direct Order Form with Gong under Section 1.2.2 (Separate
+                Affiliate Ordering) below.
+              </p>
+              <p>1.2.2 Separate Affiliate Ordering</p>
+              <p>
+                Subject to the parties executing a mutually agreed upon Order
+                Form, Customer Affiliates may purchase the Services, hosted on a
+                separate instance, by signing an Order Form that references this
+                Agreement directly with Gong, which will establish a new and
+                separate agreement between the Customer Affiliate and the Gong
+                entity signing such Order Form.
+              </p>
+              <p>1.3 Customer Responsibilities</p>
+              <ul>
+                <li>
+                  Be responsible for Permitted Users’ compliance with this
+                  Agreement, Documentation and Order Forms;
+                </li>
+                <li>
+                  Be responsible for the accuracy, quality and legality of
+                  Customer Data and its use;
+                </li>
+                <li>
+                  Use commercially reasonable efforts to prevent unauthorized
+                  access and notify Gong of any such unauthorized access or use;
+                </li>
+                <li>
+                  Use Services only in accordance with this Agreement,
+                  Documentation, Order Forms and applicable laws;
+                </li>
+                <li>
+                  Comply with terms of service of any third-party applications
+                  with which Customer elects to use with the Services.
+                </li>
+              </ul>
+              <p>
+                Any use of the Services in breach of the foregoing by Customer
+                or Permitted Users that in Gong’s judgment threatens the
+                security, integrity or availability of the Services may result
+                in Gong’s immediate suspension of the Services, however Gong
+                will use commercially reasonable efforts under the circumstances
+                to provide Customer with notice and an opportunity to remedy
+                such violation or threat prior to any such suspension.
+              </p>
+              <p>1.4 Use Restrictions</p>
+              <p>Customer shall not:</p>
+              <ul>
+                <li>Use the Services for non-business calls;</li>
+                <li>
+                  Resell, transfer, pledge, lease, rent, or share Customer’s
+                  rights under this Agreement;
+                </li>
+                <li>
+                  Modify, remove or amend Gong’s name or logo, or copy any part
+                  of the Services;
+                </li>
+                <li>
+                  Make the Services or content generated by the Services
+                  available to anyone other than Customer’s employees and
+                  consultants;
+                </li>
+                <li>
+                  Access or attempt to access any of Gong’s systems not made
+                  available for public use;
+                </li>
+                <li>
+                  Use the Services for benchmarking or for developing a
+                  competing product;
+                </li>
+                <li>
+                  Decompile, disassemble, or reverse engineer any portion of the
+                  Services;
+                </li>
+                <li>
+                  Access or use the Services if Customer is a direct competitor
+                  of Gong.
+                </li>
+              </ul>
+              <p>1.5 Support</p>
+              <p>
+                Gong uses commercially reasonable efforts to maintain high
+                service availability. Scheduled maintenance will occur during
+                off-peak hours with advance notice. Support is available
+                weekdays 6:00am–6:00pm Pacific Time via an online portal.
+              </p>
+
+              <p>
+                1.6 Evaluation Services<br />
+                Gong may offer the Services on an evaluation basis (“Evaluation
+                Services”) until the earlier of: (i) end of the evaluation
+                period; (ii) start date of any purchased subscription; or (iii)
+                termination by Gong. Evaluation Services are provided “AS IS”
+                for limited evaluation purposes only.
+              </p>
+
+              <p>2. Proprietary Rights and Licenses</p>
+
+              <p>
+                2.1 Reservation of Rights<br />
+                Subject to the limited rights expressly granted herein, Gong and
+                its Affiliates reserve all rights, title and interest in and to
+                the Services and their related intellectual property rights.
+              </p>
+
+              <p>
+                2.2 Customer Data; License by Customer to Gong<br />
+                “Customer Data” means data submitted by or for Customer to the
+                Services. Customer grants Gong a non-exclusive, worldwide,
+                limited term, royalty-free right to host, use, copy, transmit
+                and display Customer Data as necessary to provide the Services.
+              </p>
+
+              <p>
+                2.3 Feedback<br />
+                Customer grants Gong a perpetual, irrevocable, royalty-free
+                license to use and incorporate any feedback provided by Customer
+                into its services.
+              </p>
+
+              <p>3. Subscriptions; Term; Fees and Payment</p>
+
+              <p>
+                3.1 Subscriptions<br />
+                Services are purchased as subscriptions. Subscriptions may be
+                added during a term at prorated pricing and will terminate on
+                the same date as underlying subscriptions.
+              </p>
+
+              <p>
+                3.2 Term of Agreement<br />
+                This Agreement commences on the date Customer first accepts it
+                and continues until all subscriptions expire or are terminated.
+              </p>
+
+              <p>
+                3.3 Term of Subscriptions<br />
+                Subscription terms are specified in the Order Form and
+                automatically renew for one-year periods unless either party
+                provides notice 60 days prior to term end.
+              </p>
+
+              <p>
+                3.4 Fees and Payment<br />
+                All fees are set forth on the Order Form and payable within 30
+                days of the effective date. Fees are non-refundable and
+                non-cancelable. Late payments may incur service charges up to
+                1.0% per month or maximum allowed by law.
+              </p>
+
+              <p>
+                3.5 Suspension of Service and Acceleration<br />
+                If any payment is overdue, Gong may accelerate unpaid fees and
+                suspend Services after 10 days’ written notice.
+              </p>
+
+              <p>
+                4. Confidential Information<br />
+                Each party agrees to hold confidential information of the other
+                in confidence and not disclose it except as required to perform
+                under this Agreement or as required by law.<br />
+                “Confidential Information” excludes information that is publicly
+                known, lawfully possessed prior to disclosure, rightfully
+                received from a third party without restriction, or
+                independently developed.
+              </p>
+
+              <p>5. Representations; Warranties; Disclaimers</p>
+
+              <p>
+                5.1 Representations<br />
+                Each party represents it has authority to enter into this
+                Agreement and that performance does not violate other
+                agreements.
+              </p>
+
+              <p>
+                5.2 Warranties<br />
+                Gong warrants the Services will perform in accordance with the
+                Documentation in all material respects during subscription term.
+              </p>
+
+              <p>
+                5.3 Disclaimers<br />
+                EXCEPT AS EXPRESSLY PROVIDED ABOVE, GONG DISCLAIMS ALL OTHER
+                WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+              </p>
+
+              <p>6. Indemnification</p>
+
+              <p>
+                6.1 Gong Indemnification<br />
+                Gong will defend and indemnify Customer against third-party
+                claims that the Services infringe intellectual property rights,
+                subject to certain conditions and limitations.
+              </p>
+
+              <p>
+                6.2 Customer Indemnification<br />
+                Customer will defend and indemnify Gong against third-party
+                claims arising from Customer Data or Customer’s breach of this
+                Agreement.
+              </p>
+
+              <p>
+                6.3 Procedures<br />
+                Indemnification obligations require prompt written notice,
+                control of defense and reasonable assistance.
+              </p>
+
+              <p>7. Limitation of Remedies and Damages</p>
+
+              <p>
+                7.1 Limitation of Liability<br />
+                EXCEPT FOR INDEMNIFICATION OBLIGATIONS, EACH PARTY’S AGGREGATE
+                LIABILITY WILL NOT EXCEED FEES RECEIVED BY GONG FROM CUSTOMER IN
+                THE PRIOR 12 MONTHS.
+              </p>
+
+              <p>
+                7.2 Exclusion of Consequential Damages<br />
+                UNDER NO CIRCUMSTANCES WILL EITHER PARTY BE LIABLE FOR INDIRECT,
+                INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES.
+              </p>
+
+              <p>8. Data Security</p>
+
+              <p>
+                8.1 Protection of Customer Data<br />
+                The Gong Data Processing Addendum (“DPA”) applies to personal
+                information processed by Gong. See Gong’s Privacy Policy at
+                www.gong.io/privacy-policy/.
+              </p>
+
+              <p>
+                8.2 Data Maintenance and Backup Procedures<br />
+                Gong will use commercially reasonable efforts to restore lost
+                Customer Data from backups but is not responsible for loss
+                caused by Customer or third parties.
+              </p>
+
+              <p>9. Termination</p>
+
+              <p>
+                9.1 Termination<br />
+                Either party may terminate for uncured material breach after 30
+                days’ written notice.
+              </p>
+
+              <p>
+                9.2 Refund or Payment upon Termination<br />
+                If Customer terminates for Gong’s breach, Gong will refund
+                prepaid fees for unused term. If Gong terminates for Customer’s
+                breach, Customer pays unpaid fees.
+              </p>
+
+              <p>
+                9.3 Surviving Provisions<br />
+                Sections on Evaluation Services, Fees and Payment, Proprietary
+                Rights, Confidentiality, Disclaimers, Indemnification,
+                Limitation of Remedies, Refund or Payment upon Termination,
+                Surviving Provisions and Data Security will survive termination.
+              </p>
+
+              <p>
+                9.4 Effect of Termination<br />
+                Upon termination, all rights granted cease and Customer must
+                stop using Services. Customer Data export available for 30 days,
+                then Gong will delete data.
+              </p>
+
+              <p>
+                10. Federal Government End Use Provisions<br />
+                The Services for federal government end use are subject to
+                restricted rights as defined in the Agreement, and additional
+                negotiations may be required for special government rights.
+              </p>
+
+              <p>
+                11. Beta Services<br />
+                “Beta Services” are pre-release or developer preview features
+                offered at no or nominal charge, intended for evaluation only.
+                Beta Services are not supported and may be subject to additional
+                terms.
+              </p>
+
+              <p>
+                12. Injunctive Relief<br />
+                Customer acknowledges that unauthorized use may cause
+                irreparable harm to Gong and entitles Gong to injunctive relief
+                without bond.
+              </p>
+
+              <p>13. General Provisions</p>
+
+              <ul>
+                <li>
+                  <strong>13.1 Assignment.</strong> Binding on permitted
+                  successors and assigns; assignment restricted without consent
+                  except in mergers or acquisitions.
+                </li>
+                <li>
+                  <strong>13.2 Severability.</strong> Invalid provisions limited
+                  so remainder remains effective.
+                </li>
+                <li>
+                  <strong>13.3 Governing Law.</strong> California law, exclusive
+                  venue in San Francisco courts; excludes CISG and UCITA.
+                </li>
+                <li>
+                  <strong>13.4 Attorneys’ Fees.</strong> Prevailing party
+                  recovers reasonable attorneys’ fees.
+                </li>
+                <li>
+                  <strong>13.5 Marketing.</strong> Customer grants Gong the
+                  right to use company name/logo for marketing unless Customer
+                  opts out in writing.
+                </li>
+                <li>
+                  <strong>13.6 Notice.</strong> Notices to Gong by certified
+                  mail or courier; payment notices to
+                  accounts.receivable@gong.io.
+                </li>
+                <li>
+                  <strong>13.7 Amendments.</strong> Must be in writing and
+                  signed by both parties; no waiver unless written.
+                </li>
+                <li>
+                  <strong>13.8 Entire Agreement.</strong> Supersedes all prior
+                  agreements.
+                </li>
+                <li>
+                  <strong>13.9 Force Majeure.</strong> Excused for delays due to
+                  uncontrollable events (strike, war, disaster, etc.).
+                </li>
+                <li>
+                  <strong>13.10 Third Party Beneficiaries.</strong> None
+                  intended.
+                </li>
+                <li>
+                  <strong>13.11 Independent Contractors.</strong> Parties are
+                  independent contractors; no agency created.
+                </li>
+                <li>
+                  <strong>13.12 Government End-Users.</strong> Use restricted
+                  per FAR Part 12.212 and DFARS 227.7202.
+                </li>
+                <li>
+                  <strong>13.13 Export Control.</strong> Customer complies with
+                  U.S. export/import laws and is not on prohibited party lists.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <a href="/" class="footer__logo">
+          <img src="/src/assets/images/logo.svg" alt="" />
+        </a>
+
+        <div class="footer__title">Lets make real profit together</div>
+        <a href="mailto:info@zenex-coin.com" class="footer__email">
+          info@zenex-coin.com
+        </a>
+
+        <ul class="footer__menu">
+          <li>
+            <a href="/#projects">Projects</a>
+          </li>
+          <li>
+            <a href="career.html">Career</a>
+          </li>
+          <li>
+            <a href="news.html">News</a>
+          </li>
+          <li>
+            <a href="#footer">Contact</a>
+          </li>
+          <li>
+            <a href="privacy-policy.html">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="terms.html">Terms of Service</a>
+          </li>
+        </ul>
+
+        <ul class="footer__socials">
+          <li>
+            <a href="https://t.me/zenexcoinupdates" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="33"
+                height="32"
+                viewBox="0 0 33 32"
+                fill="none"
+              >
+                <path
+                  d="M16.4854 0.5L16.8809 0.504883C25.1568 0.714445 31.8017 7.48903 31.8018 15.8154V15.8828C31.8018 24.3414 24.9439 31.1992 16.4854 31.1992H16.418C7.95947 31.1991 1.10254 24.3413 1.10254 15.8828V15.8154C1.10262 7.35699 7.95952 0.500078 16.418 0.5H16.4854Z"
+                  stroke="#EBEBEB"
+                />
+                <path
+                  d="M9.40825 15.3817C9.44155 15.3651 9.47486 15.3492 9.50733 15.3342C10.0717 15.0728 10.6435 14.828 11.2146 14.5832C11.2454 14.5832 11.297 14.5474 11.3261 14.5357C11.3702 14.5166 11.4143 14.4983 11.4585 14.4791C11.5434 14.4425 11.6283 14.4067 11.7123 14.3701C11.8821 14.2976 12.0511 14.2252 12.2209 14.1527L13.2373 13.7173C13.9148 13.4275 14.5933 13.1369 15.2708 12.8471C15.9484 12.5574 16.6268 12.2668 17.3044 11.977C17.9819 11.6873 18.6603 11.3967 19.3379 11.1069C20.0155 10.8172 20.6939 10.5266 21.3715 10.2368C21.5221 10.1719 21.6853 10.0753 21.8467 10.047C21.9824 10.0228 22.1148 9.97621 22.2513 9.9504C22.5102 9.90127 22.7957 9.88129 23.0437 9.9887C23.1295 10.0262 23.2085 10.0786 23.2743 10.1444C23.5889 10.4558 23.5448 10.967 23.4782 11.405C23.0146 14.4575 22.5509 17.5108 22.0865 20.5632C22.0232 20.982 21.9366 21.4417 21.6062 21.7064C21.3265 21.9304 20.9286 21.9554 20.5832 21.8605C20.2377 21.7647 19.9331 21.5641 19.6342 21.3667C18.3948 20.5457 17.1545 19.7248 15.9151 18.9038C15.6204 18.7089 15.2925 18.4541 15.2958 18.1003C15.2975 17.8871 15.4248 17.6973 15.5547 17.5283C16.6318 16.1228 18.1859 15.1569 19.3421 13.8163C19.5052 13.6273 19.6334 13.286 19.4095 13.1769C19.2763 13.1119 19.1231 13.2002 19.0016 13.2843C17.4733 14.3459 15.9459 15.4084 14.4176 16.47C13.919 16.8163 13.3963 17.1727 12.7953 17.2576C12.2576 17.3342 11.7165 17.1844 11.1963 17.0312C10.7601 16.9029 10.3247 16.7714 9.89105 16.6357C9.66047 16.5641 9.42241 16.4866 9.24428 16.3243C9.06614 16.1619 8.96377 15.8888 9.07115 15.6723C9.13858 15.5366 9.26926 15.4508 9.40661 15.3809L9.40825 15.3817Z"
+                  fill="#282828"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/zenexcoin/?originalSubdomain=ee"
+              target="_blank"
+            >
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.1841 0.5C24.6426 0.5 31.5004 7.35694 31.5005 15.8154V15.8828C31.5005 24.3414 24.6426 31.1992 16.1841 31.1992H16.1167C7.65821 31.1991 0.80127 24.3413 0.80127 15.8828V15.8154C0.801351 7.35699 7.65826 0.500085 16.1167 0.5H16.1841Z"
+                  stroke="#EBEBEB"
+                />
+                <path
+                  d="M9.93724 11.7763C9.62435 11.4858 9.46875 11.1262 9.46875 10.6984C9.46875 10.2705 9.62518 9.89511 9.93724 9.60378C10.2501 9.31327 10.6529 9.1676 11.1464 9.1676C11.6398 9.1676 12.0268 9.31327 12.3388 9.60378C12.6517 9.89428 12.8073 10.2597 12.8073 10.6984C12.8073 11.137 12.6509 11.4858 12.3388 11.7763C12.0259 12.0668 11.629 12.2125 11.1464 12.2125C10.6637 12.2125 10.2501 12.0668 9.93724 11.7763ZM12.5444 13.4428V22.3494H9.73087V13.4428H12.5444Z"
+                  fill="#282828"
+                />
+                <path
+                  d="M21.9103 14.3216C22.5236 14.9875 22.8299 15.9015 22.8299 17.0652V22.1911H20.1578V17.4265C20.1578 16.8396 20.0056 16.3835 19.7018 16.0588C19.3981 15.7342 18.9887 15.5711 18.4761 15.5711C17.9635 15.5711 17.554 15.7334 17.2503 16.0588C16.9466 16.3835 16.7943 16.8396 16.7943 17.4265V22.1911H14.1064V13.4168H16.7943V14.5805C17.0664 14.1926 17.4334 13.8863 17.8944 13.6607C18.3554 13.4351 18.8738 13.3228 19.4505 13.3228C20.4774 13.3228 21.2979 13.6557 21.9103 14.3208V14.3216Z"
+                  fill="#282828"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/EnZenex" target="_blank">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.8828 0.5C24.3413 0.5 31.1991 7.35694 31.1992 15.8154V15.8828C31.1992 24.3414 24.3414 31.1992 15.8828 31.1992H15.8154C7.35694 31.1991 0.5 24.3413 0.5 15.8828V15.8154C0.500081 7.35699 7.357 0.500085 15.8154 0.5H15.8828Z"
+                  stroke="#EBEBEB"
+                />
+                <g clip-path="url(#clip0_2004_698)">
+                  <path
+                    d="M14.3859 17.0529L8.6586 23.7104H10.0158L14.9888 17.9298L18.9608 23.7104H23.542L17.5356 14.969L23.542 7.98756H22.1847L16.933 14.0921L12.7384 7.98756H8.15718L14.3863 17.0529H14.3859ZM16.2449 14.892L16.8535 15.7625L21.6957 22.6887H19.611L15.7033 17.099L15.0947 16.2286L10.0152 8.96282H12.0998L16.2449 14.8917V14.892Z"
+                    fill="#282828"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2004_698">
+                    <rect
+                      width="15.7229"
+                      height="15.7229"
+                      fill="white"
+                      transform="matrix(-1 0 0 -1 23.7109 23.7109)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@zenexcoin" target="_blank">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.082 0.5L16.4775 0.504883C24.7535 0.714445 31.3984 7.48903 31.3984 15.8154V15.8828C31.3984 24.3414 24.5406 31.1992 16.082 31.1992H16.0146C7.55615 31.1991 0.699219 24.3413 0.699219 15.8828V15.8154C0.699302 7.35699 7.5562 0.500078 16.0146 0.5H16.082Z"
+                  stroke="#EBEBEB"
+                />
+                <g clip-path="url(#clip0_2003_1765)">
+                  <path
+                    d="M24.6727 11.5511C24.4657 10.7716 23.8558 10.1577 23.0813 9.94936C21.6776 9.5708 16.0488 9.5708 16.0488 9.5708C16.0488 9.5708 10.4201 9.5708 9.01635 9.94936C8.24189 10.1577 7.63196 10.7716 7.42496 11.5511C7.04883 12.9639 7.04883 15.9117 7.04883 15.9117C7.04883 15.9117 7.04883 18.8595 7.42496 20.2724C7.63196 21.0518 8.24189 21.6657 9.01635 21.8741C10.4201 22.2526 16.0488 22.2526 16.0488 22.2526C16.0488 22.2526 21.6776 22.2526 23.0813 21.8741C23.8558 21.6657 24.4657 21.0518 24.6727 20.2724C25.0488 18.8595 25.0488 15.9117 25.0488 15.9117C25.0488 15.9117 25.0488 12.9639 24.6727 11.5511Z"
+                    fill="#282828"
+                  />
+                  <path
+                    d="M14.208 18.5881L18.9125 15.9118L14.208 13.2354V18.5881Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2003_1765">
+                    <rect
+                      width="18"
+                      height="18"
+                      fill="white"
+                      transform="translate(7.04883 6.91162)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer__text">
+          <p>
+            <strong>Name:</strong> ZENEX Game Ltd. <strong>Address:</strong> 10
+            ANSON ROAD #20-05, INTERNATIONAL PLAZA, SINGAPORE, 079903.
+            <strong>Reg.number:</strong> (UEN): 202243071W.
+            <strong>Activities:</strong>
+            Development of software and applications (except games and
+            cybersecurity)
+          </p>
+          <p>
+            <strong>Name:</strong> TAU impex s.r.o.
+            <strong>Address:</strong> Klecanska 369 Zdiby; Stredocesky; 25066.
+            <strong>Reg.number:</strong> 247 09 891 Klecanská 369, 250 66 Zdiby,
+            Czech republic. <strong>Activity:</strong> Poskytování služeb
+            spojených s virtuálním aktivem (Provision of services related to
+            virtual assets)
+          </p>
+        </div>
+
+        <div class="footer__copyright">
+          Copyright © 2025 <br />
+          Zenex. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/text.js"></script>
+  </body>
+</html>

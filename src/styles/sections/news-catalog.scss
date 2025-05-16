@@ -1,0 +1,39 @@
+@use '../cards/new-card.scss';
+
+.news-catalog {
+    padding: 10rem 0 13.55rem;
+
+    &__header {
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        display: grid;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .news-catalog {
+        &__label {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .news-catalog {
+        padding-top: 13.6rem;
+
+        &__header {
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

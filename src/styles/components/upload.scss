@@ -1,0 +1,243 @@
+.upload {
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    &__static {
+        position: relative;
+        display: none;
+        border-radius: 1.6rem;
+        background: #EBFBFB;
+        padding: 2.1rem 2.4rem;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__static-inner {
+        gap: 1.3rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__done {
+        border-radius: 1.6rem;
+        background: #F7F8FA;
+        padding: 2.1rem 2.4rem;
+        display: none;
+
+        gap: 1.3rem;
+
+        position: relative;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__done-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 1.3rem;
+
+        svg {
+            width: 2.9rem;
+            height: auto;
+        }
+    }
+
+    &__error {
+        border-radius: 1.6rem;
+        border: 2px solid #E85143;
+        background: #FEF2F1;
+        padding: 2.1rem 2.4rem;
+        display: none;
+        position: relative;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__error-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 1.3rem;
+
+        svg {
+            width: 2.9rem;
+            height: auto;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        text-align: center;
+    }
+
+    &__title {
+        color: #282828;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+    }
+
+    &__description {
+        color: #757575;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+
+        span {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+    &__action {
+        display: none;
+    }
+
+    &__clear-button {
+        position: absolute;
+        top: 1.2rem;
+        right: 1.2rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        padding: 0;
+        margin: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 767px) {
+    .upload {
+        &__helper {
+            display: none;
+        }
+
+        &__clear-button {
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .upload {
+
+        &__static {
+            padding: 2.1rem 1.3rem 2.1rem 2.4rem;
+            justify-content: space-between;
+            transition: background-color 0.3s;
+
+            .upload {
+                &__helper {
+                    color: var(--Fill-01, #05ACA4);
+                }
+            }
+
+            &:hover {
+                background-color: #CDF4F2;
+            }
+        }
+
+        &__static-inner {
+            flex-direction: row;
+            width: auto;
+            gap: 2.1rem;
+        }
+
+        &__content {
+            text-align: left;
+            margin-right: auto;
+        }
+
+        &__done {
+            padding: 2.1rem 1.3rem 2.1rem 2.4rem;
+            justify-content: space-between;
+
+            .upload {
+                &__helper {
+                    color: var(--Fill-01, #05ACA4);
+                }
+            }
+        }
+
+        &__done-inner {
+            flex-direction: row;
+            width: auto;
+            gap: 2.1rem;
+        }
+
+        &__error {
+            padding: 2.1rem 1.3rem 2.1rem 2.4rem;
+            justify-content: space-between;
+
+            .upload {
+                &__helper {
+                    color: var(--Fill-01, #E85143);
+                }
+            }
+        }
+
+        &__error-inner {
+            flex-direction: row;
+            width: auto;
+            gap: 2.1rem;
+        }
+
+        &__helper {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0 1.3rem;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            white-space: nowrap;
+        }
+
+        &__clear-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 1.3rem;
+            width: auto;
+            color: #757575;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            gap: 0.5rem;
+        }
+    }
+}

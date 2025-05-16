@@ -1,0 +1,58 @@
+@use '../cards/project-card.scss';
+
+.projects-section {
+    padding-top: 7rem;
+    overflow: hidden;
+    padding-bottom: 4rem;
+
+    &__header {
+        display: grid;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        color: #757575;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}
+
+.projects-swiper {
+    overflow: unset !important;
+
+    .swiper-slide {
+        max-width: 31.7rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .projects-section {
+        &__label {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .projects-section {
+        padding-top: 15rem;
+
+        &__header {
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        &__label {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &__text {
+            max-width: 49.8rem;
+        }
+    }
+}
