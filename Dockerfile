@@ -1,6 +1,7 @@
 # Builder stage
 FROM node:18 AS builder
-RUN apt-get update && apt-get install -y optipng
+RUN apt-get update && apt-get install -y --no-install-recommends optipng \
+    && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 COPY package.json package-lock.json ./
 COPY .npmrc  ./
@@ -10,13 +11,13 @@ RUN npm run build
 
 # Final stage
 FROM nginx:1.25-alpine
+RUN apk add --no-cache curl
 ARG NODE_ENV=production
 ARG NGINX_PORT=80
 ENV NODE_ENV=${NODE_ENV}
 WORKDIR /usr/share/nginx/html
 
 COPY --from=builder /app/dist .
-COPY --from=builder /app/node_modules ./node_modules
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
