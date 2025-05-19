@@ -1,13 +1,14 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { FreeMode } from 'swiper/modules';
+import { FreeMode, Mousewheel } from 'swiper/modules';
 
 export function projectsSwiper() {
   const swiper = new Swiper('.projects-swiper', {
-    modules: [FreeMode],
+    modules: [FreeMode, Mousewheel],
     freeMode: true,
     slidesPerView: 'auto',
     spaceBetween: 20,
+    mousewheel: true,
   });
 
   return swiper;
