@@ -232,7 +232,7 @@
             position: absolute;
             top: 14.8rem;
             left: 4rem;
-            width: 26rem;
+            width: calc(100% - 8rem);
             z-index: 1;
         }
 
@@ -240,6 +240,7 @@
             padding: 2rem 1.3rem;
             min-height: 5rem;
             gap: 1.3rem;
+            max-width: 26rem;
 
             svg {
                 width: 4.3rem;
