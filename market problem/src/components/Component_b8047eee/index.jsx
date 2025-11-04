@@ -1,0 +1,11 @@
+function Component_b8047eee() {
+  return (
+    <div className="[background:linear-gradient(0deg,rgba(212,226,228,1)_0%,rgba(112,150,164,1)_100%_)] box-border flex justify-center items-center flex-row gap-2.5 w-[122px] h-[122px] grow-0 shrink-0 basis-auto overflow-hidden p-[19px] rounded-[18px]">
+      <div className="bg-[rgba(255,255,255,0.25)] box-border flex justify-start items-center flex-row gap-2.5 grow-0 shrink-0 basis-auto p-4 rounded-[36px] border-[0.9px] border-solid border-[rgba(255,255,255,0.40)]">
+        <img src="/assets/image_31bfa3fb.png" alt="" className="h-10 max-w-[initial] w-10 block grow-0 shrink-0 basis-auto box-border" />
+      </div>
+    </div>
+  );
+}
+
+export default Component_b8047eee;

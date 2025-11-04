@@ -18,12 +18,14 @@
 
     &__logo {
         width: 6.2rem;
+        min-width: 6.2rem;
         display: block;
         margin-right: auto;
 
         img {
             width: 100%;
             height: auto;
+            display: block;
         }
     }
 
@@ -31,16 +33,27 @@
         height: 4.5rem;
         padding: 0 1.4rem;
         color: #fff;
+        font-family: 'Inter', sans-serif;
         font-size: 1.6rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 100%;
+        line-height: 1em;
         background-color: #05ACA4;
-        backdrop-filter: blur(50px);
+        backdrop-filter: blur(100px);
         border-radius: 1rem;
         display: flex;
         align-items: center;
+        justify-content: center;
         margin-right: 1rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.3s;
+
+        &:hover {
+            background-color: #04968F;
+        }
     }
 
     &__menu-button {
@@ -76,6 +89,69 @@
                     opacity: 1;
                 }
             }
+        }
+    }
+}
+
+// Универсальная кнопка CTA для использования везде (включая cards-igaming-vip)
+.header-cta-button {
+    height: 4.5rem;
+    min-width: 19.7rem;
+    padding: 0 1.4rem;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1em;
+    background-color: #05ACA4;
+    backdrop-filter: blur(100px);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.3s;
+
+    &:hover {
+        background-color: #04968F;
+    }
+}
+
+// Универсальный переключатель языка
+.language-switcher {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+
+    button {
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: #fff;
+        border: 0.1rem solid #05ACA4;
+        border-radius: 1rem;
+        color: #05ACA4;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1em;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        padding: 0;
+
+        &:hover {
+            background-color: #EBFBFB;
+        }
+
+        &.active {
+            background-color: #EBFBFB;
+            border-color: #05ACA4;
         }
     }
 }
@@ -155,5 +231,10 @@
                 background-color: #04968F;
             }
         }
+    }
+
+    .header-cta-button {
+        border-radius: 1.6rem;
+        margin-right: 0;
     }
 }

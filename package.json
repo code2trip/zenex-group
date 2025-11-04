@@ -1,23 +1,38 @@
 {
-  "name": "LBO",
-  "description": "Project layout",
+  "name": "zenex-group",
+  "description": "Zenex Group website",
   "version": "2.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite --host --open",
-    "lint": "eslint --ext .js ./",
-    "lint:fix": "eslint --fix --ext .js ./",
-    "format": "prettier --write \"./**/*.{js,jsx,json,css}\"",
-    "build": "vite build",
-    "preview": "vite preview --open",
-    "buildpreview": "vite build && vite preview --open",
-    "optimize-images": "node optimize-images.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx ./",
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css,scss}\""
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
+    "@mui/base": "^5.0.0-beta.70",
+    "gsap": "npm:@gsap/shockingly@^3.12.7",
+    "lenis": "^1.1.20",
+    "next": "^14.2.0",
+    "next-intl": "^3.5.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "swiper": "^11.2.4",
+    "the-new-css-reset": "^1.11.3",
+    "vanilla-marquee": "^1.1.2"
   },
   "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-next": "^14.2.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.31.0",
@@ -26,16 +41,7 @@
     "postcss-nesting": "^13.0.1",
     "prettier": "^3.5.0",
     "sass": "^1.84.0",
-    "vite": "6.1.0",
-    "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-imagemin": "^0.6.1"
-  },
-  "dependencies": {
-    "@fancyapps/ui": "^5.0.36",
-    "gsap": "npm:@gsap/shockingly@^3.12.7",
-    "lenis": "^1.1.20",
-    "swiper": "^11.2.4",
-    "the-new-css-reset": "^1.11.3",
-    "vanilla-marquee": "^1.1.2"
+    "tailwindcss": "^3.4.18",
+    "typescript": "^5.3.0"
   }
 }

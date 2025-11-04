@@ -1,11 +1,11 @@
-@use 'the-new-css-reset/css/reset.css';
-@use './utils.scss';
-@use './typo.scss';
-@use './fonts.scss';
-@use '../components/button.scss';
-@use '../components/header.scss';
-@use '../components/menu.scss';
-@use '../components/footer.scss';
+@import 'the-new-css-reset/css/reset.css';
+@import './utils.scss';
+@import './typo.scss';
+@import './fonts.scss';
+@import '../components/button.scss';
+@import '../components/header.scss';
+@import '../components/menu.scss';
+@import '../components/footer.scss';
 
 * {
   box-sizing: border-box;

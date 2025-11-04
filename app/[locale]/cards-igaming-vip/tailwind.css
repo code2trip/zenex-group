@@ -1,0 +1,319 @@
+@tailwind components;
+@tailwind utilities;
+
+/* Scoped fixes for layout, affecting ONLY this page */
+#cards-igaming-vip {
+  position: relative;
+  isolation: isolate;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Глобальный стиль для шрифта Inter на всей странице */
+#cards-igaming-vip,
+#cards-igaming-vip * {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Elevate header bar (white rounded container) */
+#cards-igaming-vip .h-\[77px\].rounded-\[20px\] {
+  position: relative;
+  z-index: 20;
+}
+
+/* Neutralize negative margins that cause overlaps */
+#cards-igaming-vip .mt-\[\-93px\],
+#cards-igaming-vip .mt-\[\-242px\],
+#cards-igaming-vip .mt-\[\-315px\],
+#cards-igaming-vip .mt-\[\-827px\] {
+  margin-top: 0 !important;
+}
+
+/* Decorative grid / blurs should be behind and non-interactive */
+#cards-igaming-vip .blur-\[333px\],
+#cards-igaming-vip .mix-blend-screen,
+#cards-igaming-vip .border-\[none\][src*="image_efb34469"],
+#cards-igaming-vip .border-\[none\][src*="image_1faa9053"] {
+  pointer-events: none;
+}
+
+#cards-igaming-vip .blur-\[333px\] {
+  position: relative;
+  z-index: -1;
+}
+
+/* Ensure hero content block stays above decorative layers */
+#cards-igaming-vip .min-w-\[1434px\] {
+  position: relative;
+  z-index: 10;
+}
+
+/* Center inner section containers to match layout grid */
+#cards-igaming-vip .w-\[1290px\] {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fix extreme left padding in Get Started section */
+#cards-igaming-vip .pl-\[983px\] {
+  padding-left: 0 !important;
+}
+
+/* Ensure get started CTA section doesn’t overflow horizontally */
+#cards-igaming-vip .w-\[1440px\],
+#cards-igaming-vip .w-\[1290px\] {
+  max-width: 100%;
+}
+
+/* Full-bleed helper for header background */
+#cards-igaming-vip .full-bleed {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Glow ellipse (as in Figma) */
+#cards-igaming-vip .glow-ellipse {
+  position: absolute;
+  width: 903px;
+  height: 748px;
+  right: -435px;
+  top: -379px;
+  background: rgba(5, 172, 164, 0.5);
+  filter: blur(166.5px);
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Header background should stretch edge-to-edge */
+#cards-igaming-vip .header-bg {
+  background: linear-gradient(206.18deg, #17494D -0.03%, #07181C 100.03%);
+}
+
+/* Neutralize negative overlaps from imported classes */
+#cards-igaming-vip .mt-\[\-93px\],
+#cards-igaming-vip .mt-\[\-242px\],
+#cards-igaming-vip .mt-\[\-315px\],
+#cards-igaming-vip .mt-\[\-827px\] {
+  margin-top: 0 !important;
+}
+
+
+
+/* --- Figma-specific header layout --- */
+#cards-igaming-vip .nav-card {
+  position: absolute;
+  left: 59px;
+  right: 59.08px;
+  top: 16px;
+  height: 77px;
+  padding: 0 16px 0 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 201px;
+  background: #ffffff;
+  box-shadow: 0px 4px 18.6px rgba(110, 126, 159, 0.1);
+  border-radius: 20px;
+  z-index: 20;
+}
+
+/* Top ellipse glow */
+#cards-igaming-vip .ellipse-top {
+  position: absolute;
+  width: 903px;
+  height: 748px;
+  right: -435px;
+  top: -379px;
+  background: #05ACA4;
+  opacity: 0.5;
+  filter: blur(166.5px);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+/* Bottom ellipse glow */
+#cards-igaming-vip .ellipse-bottom {
+  position: absolute;
+  width: 1176px;
+  height: 176px;
+  left: calc(50% - 1176px / 2);
+  top: 811px;
+  background: #05ACA4;
+  opacity: 0.5;
+  filter: blur(111px);
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Radial mask layers (centered 1440x1440) */
+#cards-igaming-vip .mask-dummy {
+  position: absolute;
+  width: 1440px;
+  height: 1440px;
+  left: calc(50% - 1440px / 2);
+  top: -360px;
+  transform: rotate(-180deg);
+  pointer-events: none;
+}
+
+#cards-igaming-vip .mask-radial {
+  position: absolute;
+  width: 1440px;
+  height: 1440px;
+  left: calc(50% - 1440px / 2);
+  top: 0px;
+  background: radial-gradient(52.19% 100% at 50% 0%, #000000 0%, rgba(0, 0, 0, 0) 95.31%);
+  transform: rotate(-180deg);
+  pointer-events: none;
+}
+
+/* Background grid pattern */
+#cards-igaming-vip .bg-grid-pattern {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.1;
+  transform: rotate(-180deg);
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 95px, #E9EAEB 96px),
+    repeating-linear-gradient(90deg, transparent, transparent 95px, #E9EAEB 96px);
+  pointer-events: none;
+}
+
+/* Левая большая картинка в блоке Benefits VIP (как в макете) */
+#cards-igaming-vip .vip-benefits-left {
+  position: absolute;
+  left: 40px;
+  top: 140px;
+  width: 399px;
+  height: 397px;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Левая картинка в Benefits Business */
+#cards-igaming-vip .business-left-img {
+  position: absolute;
+  left: 59px;
+  top: 980px; /* позиция по макету относительно секции */
+  width: 380px;
+  height: 449px;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Декор для Get Started: позиционирование карт и бейджа */
+#cards-igaming-vip .gs-card-1 {
+  position: absolute;
+  right: -20px;
+  bottom: 10px;
+  width: 303px;
+  height: 296px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+#cards-igaming-vip .gs-card-2 {
+  position: absolute;
+  left: -10px;
+  top: -6px;
+  width: 261px;
+  height: 316px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+#cards-igaming-vip .gs-badge {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  padding: 10px 16px;
+  border-radius: 45px;
+  color: #fff;
+  background: linear-gradient(37deg, #9A885D 0%, #E5D395 100%);
+  box-shadow: 3.36px 9.25px 7.15px 0px rgba(0,0,0,0.31);
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+}
+
+/* Межсекционная зелёная подсветка между Benefits Business и Benefits VIP (слева) */
+#cards-igaming-vip .between-glow {
+  position: relative;
+  width: 800px;
+  left: 90%;
+  top: -255px;
+  margin-left: -100vw;
+  height: 1px;
+  margin: 2px 0 4px;
+}
+
+#cards-igaming-vip .between-glow::before {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: -15%;
+  width: 860px;
+  height: 580px;
+  background: #05ACA4;
+  opacity: 0.333;
+  filter: blur(120px);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+/* Левая подсветка между Our Solution и Benefits Business */
+#cards-igaming-vip .between-glow-left {
+  position: relative;
+  width: 200vw;
+  left: -30%;
+  top: -5%;
+  margin-left: -100vw;
+  height: 5px;
+  margin: 1px 0 3px;
+}
+
+#cards-igaming-vip .between-glow-left::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: -115px;
+  width: 740px;
+  height: 280px;
+  background: #05ACA4;
+  opacity: 0.333;
+  filter: blur(120px);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+/* Hero content group (title + subtitle + CTA) */
+#cards-igaming-vip .hero-group {
+  position: absolute;
+  width: 502px;
+  height: 345px;
+  left: calc(50% - 502px / 2 - 320px);
+  top: calc(50% - 345px / 2 - 0.35px);
+  z-index: 10;
+}
+
+/* Right VIP image */
+#cards-igaming-vip .vip-image {
+  position: absolute;
+  width: 646px;
+  height: 773px;
+  left: calc(50% - 646px / 2 + 322.21px);
+  top: calc(50% - 773px / 2 - 9.24px);
+  object-fit: cover;
+  z-index: 5;
+}
+

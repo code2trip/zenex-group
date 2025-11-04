@@ -808,3 +808,6 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,eclipse,intellij,webstorm,node
+
+# Old JS files (migrated to Next.js)
+src/js/**/*.js
