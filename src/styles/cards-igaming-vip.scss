@@ -1729,7 +1729,10 @@
       }
 
       // Вторая строка с 2 карточками
+      &.solution-cards-row-second,
       &:last-of-type {
+        margin-top: 24px;
+
         .solution-card {
           width: calc(50% - 10px);
           min-width: 280px;
