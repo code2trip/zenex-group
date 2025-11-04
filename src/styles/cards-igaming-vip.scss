@@ -1701,13 +1701,51 @@
   // Our Solution
   .our-solution-section {
     padding: 50px 40px;
+    width: 100%;
+    max-width: 100%;
+
+    .section-inner {
+      width: 100%;
+    }
+
+    .solution-description {
+      width: 100%;
+      max-width: 720px;
+    }
 
     .solution-cards-row {
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
       gap: 20px;
+      width: 100%;
+      max-width: 100%;
+
+      // Первая строка с 3 карточками
+      &:first-of-type {
+        .solution-card {
+          width: calc(33.333% - 14px);
+          min-width: 200px;
+        }
+      }
+
+      // Вторая строка с 2 карточками
+      &:last-of-type {
+        .solution-card {
+          width: calc(50% - 10px);
+          min-width: 280px;
+        }
+      }
 
       .solution-card {
-        width: 100% !important;
+        h3 {
+          font-size: 24px;
+          line-height: 24px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
     }
   }

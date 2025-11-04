@@ -56,7 +56,7 @@ export default function OurSolution() {
       </div>
 
       {/* Вторая строка: Transparent fees и Access worldwide */}
-      <div className="solution-cards-row" style={{ marginTop: '24px' }}>
+      <div className="solution-cards-row solution-cards-row-second">
         {/* Transparent Fees Card */}
         <div className="solution-card card-fees">
           <h3>Transparent fees</h3>
