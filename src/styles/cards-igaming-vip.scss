@@ -1613,45 +1613,72 @@
 
   // Header
   .cards-vip-header {
-    min-height: 800px;
+    min-height: 905px;
 
     .header-nav-container {
-      width: calc(100% - 32px);
-      padding: 0 12px 0 24px;
+      width: calc(100% - 48px);
+      padding: 10px 16px 10px 24px;
+      max-width: 752px;
     }
 
     .hero-content {
       flex-direction: column;
       align-items: flex-start;
-      padding: 80px 40px 50px;
+      padding: 80px 40px 40px;
       min-height: auto;
+      width: 100%;
+      max-width: 100%;
 
-      .hero-left {
+      // Карточки должны быть выше текста (order: -1)
+      .hero-right {
+        order: -1;
         width: 100%;
-        max-width: 100%;
-        padding-left: 0;
-        gap: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        margin-left: 0;
+        transform: none;
 
-        .hero-title {
-          font-size: 50px;
-          line-height: 50px;
-        }
-
-        .hero-subtitle-group .hero-subtitle {
-          font-size: 20px;
-          line-height: 20px;
+        .vip-image {
+          width: 462px;
+          height: 553px;
+          max-width: 100%;
+          object-fit: cover;
+          left: auto;
+          top: auto;
+          transform: none;
         }
       }
 
-      .hero-right {
+      // Текст и кнопка снизу слева
+      .hero-left {
+        order: 0;
         width: 100%;
-        justify-content: center;
-        margin-top: 30px;
+        max-width: 720px;
+        padding-left: 0;
+        gap: 40px;
+        transform: none;
 
-        .vip-image {
-          width: 400px;
-          height: auto;
-          max-width: 100%;
+        .hero-title-group {
+          gap: 20px;
+
+          .hero-title {
+            font-size: 50px;
+            line-height: 50px;
+          }
+
+          .hero-subtitle-group {
+            .hero-subtitle {
+              font-size: 16px;
+              line-height: 24px;
+              max-width: 406px;
+            }
+          }
+        }
+
+        .hero-cta-button {
+          width: auto;
         }
       }
     }
