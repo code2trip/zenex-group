@@ -1714,32 +1714,16 @@
     }
 
     .solution-cards-row {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 20px;
       width: 100%;
       max-width: 100%;
 
-      // Первая строка с 3 карточками
-      &:first-of-type {
-        .solution-card {
-          width: calc(33.333% - 14px);
-          min-width: 200px;
-        }
-      }
-
-      // Вторая строка с 2 карточками
-      &.solution-cards-row-second,
-      &:last-of-type {
-        margin-top: 24px;
-
-        .solution-card {
-          width: calc(50% - 10px);
-          min-width: 280px;
-        }
-      }
-
+      // Каждая карточка на отдельной строке
       .solution-card {
+        width: 100% !important;
+        min-width: auto;
+
         h3 {
           font-size: 24px;
           line-height: 24px;
@@ -1750,6 +1734,11 @@
           line-height: 20px;
         }
       }
+    }
+
+    // Отступ между строками карточек
+    .solution-cards-row-second {
+      margin-top: 0;
     }
   }
 
