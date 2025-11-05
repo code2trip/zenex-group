@@ -1,6 +1,10 @@
-import React from 'react';
+'use client';
+
+import { useTranslations } from 'next-intl';
 
 export default function MarketProblem() {
+  const t = useTranslations('cardsVip.marketProblem');
+
   return (
     <div className="market-problem-section section-container">
       {/* Заголовок и иконка как в market problem/src */}
@@ -10,13 +14,12 @@ export default function MarketProblem() {
             <img src="/assets/problem-icon.svg" alt="" />
           </div>
           <p className="title-text">
-            <span className="dark">Market </span>
-            <span className="accent">Problem</span>
+            <span className="dark">{t('title').split(' ')[0]} </span>
+            <span className="accent">{t('title').split(' ').slice(1).join(' ')}</span>
           </p>
         </div>
         <div className="problem-description">
-          <p>Traditional card solutions don&apos;t meet the expectations of VIP players and high-rollers.</p>
-          <p>They face constant friction and limitations when managing their funds:</p>
+          <p>{t('description')}</p>
         </div>
       </div>
 
@@ -24,7 +27,7 @@ export default function MarketProblem() {
       <div className="problem-cards-grid">
         {/* Blocked or declined transactions */}
         <div className="problem-card">
-          <p>Blocked or declined transactions</p>
+          <p>{t('problems.blocked')}</p>
           <div className="problem-icon-box">
             <div className="icon-inner">
               <img src="/assets/image_c92b9845.png" alt="" />
@@ -34,7 +37,7 @@ export default function MarketProblem() {
 
         {/* High transaction fees */}
         <div className="problem-card">
-          <p>High transaction fees</p>
+          <p>{t('problems.fees')}</p>
           <div className="problem-icon-box">
             <div className="icon-inner">
               <img src="/assets/image_8daddbc1.png" alt="" />
@@ -44,7 +47,7 @@ export default function MarketProblem() {
 
         {/* Deposit and withdrawal limits */}
         <div className="problem-card">
-          <p>Deposit and withdrawal limits</p>
+          <p>{t('problems.limits')}</p>
           <div className="problem-icon-box">
             <div className="icon-inner">
               <img src="/assets/image_a5190a7d.png" alt="" />
@@ -54,7 +57,7 @@ export default function MarketProblem() {
 
         {/* Long settlement times */}
         <div className="problem-card">
-          <p>Long settlement times for deposits and winnings accrual</p>
+          <p>{t('problems.settlement')}</p>
           <div className="problem-icon-box">
             <div className="icon-inner">
               <img src="/assets/image_e31ad966.png" alt="" />
@@ -64,7 +67,7 @@ export default function MarketProblem() {
 
         {/* Difficulty in regions */}
         <div className="problem-card">
-          <p>Difficulty in funding accounts and withdrawals in certain regions</p>
+          <p>{t('problems.regions')}</p>
           <div className="problem-icon-box">
             <div className="icon-inner">
               <img src="/assets/image_31bfa3fb.png" alt="" />
@@ -74,7 +77,7 @@ export default function MarketProblem() {
 
         {/* No privacy */}
         <div className="problem-card">
-          <p>No privacy</p>
+          <p>{t('problems.privacy')}</p>
           <div className="problem-icon-box">
             <div className="icon-inner">
               <img src="/assets/image_ba116ca.png" alt="" />

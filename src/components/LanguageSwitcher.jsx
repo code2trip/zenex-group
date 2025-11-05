@@ -12,12 +12,19 @@ export default function LanguageSwitcher() {
   const switchLocale = () => {
     const otherLocale = routing.locales.find(locale => locale !== currentLocale);
     if (otherLocale) {
-      const segments = pathname.split('/');
-      segments[1] = otherLocale;
-      const newPath = segments.join('/');
+      let pathWithoutLocale = pathname.replace(`/${currentLocale}`, '');
+      if (!pathWithoutLocale || pathWithoutLocale === '') {
+        pathWithoutLocale = '/';
+      }
+      if (pathWithoutLocale !== '/' && !pathWithoutLocale.startsWith('/')) {
+        pathWithoutLocale = '/' + pathWithoutLocale;
+      }
+      const newPath = `/${otherLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
       router.push(newPath);
     }
   };
+
+  const otherLocale = routing.locales.find(locale => locale !== currentLocale);
 
   return (
     <div className="language-switcher">
@@ -26,7 +33,7 @@ export default function LanguageSwitcher() {
         className="active"
         type="button"
       >
-        {currentLocale.toUpperCase()}
+        {otherLocale ? otherLocale.toUpperCase() : currentLocale.toUpperCase()}
       </button>
     </div>
   );

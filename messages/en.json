@@ -217,6 +217,100 @@
   },
   "privacy": {
     "title": "Privacy Policy"
+  },
+  "cardsVip": {
+    "header": {
+      "title": "Cards iGaming VIP",
+      "subtitle": "A New Level of Freedom and Convenience for Your VIP Players",
+      "cta": "contact sales",
+      "learnMore": "Learn more"
+    },
+    "marketProblem": {
+      "title": "Market Problem",
+      "description": "Traditional card solutions don't meet the expectations of VIP players and high-rollers. They face constant friction and limitations when managing their funds:",
+      "problems": {
+        "blocked": "Blocked or declined transactions",
+        "blockedDesc": "Blocked or declined transactions",
+        "fees": "High transaction fees",
+        "feesDesc": "High transaction fees",
+        "limits": "Deposit and withdrawal limits",
+        "limitsDesc": "Deposit and withdrawal limits",
+        "settlement": "Long settlement times",
+        "settlementDesc": "Long settlement times for deposits and winnings accrual",
+        "regions": "Difficulty in regions",
+        "regionsDesc": "Difficulty in funding accounts and withdrawals in certain regions",
+        "privacy": "No privacy",
+        "privacyDesc": "No privacy"
+      }
+    },
+    "ourSolution": {
+      "title": "Our Solution — Ns.Cards iGaming VIP",
+      "description": "The first card product built specifically for iGaming — offering unlimited transactions, privacy, and service excellence.",
+      "features": {
+        "unlimited": {
+          "title": "Unlimited",
+          "description": "Unlimited deposits and withdrawals by amount or number of transactions for your brand"
+        },
+        "approval": {
+          "title": "100% approval rate",
+          "description": "100% transaction approval rate and instant payouts delivery to players"
+        },
+        "protection": {
+          "title": "Protection",
+          "description": "Protection from fines and chargeback dispute options"
+        },
+        "fees": {
+          "title": "Transparent fees",
+          "description": "Transparent fees and no hidden charges: up to 4% on deposits and 2% on payouts"
+        },
+        "worldwide": {
+          "title": "Access worldwide",
+          "description": "Access to hard-to-reach regions and local top-up methods"
+        }
+      }
+    },
+    "benefitsBusiness": {
+      "title": "Benefits for your Business",
+      "benefits": {
+        "customization": "Custom client dashboard and branded card design",
+        "unlimited": "Unlimited issuance of virtual and physical cards — with worldwide delivery",
+        "communication": "Easy communication with players through push notifications, pop-ups, banners, and email campaigns",
+        "loyalty": "Tailored loyalty and bonus programs to strengthen retention",
+        "analytics": "Full control and analytics over player balances and transactions",
+        "support": "24/7 support for users"
+      }
+    },
+    "benefitsVip": {
+      "title": "Benefits for VIP Players",
+      "description": "Give your top clients the premium experience they expect — and increase loyalty and LTV.",
+      "benefits": {
+        "instant": "Instant payouts to players",
+        "limits": "Spending limits up to $100,000 per month per card",
+        "integration": "Integration with Apple Pay and Google Pay",
+        "withdrawals": "Cash withdrawals in 150+ countries",
+        "deposits": "Deposits via cryptocurrency, SWIFT and SEPA — with the option to add local methods",
+        "recovery": "Balance recovery options in case the card gets blocked"
+      }
+    },
+    "getStarted": {
+      "title": "Get Started with Ns.Cards iGaming VIP in Just 96 Hours",
+      "integration": {
+        "title": "Integration Options",
+        "option1": "Turnkey API Integrations — seamless connection to your existing platforms",
+        "option2": "Custom API Integrations — product setup based on your technical requirements"
+      },
+      "issuance": {
+        "title": "Card issuance options",
+        "option1": "Players receive a link to apply for a card directly",
+        "option2": "You provide client data via API — we set-up a card and give you a link to receive it",
+        "option3": "Fully custom onboarding flow adapted to your business processes"
+      },
+      "cta": {
+        "title": "Your Competitive Edge",
+        "description": "Give your players true transactional freedom — and grow your revenue.",
+        "button": "CONTACT SALES"
+      }
+    }
   }
 }
 

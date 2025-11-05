@@ -1,6 +1,14 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 export default function OurSolution() {
+  const t = useTranslations('cardsVip.ourSolution');
+  const titleText = t('title');
+  const titleParts = titleText.split(' — ');
+  const titleFirst = titleParts.length > 1 ? titleParts[0] + ' — ' : '';
+  const titleSecond = titleParts.length > 1 ? titleParts[1] : titleText;
+
   return (
     <div className="our-solution-section section-container">
       <div className="section-title-group section-inner">
@@ -9,25 +17,20 @@ export default function OurSolution() {
             <img src="/assets/User-Centricity-icon.svg" alt="" />
           </div>
           <p className="title-text">
-            <span className="dark">Our Solution — </span>
-            <span className="accent">Ns.Cards iGaming VIP</span>
+            <span className="dark">{titleFirst}</span>
+            <span className="accent">{titleSecond}</span>
           </p>
         </div>
         <div className="solution-description">
-          <p>
-            <span>The first </span>
-            <span className="bold">card product</span>
-            <span> built specifically for iGaming — offering unlimited transactions, privacy, and </span>
-            <span className="bold">service excellence.</span>
-          </p>
+          <p>{t('description')}</p>
         </div>
       </div>
       {/* Первая строка: Unlimited, 100% approval rate, Protection */}
       <div className="solution-cards-row">
         {/* Unlimited Card */}
         <div className="solution-card card-unlimited">
-          <h3>Unlimited</h3>
-          <p>Unlimited deposits and withdrawals by amount or number of transactions for your brand</p>
+          <h3>{t('features.unlimited.title')}</h3>
+          <p>{t('features.unlimited.description')}</p>
           {/* Group 48100372 - изображение */}
           <div className="card-image-unlimited">
             <img src="/assets/image_a9ae2e7c.png" alt="" />
@@ -36,8 +39,8 @@ export default function OurSolution() {
 
         {/* 100% Approval Rate Card */}
         <div className="solution-card card-approval">
-          <h3>100% approval rate</h3>
-          <p>100% transaction approval rate and instant payouts delivery to players</p>
+          <h3>{t('features.approval.title')}</h3>
+          <p>{t('features.approval.description')}</p>
           {/* Group 48100371 - изображение */}
           <div className="card-image-approval">
             <img src="/assets/image_a70b7741.png" alt="" />
@@ -46,8 +49,8 @@ export default function OurSolution() {
 
         {/* Protection Card */}
         <div className="solution-card card-protection">
-          <h3>Protection</h3>
-          <p>Protection from fines and chargeback dispute options</p>
+          <h3>{t('features.protection.title')}</h3>
+          <p>{t('features.protection.description')}</p>
           {/* Group 48100372 - изображение */}
           <div className="card-image-protection">
             <img src="/assets/image_b60a68d7.png" alt="" />
@@ -59,8 +62,8 @@ export default function OurSolution() {
       <div className="solution-cards-row solution-cards-row-second">
         {/* Transparent Fees Card */}
         <div className="solution-card card-fees">
-          <h3>Transparent fees</h3>
-          <p>Transparent fees and no hidden charges: up to 4% on deposits and 2% on payouts</p>
+          <h3>{t('features.fees.title')}</h3>
+          <p>{t('features.fees.description')}</p>
           {/* Group 48100372 - монеты */}
           <div className="card-image-fees">
             <img src="/assets/image_c5ebdd65.png" alt="" />
@@ -69,8 +72,8 @@ export default function OurSolution() {
 
         {/* Access Worldwide Card */}
         <div className="solution-card card-worldwide">
-          <h3>Access worldwide</h3>
-          <p>Access to hard-to-reach regions and local top-up methods</p>
+          <h3>{t('features.worldwide.title')}</h3>
+          <p>{t('features.worldwide.description')}</p>
           {/* Group с эллипсами и глобусом */}
           <div className="card-image-worldwide">
             <div className="worldwide-ellipses">

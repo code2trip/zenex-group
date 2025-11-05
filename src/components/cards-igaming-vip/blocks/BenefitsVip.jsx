@@ -1,6 +1,10 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 export default function BenefitsVip() {
+  const t = useTranslations('cardsVip.benefitsVip');
+
   return (
     <div className="benefits-vip-section section-container">
       {/* Title */}
@@ -10,14 +14,12 @@ export default function BenefitsVip() {
             <img src="/assets/Excellence-icon.svg" alt="" />
           </div>
           <p className="title-text">
-            <span className="dark">Benefits for </span>
-            <span className="accent">VIP Players</span>
+            <span className="dark">{t('title').split(' ').slice(0, 2).join(' ')} </span>
+            <span className="accent">{t('title').split(' ').slice(2).join(' ')}</span>
           </p>
         </div>
         <div className="solution-description">
-          <p>
-            Give your top clients the premium experience they expect — and increase loyalty and LTV.
-          </p>
+          <p>{t('description')}</p>
         </div>
       </div>
 
@@ -73,9 +75,7 @@ export default function BenefitsVip() {
           {/* Card 1 */}
           <div className="vip-benefit-card">
             <div className="card-text">
-              <p>
-                <span className="bold">Instant payouts</span> <span>to players</span>
-              </p>
+              <p>{t('benefits.instant')}</p>
             </div>
             <div className="card-icon-box gradient-teal">
               <div className="icon-inner">
@@ -86,11 +86,7 @@ export default function BenefitsVip() {
           {/* Card 2 */}
           <div className="vip-benefit-card">
             <div className="card-text">
-              <p>
-                <span>Spending limits up to </span>
-                <span className="bold">$100,000</span>
-                <span> per month per card</span>
-              </p>
+              <p>{t('benefits.limits')}</p>
             </div>
             <div className="card-icon-box gradient-dark">
               <div className="icon-inner">
@@ -101,10 +97,7 @@ export default function BenefitsVip() {
           {/* Card 3 */}
           <div className="vip-benefit-card">
             <div className="card-text">
-              <p>
-                <span>Integration with </span>
-                <span className="bold">Apple Pay and Google Pay</span>
-              </p>
+              <p>{t('benefits.integration')}</p>
             </div>
             <div className="card-icon-box gradient-gold">
               <div className="icon-inner">
@@ -115,10 +108,7 @@ export default function BenefitsVip() {
           {/* Card 4 */}
           <div className="vip-benefit-card">
             <div className="card-text">
-              <p>
-                <span>Cash withdrawals </span>
-                <span className="bold">in 150+ countries</span>
-              </p>
+              <p>{t('benefits.withdrawals')}</p>
             </div>
             <div className="card-icon-box gradient-teal">
               <div className="icon-inner">
@@ -129,10 +119,7 @@ export default function BenefitsVip() {
           {/* Card 5 */}
           <div className="vip-benefit-card">
             <div className="card-text">
-              <p>
-                <span className="bold">Deposits</span>
-                <span> via cryptocurrency, SWIFT and SEPA — with the option to add local methods</span>
-              </p>
+              <p>{t('benefits.deposits')}</p>
             </div>
             <div className="card-icon-box gradient-dark">
               <div className="icon-inner">
@@ -143,10 +130,7 @@ export default function BenefitsVip() {
           {/* Card 6 */}
           <div className="vip-benefit-card">
             <div className="card-text">
-              <p>
-                <span className="bold">Balance recovery options</span>
-                <span> in case the card gets blocked</span>
-              </p>
+              <p>{t('benefits.recovery')}</p>
             </div>
             <div className="card-icon-box gradient-gold">
               <div className="icon-inner">

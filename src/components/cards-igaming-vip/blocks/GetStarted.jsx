@@ -1,6 +1,10 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 export default function GetStarted() {
+  const t = useTranslations('cardsVip.getStarted');
+
   return (
     <div className="get-started-section">
       {/* Get Started with Ns.Cards iGaming VIP in Just 96 Hours */}
@@ -12,9 +16,7 @@ export default function GetStarted() {
               <img src="/assets/Career-icon.svg" alt="" />
             </div>
             <p className="title-text">
-              <span className="accent">Get Started </span>
-              <span className="dark">with Ns.Cards iGaming VIP in Just 96 </span>
-              <span className="accent">Hours</span>
+              <span className="accent">{t('title')}</span>
             </p>
           </div>
         </div>
@@ -26,7 +28,7 @@ export default function GetStarted() {
             {/* Frame 352279 - контент */}
             <div className="integration-content">
               {/* Integration Options */}
-              <h2>Integration Options</h2>
+              <h2>{t('integration.title')}</h2>
 
               {/* Frame 2085661939 - пункт 1 */}
               <div className="integration-item">
@@ -35,7 +37,7 @@ export default function GetStarted() {
                   <span>1</span>
                 </div>
                 {/* Text */}
-                <p><span className="bold">Turnkey API Integrations</span> — seamless connection to your existing platforms</p>
+                <p>{t('integration.option1')}</p>
               </div>
 
               {/* Frame 2085661940 - пункт 2 */}
@@ -45,7 +47,7 @@ export default function GetStarted() {
                   <span>2</span>
                 </div>
                 {/* Text */}
-                <p><span className="bold">Custom API Integrations</span> — product setup based on your technical requirements</p>
+                <p>{t('integration.option2')}</p>
               </div>
             </div>
 
@@ -65,7 +67,7 @@ export default function GetStarted() {
             {/* Frame 352279 - контент */}
             <div className="issuance-content">
               {/* Card issuance options */}
-              <h2>Card issuance options</h2>
+              <h2>{t('issuance.title')}</h2>
 
               {/* Frame 2085661939 - пункт 1 */}
               <div className="issuance-item">
@@ -74,7 +76,7 @@ export default function GetStarted() {
                   <span>1</span>
                 </div>
                 {/* Text */}
-                <p>Players receive a link to apply for a card <span className="bold">directly</span></p>
+                <p>{t('issuance.option1')}</p>
               </div>
 
               {/* Frame 2085661940 - пункт 2 */}
@@ -84,7 +86,7 @@ export default function GetStarted() {
                   <span>2</span>
                 </div>
                 {/* Text */}
-                <p><span className="bold">You provide client data via API</span> — we set-up a card and give you a link to receive it</p>
+                <p>{t('issuance.option2')}</p>
               </div>
 
               {/* Frame 2085661941 - пункт 3 */}
@@ -94,7 +96,7 @@ export default function GetStarted() {
                   <span>3</span>
                 </div>
                 {/* Text */}
-                <p><span className="bold">Fully custom onboarding flow</span> adapted to your business processes</p>
+                <p>{t('issuance.option3')}</p>
               </div>
             </div>
 
@@ -192,10 +194,10 @@ export default function GetStarted() {
               {/* Frame 2085662131 - текст */}
               <div className="cta-text-group">
                 {/* Your Competitive Edge */}
-                <h3>Your Competitive Edge</h3>
+                <h3>{t('cta.title')}</h3>
 
                 {/* Описание */}
-                <p>Give your players true transactional freedom — and grow your revenue.</p>
+                <p>{t('cta.description')}</p>
               </div>
             </div>
 
@@ -203,7 +205,7 @@ export default function GetStarted() {
             <div className="cta-right">
               {/* Buttons - кнопка CONTACT SALES */}
               <button>
-                <span>CONTACT SALES</span>
+                <span>{t('cta.button')}</span>
                 <img src="/assets/contacts_arrow.svg" alt="" />
               </button>
             </div>

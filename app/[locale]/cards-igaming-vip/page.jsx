@@ -1,10 +1,13 @@
 import '@/styles/cards-igaming-vip.scss';
 import { Header, MarketProblem, OurSolution, BenefitsBusiness, BenefitsVip, GetStarted } from '../../../src/components/cards-igaming-vip/blocks';
 import Footer from '@/components/Footer';
+import { setRequestLocale } from 'next-intl/server';
 
 export const dynamic = 'force-static';
 
-export default function CardsIGamingVipPage() {
+export default async function CardsIGamingVipPage({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <div id="cards-igaming-vip">
       <Header />

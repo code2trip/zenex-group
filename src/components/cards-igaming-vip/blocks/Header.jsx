@@ -10,6 +10,7 @@ export default function Header() {
   const pathname = usePathname();
   const locale = pathname?.split('/')[1] || 'en';
   const t = useTranslations('common.nav');
+  const tCardsVip = useTranslations('cardsVip.header');
 
   const isActive = (path) => {
     if (path === '/') {
@@ -54,7 +55,7 @@ export default function Header() {
               href={`/${locale}/career#form`}
               className="header-cta-button"
             >
-              Learn more
+              {tCardsVip('learnMore')}
             </Link>
           </div>
         </div>
@@ -64,19 +65,19 @@ export default function Header() {
       <div className="hero-content">
         <div className="hero-left">
           <div className="hero-title-group">
-            <p className="hero-title">Cards iGaming VIP</p>
+            <p className="hero-title">{tCardsVip('title')}</p>
             <div className="hero-subtitle-group">
               <div className="subtitle-icon-box">
                 <img src="/assets/card-header-icon.svg" alt="" />
               </div>
-              <p className="hero-subtitle">A New Level of Freedom and Convenience for Your VIP Players</p>
+              <p className="hero-subtitle">{tCardsVip('subtitle')}</p>
             </div>
           </div>
           <Link
             href={`/${locale}/career#form`}
             className="hero-cta-button"
           >
-            contact sales
+            {tCardsVip('cta')}
           </Link>
         </div>
         <div className="hero-right">

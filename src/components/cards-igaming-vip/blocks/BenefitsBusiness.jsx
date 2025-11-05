@@ -1,6 +1,10 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 export default function BenefitsBusiness() {
+  const t = useTranslations('cardsVip.benefitsBusiness');
+
   return (
     <div className="benefits-business-section section-container">
       {/* Левая иллюстрация по макету */}
@@ -13,8 +17,7 @@ export default function BenefitsBusiness() {
             <img src="/assets/Benefits-icon.svg" alt="" />
           </div>
           <p className="title-text">
-            <span className="dark">Benefits for </span>
-            <span className="accent">your Business</span>
+            <span className="dark">{t('title')}</span>
           </p>
         </div>
       </div>
@@ -26,10 +29,7 @@ export default function BenefitsBusiness() {
           {/* Card 1 */}
           <div className="benefit-card">
             <div className="card-text">
-              <p>
-                <span className="bold">Custom client dashboard </span>
-                <span>and branded card design</span>
-              </p>
+              <p>{t('benefits.customization')}</p>
             </div>
             <div className="card-icon-box gradient-teal">
               <div className="icon-inner">
@@ -41,10 +41,7 @@ export default function BenefitsBusiness() {
           {/* Card 2 */}
           <div className="benefit-card">
             <div className="card-text">
-              <p>
-                <span className="bold">Unlimited issuance </span>
-                <span>of virtual and physical cards — with worldwide delivery</span>
-              </p>
+              <p>{t('benefits.unlimited')}</p>
             </div>
             <div className="card-icon-box gradient-dark">
               <div className="icon-inner">
@@ -56,10 +53,7 @@ export default function BenefitsBusiness() {
           {/* Card 3 */}
           <div className="benefit-card">
             <div className="card-text">
-              <p>
-                <span className="bold">Easy communication with players</span>
-                <span> through push notifications, pop-ups, banners, and email campaigns</span>
-              </p>
+              <p>{t('benefits.communication')}</p>
             </div>
             <div className="card-icon-box gradient-gold">
               <div className="icon-inner">
@@ -71,11 +65,7 @@ export default function BenefitsBusiness() {
           {/* Card 4 */}
           <div className="benefit-card">
             <div className="card-text">
-              <p>
-                <span>Tailored</span>
-                <span className="bold"> loyalty and bonus programs</span>
-                <span> to strengthen retention</span>
-              </p>
+              <p>{t('benefits.loyalty')}</p>
             </div>
             <div className="card-icon-box gradient-teal">
               <div className="icon-inner">
@@ -87,10 +77,7 @@ export default function BenefitsBusiness() {
           {/* Card 5 */}
           <div className="benefit-card">
             <div className="card-text">
-              <p>
-                <span className="bold">Full control and analytics</span>
-                <span> over player balances and transactions</span>
-              </p>
+              <p>{t('benefits.analytics')}</p>
             </div>
             <div className="card-icon-box gradient-dark">
               <div className="icon-inner">
@@ -102,10 +89,7 @@ export default function BenefitsBusiness() {
           {/* Card 6 */}
           <div className="benefit-card">
             <div className="card-text">
-              <p>
-                <span className="bold">24/7 support</span>
-                <span> for users</span>
-              </p>
+              <p>{t('benefits.support')}</p>
             </div>
             <div className="card-icon-box gradient-gold">
               <div className="icon-inner">
