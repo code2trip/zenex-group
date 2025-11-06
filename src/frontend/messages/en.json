@@ -311,6 +311,196 @@
         "button": "CONTACT SALES"
       }
     }
+  },
+  "launchAndScale": {
+    "hero": {
+      "title": "Launch and scale your business in 96 hours",
+      "subtitle": "A complete set of tools for working with fiat and cryptocurrency assets and creating financial products under your brand.",
+      "requestDemo": "Request a Demo",
+      "getOffer": "Get an Offer"
+    },
+    "about": {
+      "title": "About the Product",
+      "unlimited": "One solution — unlimited possibilities",
+      "dashboards": {
+        "title": "Dashboards",
+        "text": "Multifunctional dashboards for admins and clients."
+      },
+      "crossPlatform": {
+        "title": "Cross‑platform",
+        "text": "Web, Mobile, PWA, and Telegram Mini‑App."
+      },
+      "branding": {
+        "title": "Branding",
+        "text": "Extensive options for customization and white-label branding."
+      },
+      "cryptoFiat": {
+        "title": "Crypto & Fiat",
+        "text": "Full toolkit for working with crypto and fiat assets."
+      },
+      "cards": {
+        "title": "Cards",
+        "text": "Issuance of virtual and plastic cards with Apple Pay and Google Pay."
+      }
+    },
+    "modules": {
+      "title": "Zenex B2B Modules",
+      "crypto": {
+        "title": "Cryptocurrency Module",
+        "items": [
+          "Integration with exchanges (Binance, Xt.com, Bitfinex) and liquidity providers",
+          "Full functionality for exchange operations: Fiat ↔ Crypto, Crypto ↔ Crypto",
+          "Custodial wallets (individual and master)",
+          "Staking and OTC desk",
+          "Ability to add tokens — fiat, crypto, and custom"
+        ]
+      },
+      "fiat": {
+        "title": "Fiat Module",
+        "items": [
+          "Integration with fiat payment providers",
+          "SWIFT, SEPA, cards, local methods",
+          "Instant peer‑to‑peer transfers",
+          "IBAN issuing",
+          "On/Off‑ramp"
+        ]
+      },
+      "card": {
+        "title": "Card Module",
+        "items": [
+          "Integration with card issuers",
+          "API to order & manage cards",
+          "Virtual & plastic cards, Apple/Google Pay",
+          "Unlimited partner transactions",
+          "Top‑ups with crypto & fiat"
+        ]
+      },
+      "getOffer": "Get an Offer"
+    },
+    "admin": {
+      "title": "Zenex B2B Admin Panel",
+      "items": [
+        {
+          "text": "Currency pair management and fee configuration"
+        },
+        {
+          "text": "Staking strategy setup"
+        },
+        {
+          "text": "Statistics across all operations, wallets, and reserves"
+        },
+        {
+          "text": "Deposit and withdrawal management"
+        },
+        {
+          "text": "Card product management"
+        },
+        {
+          "text": "Balance control, fees, and card limits"
+        },
+        {
+          "text": "API key management"
+        },
+        {
+          "text": "KYC monitoring and management"
+        }
+      ],
+      "highlight": "Full control of your business processes in one place"
+    },
+    "customization": {
+      "title": "Customization & Marketing Tools",
+      "interface": {
+        "title": "Interface Customization",
+        "items": [
+          "Logo and corporate colors",
+          "Personal cabinet banners (10+ options)",
+          "Custom pop-ups"
+        ]
+      },
+      "marketing": {
+        "title": "Marketing & Communications",
+        "items": [
+          "E-mail campaigns and push notifications",
+          "Referral system",
+          "Promo codes and marketing campaigns",
+          "Cashback programs"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Launch in 96 Hours with Zenex B2B",
+      "subtitle": "For the first time on the market — your fintech product in 96 hours starting from €2,500 + monthly fee.",
+      "from": "from",
+      "monthlyFee": "+ Monthly Fee",
+      "mainTitle": "Full customization and branding of the Personal Cabinet",
+      "features": {
+        "branding": {
+          "title": "Branding",
+          "text": "Placement of your logo and partner banners in the dashboard"
+        },
+        "promos": {
+          "title": "Promos & Bonuses",
+          "text": "Custom promo codes, staking and referral programs"
+        },
+        "brandedCards": {
+          "title": "Branded Cards",
+          "text": "Logo printing on plastic cards"
+        },
+        "flexiblePayments": {
+          "title": "Flexible Payments",
+          "text": "Integration of payment methods upon request"
+        },
+        "license": {
+          "title": "Financial License",
+          "text": "Use of our financial license"
+        },
+        "customFees": {
+          "title": "Custom Fees",
+          "text": "Custom fee settings"
+        },
+        "communications": {
+          "title": "Communications",
+          "text": "Custom Pop-up notifications and email campaigns"
+        },
+        "newCurrencies": {
+          "title": "New Currencies",
+          "text": "Adding new currencies (incl. custom tokens)"
+        }
+      },
+      "getOffer": "Get an Offer",
+      "notices": [
+        "Domain name cannot be replaced",
+        "Terms & Conditions and Legal Entity cannot be changed",
+        "Limited back-office functionality"
+      ]
+    },
+    "solutions": {
+      "api": {
+        "price": "€6,000",
+        "title": "White Label via API",
+        "description": "Full platform functionality via API",
+        "getOffer": "Get an Offer"
+      },
+      "turnkey": {
+        "price": "€25 000",
+        "title": "Full Turn-Key White Label",
+        "description": "Ready-to-use branded platform (Web, PWA, Telegram mini-app) Launch without development from scratch",
+        "getOffer": "Get an Offer"
+      },
+      "sourceCode": {
+        "price": "€300,000",
+        "title": "Source Code License",
+        "description": "Full source code, all features, complete freedom for further development and integrations",
+        "getOffer": "Get an Offer"
+      },
+      "from": "from"
+    },
+    "finalCta": {
+      "title": "Ready to launch your own fintech product?",
+      "subtitle": "Zenex B2B — the easiest path from idea to a fully functional platform",
+      "requestDemo": "Request a Demo",
+      "contactSales": "Contact Sales"
+    }
   }
 }
 

@@ -1,0 +1,1216 @@
+// Launch & Scale page specific styles (всё в одном файле без импортов)
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+// base helpers (аналог launch-and-scale/_mixins.scss)
+.ls-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  @media (min-width: 768px) { padding: 0 75px; }
+}
+
+// HERO
+.ls-hero {
+  position: relative;
+  padding: 40px 0;
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @media (min-width: 800px) { padding: 64px 0; }
+  @media (min-width: 1440px) { padding: 96px 0; }
+
+
+  // Background pattern
+  &__pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotate(-180deg);
+    transform-origin: top left;
+    opacity: 0.15;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    display: block !important;
+  }
+
+  &__pattern-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  &__pattern-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: radial-gradient(ellipse 100.00% 52.19% at 50.00% -0.00%, black 0%, rgba(0, 0, 0, 0) 95%);
+  }
+
+  &__pattern-content {
+    position: absolute;
+    width: 1920px;
+    height: 1440px;
+    left: -240px;
+    top: -360px;
+  }
+
+  &__pattern-dots {
+    position: absolute;
+    width: 1925px;
+    height: 1438px;
+    left: -5px;
+    top: 2px;
+    background: transparent;
+    background-image: 
+      radial-gradient(circle, rgba(213, 215, 218, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 1;
+  }
+
+  // Ellipses - под картинками, но над фоном
+  &__ellipses {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0.5; // Между фоном (0) и медиа-элементами (1)
+    overflow: hidden;
+  }
+
+  &__ellipse {
+    position: absolute;
+    display: block;
+    object-fit: contain;
+    pointer-events: none;
+
+    &--1 {
+      width: 658px;
+      height: 658px;
+      transform-origin: center;
+      top: 10%;
+      right: -5%;
+      scale: 1.3;
+    }
+
+    &--2 {
+      width: 658px;
+      height: 658px;
+      transform-origin: center;
+      bottom: -2%;
+      left: 0%;
+      scale: 1.3;
+    }
+  }
+
+  .container { 
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    @extend .ls-container; 
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  &__title { 
+    font-family: 'Inter', sans-serif;
+    font-weight: 300 !important;
+    font-size: 40px; 
+    line-height: 1.1; 
+    margin: 0 0 12px; 
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    
+    span {
+      font-weight: 700;
+    }
+    
+    @media (min-width: 800px) { font-size: 56px; } 
+    @media (min-width: 1440px) { font-size: 68px; } 
+  }
+  &__subtitle { 
+    font-family: 'Inter', sans-serif;
+    font-weight: 300 !important;
+    color: #fff; 
+    max-width: 23vw; 
+    margin: 30px auto; 
+    line-height: 1.6;
+    font-size: 1.2rem;
+    text-align: center;
+    
+    html[lang="ru"] & {
+      max-width: 34vw;
+    }
+  }
+  &__actions { 
+    display: flex; 
+    gap: 12px; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    
+    html[lang="ru"] & {
+      .btn {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  &__text {
+    text-align: center;
+    position: relative;
+    z-index: 11;
+  }
+  
+  &__media { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+    display: block !important;
+  }
+
+  // iPhone mockup - верхняя правая часть
+  &__iphone {
+    position: absolute;
+    width: 711.12px;
+    height: 672.80px;
+    transform-origin: top left;
+    top: 23%;
+    right: 0%;
+    z-index: 1;
+    display: block;
+    object-fit: contain;
+  }
+
+  // Credit card mockup - верхняя левая часть
+  &__card {
+    position: absolute;
+    width: 330.21px;
+    height: 288.90px;
+    transform-origin: top left;
+    top: 20%;
+    left: 3%;
+    scale: 1;
+    z-index: 1;
+    display: block;
+    object-fit: contain;
+  }
+
+  // Poker chip - нижняя левая часть
+  &__chip {
+    position: absolute;
+    width: 298.23px;
+    height: 298.23px;
+    transform-origin: top left;
+    bottom: 10%;
+    left: 15%;
+    z-index: 1;
+    display: block;
+    object-fit: contain;
+  }
+
+  // Sparkles (stars) - разбросаны по фону с разными размерами
+  &__sparkle {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    object-fit: contain;
+    scale: 3;
+    
+    // Большие звезды
+    &--1 {
+      width: 60px;
+      height: 60px;
+      top: 18%;
+      left: 27%;
+    }
+    
+    &--2 {
+      width: 60px;
+      height: 60px;
+      bottom: 8%;
+      right: 40%;
+    }
+    
+    // Средние звезды
+    &--3 {
+      width: 50px;
+      height: 50px;
+      top: 60%;
+      left: 5%;
+    }
+    
+    &--4 {
+      width: 50px;
+      height: 50px;
+      top: 76%;
+      right: 6%;
+    }
+    
+    &--5 {
+      width: 50px;
+      height: 50px;
+      top: 24%;
+      left: 67%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+// ABOUT
+.ls-badge { 
+  color: #05aca4; 
+  font-weight: 700; 
+  margin-right: 1vw; 
+  display: inline-flex;
+  align-items: center;
+  
+  img {
+    width: auto;
+    height: 3vw;
+    display: block;
+    object-fit: contain;
+  }
+}
+.ls-about {
+  padding: 56px 0;
+  
+  @media (min-width: 800px) {
+    padding: 80px 0;
+  }
+  
+  .container {
+    @extend .ls-container;
+  }
+  
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5vw;
+  }
+  
+  &__title {
+    font-size: 3.5vw;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: #0b0b0c;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__hero {
+    position: relative;
+  }
+  
+  &__hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 23vw;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 0;
+  }
+  
+  &__hero-card {
+    position: relative;
+    border-radius: 20px;
+    padding: 32px;
+    min-height: 260px;
+    color: #fff;
+    background: linear-gradient(225deg, #01645c 0%, #0a2125 100%);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    z-index: 1;
+  }
+  
+  &__hero-title {
+    font-size: 28px;
+    line-height: 1.1;
+    max-width: 320px;
+    
+    span {
+      display: block;
+      opacity: 0.9;
+    }
+    
+    strong {
+      display: block;
+      color: #54ffda;
+      font-size: 36px;
+    }
+  }
+  
+  &__item {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.8vw;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
+    height: 23vw;
+  }
+  &__icon {
+    width: 8.5vw;
+    height: 8.5vw;
+    color: #05aca4;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    
+    img {
+      object-fit: contain;
+      display: block;
+    }
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 1.8vw;
+    margin-top: 4.2vw;
+    color: #222;
+  }
+  
+  &__text {
+    color: #666;
+    font-size: 1.15vw;
+    line-height: 1.5;
+  }
+}
+
+// MODULES
+.ls-mod {
+  padding: 56px 0;
+  
+  @media (min-width: 800px) {
+    padding: 80px 0;
+  }
+  
+  .container {
+    @extend .ls-container;
+  }
+  
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5vw;
+  }
+  
+  &__title {
+    font-size: 3.5vw;
+    font-weight: 800;
+    color: #0b0b0c;
+    
+    span {
+      color: #05aca4;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    
+    @media (min-width: 800px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__card {
+    color: #fff;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
+    
+    &-head {
+      display: flex;
+      align-items: center;
+      gap: 1.5vw;
+    }
+    
+    &-icon {
+      width: 3vw;
+      height: 3vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+    }
+    
+    &-title {
+      font-size: 1.7vw;
+      font-weight: 800;
+    }
+  }
+  
+  &__list {
+    display: grid;
+    gap: 2vw;
+    margin-top: 3vw;
+    padding: 0;
+    list-style: none;
+    
+    li {
+      position: relative;
+      padding-left: 40px;
+      line-height: 1.4;
+      font-size: 1.1vw;
+      font-weight: 400; // Обычный вес для всего текста
+      color: #fff;
+      
+      strong {
+        font-weight: 700; // Жирный для выделенных слов
+      }
+      
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: .25vw;
+        width: 1vw;
+        height: 1vw;
+        background-image: url(/images/checkcircle.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}
+
+// FEATURES
+.ls-steps {
+  padding: 40px 0;
+  .container { @extend .ls-container; }
+  &__list { counter-reset: step; display: grid; gap: 16px; }
+  &__item { background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 12px; }
+  &__num { font-weight: 700; color: #999; margin-right: 8px; }
+  &__title { margin: 0 0 6px; }
+  &__desc { color: #555; }
+}
+
+// CTA
+.ls-cta {
+  padding: 56px 0 80px;
+  .container { @extend .ls-container; }
+
+  &__box {
+    background: #111;
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  
+  &__title {
+    margin: 0;
+    font-size: 22px;
+  }
+  
+  &__button {
+    background: #fff;
+    color: #111;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+}
+
+// Buttons (простые утилиты)
+.btn { 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 10px; 
+  padding: 36px 66px; 
+  border-radius: 16px; 
+  font-family: 'Inter', sans-serif;
+  font-weight: 700; 
+  font-size: 1.6rem; 
+  line-height: 1em; 
+  text-decoration: none; 
+  
+  &__icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    display: block;
+    // Наследует цвет от родительской кнопки через CSS filter
+    filter: brightness(0) saturate(100%) invert(0);
+  }
+}
+
+.btn--primary { 
+  background:#05aca4; 
+  color:#fff; 
+  box-shadow:0 8px 32px rgba(0,0,0,.15); 
+  
+  .btn__icon {
+    // Для белой иконки на цветном фоне
+    filter: brightness(0) saturate(100%) invert(1);
+  }
+}
+
+.btn--secondary { 
+  background:#fff; 
+  color:#282828; 
+  
+  .btn__icon {
+    // Для темной иконки на белом фоне
+    filter: brightness(0) saturate(100%) invert(0);
+  }
+}
+
+// ADMIN PANEL
+.ls-admin {
+  padding: 80px 0;
+  
+  .container {
+    @extend .ls-container;
+  }
+  
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 24px;
+  }
+  
+  &__title {
+    font-size: 3.5vw;
+    font-weight: 800;
+    color: #0b0b0c;
+    
+    span {
+      color: #05aca4;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    
+    @media (min-width: 800px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+  
+  &__card {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid #e6e8ef;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  }
+  
+  &__icon {
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+  }
+  
+  &__text {
+    margin: 0;
+    font-size: 1vw;
+    align-self: center;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #757575;
+    flex: 1;
+  }
+  
+  &__highlight {
+    grid-column: 3 / 5;
+    grid-row: 1 / 5;
+    border-radius: 20px;
+    padding: 40px;
+    color: #fff;
+    background: linear-gradient(135deg, #00CDC3 0%, #006F66 100%);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    
+    @media (max-width: 799px) {
+      grid-column: 1 / -1;
+      grid-row: auto;
+      align-items: center;
+    }
+  }
+  
+  &__shturval,
+  &__shturval2,
+  &__logo {
+    max-inline-size: unset;
+    max-block-size: unset;
+    position: absolute;
+    object-fit: contain;
+    pointer-events: none;
+  }
+  
+  &__shturval {
+    width: 45vw;
+    height: 45vw;
+    bottom: -17vw;
+    left: -16vw;
+    z-index: 0;
+  }
+  
+  &__shturval2 {
+    width: 14vw;
+    height: 14vw;
+    top: 4vw;
+    right: 1vw;
+  }
+  
+  &__logo {
+    width: 3vw;
+    height: 3vw;
+    bottom: 2vw;
+    right: 2vw;
+    opacity: 0.7;
+  }
+  
+  &__big {
+    margin: 0;
+    font-size: 1.6vw;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    font-weight: 300;
+    width: 50%;
+    
+    strong {
+      font-weight: 700;
+    }
+    
+    @media (max-width: 799px) {
+      text-align: center;
+    }
+  }
+}
+
+// CUSTOMIZATION
+.ls-customization {
+  padding: 80px 0;
+  
+  .container {
+    @extend .ls-container;
+  }
+  
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 40px;
+  }
+  
+  &__title {
+    font-size: 3.5vw;
+    font-weight: 800;
+    color: #0b0b0c;
+    margin: 0;
+    
+    span {
+      color: #05aca4;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    
+    @media (min-width: 800px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  &__card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e6e8ef;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  &__card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1vw;
+  }
+  
+  &__icon {
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  &__card-title {
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: #393939;
+    margin-left: 1vw;
+  }
+  
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+  }
+  
+  &__list li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1vw;
+    font-weight: 400;
+    color: #757575;
+    line-height: 1.5;
+  }
+  
+  &__check {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+}
+
+// PRICING
+.ls-pricing {
+  padding: 80px 0;
+  
+  .container {
+    @extend .ls-container;
+  }
+  
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  &__title {
+    font-size: 3.5vw;
+    font-weight: 800;
+    color: #0b0b0c;
+    margin: 0;
+    
+    span {
+      color: #05aca4;
+    }
+  }
+  
+  &__subtitle {
+    color: #757575;
+    font-size: 1.2vw;
+    margin-top: 12px;
+  }
+  
+  &__main {
+    position: relative;
+    border-radius: 20px;
+    padding: 40px;
+    background: linear-gradient(135deg, #0A2125 0%, #01645C 100%);
+    color: #fff;
+    overflow: visible;
+  }
+  
+  &__crown {
+    position: absolute;
+    top: -12vw;
+    right: -5vw;
+    width: 30vw;
+    height: 30vw;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  &__price {
+    font-size: 1.8vw;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid #999;
+    
+    strong {
+      font-family: 'Anton', sans-serif;
+      font-weight: 400;
+      font-size: 2.2vw;
+    }
+  }
+  
+  &__big-title {
+    font-size: 3vw;
+    font-weight: 800;
+    margin: 0 0 5vw;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+    
+    &-light {
+      font-weight: 300;
+    }
+  }
+  
+  &__features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    
+    @media (max-width: 799px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  &__feature-title {
+    font-size: 1.5vw;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+  }
+  
+  &__feature-text {
+    font-size: 1vw;
+    font-weight: 300;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+  }
+  
+  &__button {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    background: #fff !important;
+    color: #0b0b0c !important;
+    border-radius: 1vw !important;
+    padding: 1vw 8vw;
+    font-size: 1.1vw;
+    font-weight: 700;
+    box-shadow: none;
+    
+    html[lang="ru"] & {
+      padding: 1vw 4vw;
+    }
+    
+    .btn__icon {
+      filter: brightness(0) saturate(100%) invert(0) !important;
+      width: 1.5vw;
+      height: 1.5vw;
+    }
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.95) !important;
+    }
+  }
+  
+  &__notices {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    position: relative;
+    z-index: 1;
+  }
+  
+  &__notice {
+    display: flex;
+    align-items: center;
+    gap: .7vw;
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  &__notice-icon {
+    width: 1.25vw;
+    height: 1.25vw;
+    flex-shrink: 0;
+    opacity: 0.7;
+    object-fit: contain;
+  }
+}
+
+// SOLUTIONS (Three pricing cards)
+.ls-solutions {
+  padding: 80px 0;
+  
+  .container {
+    @extend .ls-container;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+  
+  &__card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  &__price-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 10px;
+  }
+  
+  &__from {
+    font-size: 1.7vw;
+    color: #757575;
+    font-weight: 600;
+  }
+  
+  &__price {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 3vw;
+    color: #222;
+    margin: 0 0 20px 0;
+  }
+  
+  &__divider {
+    width: 100%;
+    height: 2px;
+    background: #f0f0f0;
+    margin-bottom: 10px;
+  }
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+  }
+  
+  &__title {
+    font-size: 1.8vw;
+    font-weight: 800;
+    color: #0b0b0c;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  &__description {
+    font-size: 1vw;
+    font-weight: 400;
+    color: #757575;
+    margin: 0;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: .7vw;
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    
+    &-line {
+      display: block;
+    }
+  }
+  
+  &__button {
+    margin-top: auto;
+    padding: 20px;
+    font-weight: 500;
+    
+    .btn__icon {
+      scale: 1.1;
+      filter: brightness(0) saturate(100%) invert(1);
+    }
+  }
+}
+
+// FINAL CTA
+.ls-final {
+  padding: 80px 0;
+  
+  .container {
+    @extend .ls-container;
+  }
+  
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 18vw;
+    gap: 16px;
+    padding: 32px;
+    border-radius: 20px;
+    color: #fff;
+    background: linear-gradient(135deg, #07171B 0%, #16464A 100%);
+    overflow: hidden;
+    
+    @media (min-width: 800px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  &__rockets {
+    position: absolute;
+    left: 27.5%;
+    top: 130%;
+    transform: translateY(-50%);
+    width: 30vw;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 0;
+    scale: 2.5;
+    
+    @media (max-width: 799px) {
+      width: 50vw;
+      opacity: 0.3;
+    }
+  }
+  
+  &__text {
+    position: relative;
+    z-index: 1;
+    margin-left: 1vw;
+  }
+  
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 2vw;
+    
+    span {
+      background: linear-gradient(135deg, #9A885D 0%, #FFEEB4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+  
+  &__desc {
+    color: #F7F8FA;
+    opacity: 0.8;
+    margin-top: 1vw;
+    font-size: 1.1vw;
+    line-height: 1.5;
+    width: 70%;
+  }
+  
+  &__actions {
+    display: flex;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+

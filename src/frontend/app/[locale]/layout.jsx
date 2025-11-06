@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { routing } from '@/frontend/i18n/routing';
+import { routing } from '@/i18n/routing';
 import '@/styles/settings/common.scss';
 
 export function generateStaticParams() {

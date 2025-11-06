@@ -1,5 +1,5 @@
 import '@/styles/cards-igaming-vip.scss';
-import { Header, MarketProblem, OurSolution, BenefitsBusiness, BenefitsVip, GetStarted } from '../../../src/components/cards-igaming-vip/blocks';
+import { Header, Hero, MarketProblem, OurSolution, BenefitsBusiness, BenefitsVip, GetStarted } from '../../../src/components/cards-igaming-vip/blocks';
 import Footer from '@/frontend/components/Footer';
 import { setRequestLocale } from 'next-intl/server';
 
@@ -11,6 +11,7 @@ export default async function CardsIGamingVipPage({ params }) {
   return (
     <div id="cards-igaming-vip">
       <Header />
+      <Hero />
       <MarketProblem />
       <OurSolution />
       {/* Левый glow между Our Solution и Benefits Business */}
@@ -24,5 +25,3 @@ export default async function CardsIGamingVipPage({ params }) {
     </div>
   );
 }
-
-
