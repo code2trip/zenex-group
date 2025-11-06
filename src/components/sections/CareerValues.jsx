@@ -22,14 +22,17 @@ export default function CareerValues() {
 
   useEffect(() => {
     const items = document.querySelectorAll('.career-values__item');
-    gsap.from(items, {
+    gsap.fromTo(items, {
+      opacity: 0,
+      yPercent: 15,
+    }, {
       scrollTrigger: {
         trigger: items,
         start: 'top 75%',
       },
       duration: 1,
-      opacity: 0,
-      yPercent: 15,
+      opacity: 1,
+      yPercent: 0,
       stagger: 0.4,
     });
   }, []);

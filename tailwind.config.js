@@ -10,6 +10,11 @@ module.exports = {
   },
   theme: {
     extend: {},
+    screens: {
+      'mobile': {'max': '767px'},
+      'tablet': {'max': '1024px'},
+      'desktop': '1025px',
+    },
   },
   plugins: [],
 };

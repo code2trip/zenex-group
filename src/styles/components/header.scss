@@ -17,8 +17,8 @@
     }
 
     &__logo {
-        width: 6.2rem;
-        min-width: 6.2rem;
+        width: 10rem;
+        min-width: 10rem;
         display: block;
         margin-right: auto;
 
@@ -63,6 +63,7 @@
         border-radius: 1rem;
         position: relative;
         cursor: pointer;
+        margin-left: 0.8rem;
 
         svg {
             width: 100%;
@@ -121,11 +122,19 @@
     }
 }
 
+// Скрываем CTA кнопку на планшете и мобиле
+@media (max-width: 1023px) {
+    .header-cta-button {
+        display: none !important;
+    }
+}
+
 // Универсальный переключатель языка
 .language-switcher {
     display: flex;
     gap: 0.8rem;
     align-items: center;
+    margin-right: 0.8rem;
 
     button {
         width: 4.5rem;
@@ -236,5 +245,15 @@
     .header-cta-button {
         border-radius: 1.6rem;
         margin-right: 0;
+    }
+}
+
+// Крупнее логотип на десктопе
+@media (min-width: 1024px) {
+    .header {
+        &__logo {
+            width: 12rem;
+            min-width: 12rem;
+        }
     }
 }

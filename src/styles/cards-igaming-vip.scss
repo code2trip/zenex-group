@@ -672,6 +672,20 @@
     flex-grow: 0;
     z-index: 2;
 
+    // Переопределение для планшета и мобильной версии
+    @media (max-width: 1024px) {
+      flex-direction: column !important;
+      flex-wrap: nowrap !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      gap: 24px !important;
+    }
+
+    @media (max-width: 767px) {
+      gap: 10px !important;
+    }
+
     .benefits-cards-list {
       box-sizing: border-box;
       display: flex;
@@ -688,6 +702,20 @@
       order: 0;
       flex-grow: 1;
 
+      // Переопределение порядка для планшета и мобильной версии
+      @media (max-width: 1024px) {
+        order: 1 !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+
       .benefit-card {
         box-shadow: 0px 4px 18.6px rgba(110, 126, 159, 0.1);
         background: white;
@@ -702,6 +730,19 @@
         height: 158px;
         padding: 18px;
         border-radius: 20px;
+
+        // Переопределение для планшета
+        @media (max-width: 1024px) {
+          width: calc(50% - 10px) !important;
+          height: 167px !important;
+        }
+
+        // Переопределение для мобильной версии
+        @media (max-width: 767px) {
+          width: 100% !important;
+          height: auto !important;
+          min-height: 0 !important;
+        }
 
         .card-text {
           box-sizing: border-box;
@@ -797,6 +838,14 @@
       position: relative;
       overflow: hidden;
 
+      // Переопределение порядка для планшета и мобильной версии
+      @media (max-width: 1024px) {
+        order: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+      }
+
       .zenex-icon {
         position: absolute;
         width: 38px;
@@ -840,6 +889,26 @@
   min-height: 802px;
   padding: 75px;
   isolation: isolate;
+
+  .benefits-vip-decor {
+    position: absolute;
+    width: 67.9rem;
+    bottom: -6rem;
+    right: calc(-6rem - 5vw);
+    height: auto;
+    z-index: 20;
+    pointer-events: none;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    object-fit: contain;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  /* benefits-vip-decor-left удалён по требованию */
 
   .vip-content-wrapper {
     box-sizing: border-box;
@@ -899,13 +968,32 @@
       flex-direction: row;
       flex-wrap: wrap;
       align-items: flex-start;
+      align-content: flex-start;
+      padding: 0px;
       gap: 24px;
       width: 852px;
       max-width: 100%;
-      height: auto;
-      flex: 1 1 auto;
+      height: 522px;
+      flex: none;
+      order: 0;
+      flex-grow: 1;
       isolation: isolate;
       z-index: 3;
+
+      // Переопределение порядка для планшета и мобильной версии
+      @media (max-width: 1024px) {
+        order: 1 !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+        height: auto !important;
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
 
       .vip-benefit-card {
         box-shadow: 0px 4px 18.6px rgba(110, 126, 159, 0.1);
@@ -921,6 +1009,20 @@
         height: 158px;
         padding: 18px;
         border-radius: 20px;
+        flex: 0 0 auto;
+
+        // Переопределение для планшета
+        @media (max-width: 1024px) {
+          width: calc(50% - 10px) !important;
+          height: 167px !important;
+        }
+
+        // Переопределение для мобильной версии
+        @media (max-width: 767px) {
+          width: 100% !important;
+          height: auto !important;
+          min-height: 0 !important;
+        }
 
         .card-text {
           box-sizing: border-box;
@@ -1595,513 +1697,5 @@
 // ============================================
 // RESPONSIVE STYLES
 // ============================================
-
-// Tablet (768px - 1024px)
-@media (max-width: 1024px) {
-  .section-container {
-    padding: 50px 40px;
-  }
-
-  .section-inner {
-    width: 100%;
-  }
-
-  .title-text {
-    font-size: 40px;
-    line-height: 40px;
-  }
-
-  // Header
-  .cards-vip-header {
-    min-height: 905px;
-
-    .header-nav-container {
-      width: calc(100% - 48px);
-      padding: 10px 16px 10px 24px;
-      max-width: 752px;
-    }
-
-    .hero-content {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 80px 40px 40px;
-      min-height: auto;
-      width: 100%;
-      max-width: 100%;
-
-      // Карточки должны быть выше текста (order: -1)
-      .hero-right {
-        order: -1;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        margin-bottom: 40px;
-        margin-left: 0;
-        transform: none;
-
-        .vip-image {
-          width: 462px;
-          height: 553px;
-          max-width: 100%;
-          object-fit: cover;
-          left: auto;
-          top: auto;
-          transform: none;
-        }
-      }
-
-      // Текст и кнопка снизу слева
-      .hero-left {
-        order: 0;
-        width: 100%;
-        max-width: 720px;
-        padding-left: 0;
-        gap: 40px;
-        transform: none;
-
-        .hero-title-group {
-          gap: 20px;
-
-          .hero-title {
-            font-size: 50px;
-            line-height: 50px;
-          }
-
-          .hero-subtitle-group {
-            .hero-subtitle {
-              font-size: 16px;
-              line-height: 24px;
-              max-width: 406px;
-            }
-          }
-        }
-
-        .hero-cta-button {
-          width: auto;
-        }
-      }
-    }
-  }
-
-  // Market Problem
-  .market-problem-section {
-    padding: 100px 40px 50px;
-
-    .problem-cards-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-
-      .problem-card {
-        width: 100%;
-      }
-    }
-  }
-
-  // Our Solution
-  .our-solution-section {
-    padding: 50px 40px;
-    width: 100%;
-    max-width: 100%;
-
-    .section-inner {
-      width: 100%;
-    }
-
-    .solution-description {
-      width: 100%;
-      max-width: 720px;
-    }
-
-    .solution-cards-row {
-      flex-direction: column;
-      gap: 20px;
-      width: 100%;
-      max-width: 100%;
-
-      // Каждая карточка на отдельной строке
-      .solution-card {
-        width: 100% !important;
-        min-width: auto;
-
-        h3 {
-          font-size: 24px;
-          line-height: 24px;
-        }
-
-        p {
-          font-size: 14px;
-          line-height: 20px;
-        }
-      }
-    }
-
-    // Отступ между строками карточек
-    .solution-cards-row-second {
-      margin-top: 0;
-    }
-  }
-
-  // Benefits Business
-  .benefits-business-section {
-    padding: 50px 40px;
-
-    .benefits-content-wrapper {
-      flex-direction: column;
-
-      .benefits-cards-list {
-        width: 100%;
-
-        .benefit-card {
-          width: 100%;
-          min-width: auto;
-        }
-      }
-
-      .zenex-showcase-card {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-  }
-
-  // Benefits VIP
-  .benefits-vip-section {
-    padding: 50px 40px;
-
-    .vip-content-wrapper {
-      flex-direction: column;
-
-      .vip-showcase-card {
-        width: 100%;
-      }
-
-      .vip-cards-list {
-        width: 100%;
-
-        .vip-benefit-card {
-          width: 100%;
-          min-width: auto;
-        }
-      }
-    }
-  }
-
-  // Get Started
-  .get-started-section {
-    .get-started-container {
-      padding: 50px 40px;
-
-      .get-started-columns {
-        flex-direction: column;
-        height: auto;
-        gap: 20px;
-
-        .integration-column,
-        .issuance-column {
-          width: 100%;
-          height: auto;
-          min-height: 400px;
-        }
-      }
-
-      .cta-banner {
-        height: auto;
-        min-height: 280px;
-        padding: 40px 20px;
-
-        .cta-content {
-          flex-direction: column;
-          position: relative;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: auto;
-          gap: 30px;
-
-          .cta-right {
-            width: 100%;
-
-            button {
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// Mobile (up to 767px)
-@media (max-width: 767px) {
-  .section-container {
-    padding: 30px 20px;
-  }
-
-  .title-text {
-    font-size: 32px;
-    line-height: 32px;
-  }
-
-  .icon-box {
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-
-    img {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
-  // Header
-  .cards-vip-header {
-    min-height: 600px;
-
-    .header-nav-wrapper {
-      padding-top: 12px;
-    }
-
-    .header-nav-container {
-      height: auto;
-      min-height: 60px;
-      padding: 12px 16px;
-      flex-wrap: wrap;
-      gap: 12px;
-
-      .header-actions {
-        width: 100%;
-        justify-content: center;
-        height: auto;
-      }
-    }
-
-    .hero-content {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 60px 20px 40px;
-      min-height: auto;
-      gap: 30px;
-
-      .hero-left {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 0;
-        gap: 24px;
-
-        .hero-title {
-          font-size: 36px;
-          line-height: 40px;
-        }
-
-        .hero-subtitle-group {
-          flex-direction: column;
-          align-items: flex-start;
-          height: auto;
-          gap: 12px;
-
-          .hero-subtitle {
-            font-size: 18px;
-            line-height: 22px;
-          }
-        }
-
-        .hero-cta-button {
-          width: 100%;
-          max-width: 277px;
-        }
-      }
-
-      .hero-right {
-        width: 100%;
-        justify-content: center;
-        margin-top: 24px;
-
-        .vip-image {
-          width: 100%;
-          max-width: 323px;
-          height: auto;
-        }
-      }
-    }
-  }
-
-  // Market Problem
-  .market-problem-section {
-    padding: 60px 20px 30px;
-
-    .problem-cards-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
-
-      .problem-card {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        min-height: 158px;
-
-        .problem-icon-box {
-          width: 100px;
-          height: 100px;
-
-          .icon-inner img {
-            width: 32px;
-            height: 32px;
-          }
-        }
-      }
-    }
-  }
-
-  // Our Solution
-  .our-solution-section {
-    padding: 30px 20px;
-
-    .solution-cards-row {
-      .solution-card {
-        height: auto;
-        min-height: 250px;
-
-        h3 {
-          font-size: 24px;
-          line-height: 24px;
-        }
-
-        p {
-          font-size: 14px;
-          position: relative;
-          bottom: auto;
-          left: auto;
-          margin-top: auto;
-        }
-      }
-    }
-  }
-
-  // Benefits Business
-  .benefits-business-section {
-    padding: 30px 20px;
-
-    .business-left-img {
-      display: none;
-    }
-
-    .benefits-content-wrapper {
-      .benefit-card {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        min-height: 158px;
-
-        .card-text {
-          width: 100%;
-        }
-
-        .card-icon-box {
-          width: 100px;
-          height: 100px;
-        }
-      }
-
-      .zenex-showcase-card {
-        height: 400px;
-      }
-    }
-  }
-
-  // Benefits VIP
-  .benefits-vip-section {
-    padding: 30px 20px;
-
-    .vip-content-wrapper {
-      .vip-showcase-card {
-        height: 400px;
-      }
-
-      .vip-benefit-card {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        min-height: 158px;
-
-        .card-text {
-          width: 100%;
-        }
-
-        .card-icon-box {
-          width: 100px;
-          height: 100px;
-        }
-      }
-    }
-  }
-
-  // Get Started
-  .get-started-section {
-    .get-started-container {
-      padding: 30px 20px;
-
-      .get-started-columns {
-        .integration-column,
-        .issuance-column {
-          min-height: 350px;
-          padding: 40px 20px 60px;
-
-          h2 {
-            font-size: 36px;
-            line-height: 40px;
-            height: auto;
-          }
-
-          .integration-item,
-          .issuance-item {
-            flex-wrap: wrap;
-            gap: 12px;
-
-            p {
-              font-size: 14px;
-              line-height: 20px;
-            }
-          }
-        }
-      }
-
-      .cta-banner {
-        margin-top: 30px;
-        padding: 30px 15px;
-
-        .cta-content {
-          .cta-left {
-            width: 100%;
-
-            .cta-text-group {
-              width: 100%;
-
-              h3 {
-                font-size: 24px;
-                line-height: 24px;
-              }
-
-              p {
-                font-size: 14px;
-                line-height: 20px;
-                height: auto;
-              }
-            }
-          }
-
-          .cta-right {
-            width: 100%;
-
-            button {
-              width: 100%;
-              padding: 12px 24px;
-              height: auto;
-              min-height: 60px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+// Адаптивные стили перенесены в компоненты с использованием Tailwind классов
+// Все медиа-запросы удалены, так как теперь используются классы mobile: и tablet:

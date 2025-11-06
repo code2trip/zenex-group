@@ -28,11 +28,7 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="language-switcher">
-      <button
-        onClick={switchLocale}
-        className="active"
-        type="button"
-      >
+      <button onClick={switchLocale} className="active" type="button">
         {otherLocale ? otherLocale.toUpperCase() : currentLocale.toUpperCase()}
       </button>
     </div>

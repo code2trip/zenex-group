@@ -94,23 +94,35 @@ export default function ProjectsSection() {
       });
     }
 
-    const items = document.querySelectorAll('.project-card');
-    gsap.from(items, {
-      scrollTrigger: {
-        trigger: items,
-        start: 'top 75%',
-      },
-      duration: 1,
-      opacity: 0,
-      yPercent: 15,
-      stagger: 0.4,
+    const items = gsap.utils.toArray('.project-card');
+
+    items.forEach((item) => {
+      item.style.opacity = '1';
+      item.style.transform = 'translateY(0)';
     });
+
+    const tween = gsap.fromTo(
+      items,
+      { opacity: 0, yPercent: 15 },
+      {
+        opacity: 1,
+        yPercent: 0,
+        duration: 1,
+        stagger: 0.3,
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: swiperRef.current,
+          start: 'top bottom',
+        },
+      },
+    );
 
     return () => {
       if (swiperInstanceRef.current) {
         swiperInstanceRef.current.destroy();
         swiperInstanceRef.current = null;
       }
+      tween?.kill();
     };
   }, []);
 

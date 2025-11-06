@@ -1,3 +1,4 @@
+import './tailwind.css';
 import '@/styles/cards-igaming-vip.scss';
 import { Header, MarketProblem, OurSolution, BenefitsBusiness, BenefitsVip, GetStarted } from '../../../src/components/cards-igaming-vip/blocks';
 import Footer from '@/components/Footer';
@@ -19,6 +20,8 @@ export default async function CardsIGamingVipPage({ params }) {
       {/* Межсекционная зелёная подсветка (как на макете) */}
       <div className="between-glow" aria-hidden />
       <BenefitsVip />
+      {/* Blur элемент между BenefitsVip и GetStarted справа */}
+      <div className="benefits-vip-get-started-blur full-bleed" aria-hidden></div>
       <GetStarted />
       <Footer />
     </div>
