@@ -1,9 +1,10 @@
-import { useTranslations } from 'next-intl';
+'use client';
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Loader from '@/components/Loader';
-import PostSection from '@/components/sections/PostSection';
-import TextSection from '@/components/sections/TextSection';
+import ArticleContent from '@/components/article/ArticleContent';
+import ArticleSidebar from '@/components/article/ArticleSidebar';
 import '@/styles/article.scss';
 
 export default function ArticlePage({ params }) {
@@ -11,9 +12,13 @@ export default function ArticlePage({ params }) {
     <>
       <Loader />
       <Header />
-      <main>
-        <PostSection />
-        <TextSection />
+      <main className="article-page">
+        <div className="container">
+          <div className="article-page__layout">
+            <ArticleContent />
+            <ArticleSidebar />
+          </div>
+        </div>
       </main>
       <Footer />
     </>
