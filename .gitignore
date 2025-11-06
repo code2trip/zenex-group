@@ -9,6 +9,7 @@
 /.nuxtg
 /.gitignore
 /.next
+/.Root-old
 /out
 /build
 *.log

@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-background: #05aca4;
+    --primary-foreground: #ffffff;
+    --primary-light: #00ffefa5;
+    --primary-dark: #05aca4;
+
+    /* Secondary Colors */
+    --secondary-background: #ffffff;
+    --secondary-foreground: #272727;
+    --secondary-light: #f7f8fa;
+    --secondary-dark: #000000;
+
+    /* Accent Colors */
+    --accent-color: #ab996a;
+    --accent-foreground: #ffffff;
+    --accent-light: #9a885c4c;
+    --accent-dark: #9a885c;
+
+    /* Border Colors */
+    --border-primary: #ebebeb;
+    --border-secondary: #9a885c66;
+    --border-light: #ffffff66;
+    --border-accent: #05aca4;
+
+    /* Text Colors */
+    --text-primary: #272727;
+    --text-secondary: #757575;
+    --text-muted: #00000016;
+    --text-accent: #05aca4;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+
+    /* Background Colors */
+    --bg-main: #f7f8fa;
+    --bg-card: #ffffff;
+    --bg-overlay: #ffffff4c;
+    --bg-accent: #eafbfa;
+    --bg-neutral: #ebebeb;
+
+    /* Typography Variables */
+    --font-size-xs: 12px;
+    --font-size-sm: 15px;
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 22px;
+    --font-size-3xl: 24px;
+    --font-size-4xl: 27px;
+    --font-size-5xl: 30px;
+    --font-size-6xl: 50px;
+    --font-size-7xl: 70px;
+
+    /* Font Weight Variables */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    /* Line Height Variables */
+    --line-height-tight: 18px;
+    --line-height-snug: 20px;
+    --line-height-normal: 21px;
+    --line-height-relaxed: 25px;
+    --line-height-loose: 33px;
+
+    /* Spacing Variables */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+
+    /* Border Radius Variables */
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+    --radius-xl: 36px;
+    --radius-full: 200px;
+
+    /* Component-specific Colors */
+    --header-bg: #ffffff;
+    --button-primary-bg: #05aca4;
+    --button-secondary-bg: #ffffff;
+    --icon-button-bg: #ffffff3f;
+    --line-bg: #ebebeb;
+  }
+}
