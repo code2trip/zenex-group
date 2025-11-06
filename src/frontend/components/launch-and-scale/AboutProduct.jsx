@@ -1,9 +1,10 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 export default function AboutProduct() {
   const t = useTranslations('launchAndScale.about');
+  const locale = useLocale();
   
   const items = [
     { icon: '/images/analytics.svg', titleKey: 'dashboards' },
@@ -19,7 +20,15 @@ export default function AboutProduct() {
           <span className="ls-badge" aria-hidden>
             <img src="/images/medal.svg" alt="" />
           </span>
-          <h2 className="ls-about__title">{t('title')}</h2>
+          <h2 className="ls-about__title">
+            {locale === 'en' ? (
+              <>
+                {t('title').split(' ').slice(0, 2).join(' ')} <span>{t('title').split(' ').slice(2).join(' ')}</span>
+              </>
+            ) : (
+              t('title')
+            )}
+          </h2>
         </div>
 
         <div className="ls-about__grid">
@@ -32,8 +41,10 @@ export default function AboutProduct() {
               <div className="ls-about__icon" aria-hidden>
                 <img src={it.icon} alt="" />
               </div>
-              <div className="ls-about__name">{t(`${it.titleKey}.title`)}</div>
-              <div className="ls-about__text">{t(`${it.titleKey}.text`)}</div>
+              <div className="ls-about__content">
+                <div className="ls-about__name">{t(`${it.titleKey}.title`)}</div>
+                <div className="ls-about__text">{t(`${it.titleKey}.text`)}</div>
+              </div>
             </div>
           ))}
         </div>

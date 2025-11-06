@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from 'next-intl';
-import LanguageSwitcher from '@/frontend/components/LanguageSwitcher';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import '@/styles/components/header.scss';
 
 export default function Header() {

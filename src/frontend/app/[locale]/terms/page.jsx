@@ -1,7 +1,7 @@
-import Header from '@/frontend/components/Header';
-import Footer from '@/frontend/components/Footer';
-import Loader from '@/frontend/components/Loader';
-import TextSection from '@/frontend/components/sections/TextSection';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Loader from '@/components/Loader';
+import TextSection from '@/components/sections/TextSection';
 import '@/styles/text.scss';
 
 export default function TermsPage() {

@@ -359,20 +359,20 @@
         "title": "Fiat Module",
         "items": [
           "Integration with fiat payment providers",
-          "SWIFT, SEPA, cards, local methods",
+          "Deposits/withdrawals via SWIFT, SEPA, cards, local methods",
           "Instant peer‑to‑peer transfers",
-          "IBAN issuing",
-          "On/Off‑ramp"
+          "IBAN integration",
+          "On/Off‑ramp functionality"
         ]
       },
       "card": {
         "title": "Card Module",
         "items": [
           "Integration with card issuers",
-          "API to order & manage cards",
-          "Virtual & plastic cards, Apple/Google Pay",
-          "Unlimited partner transactions",
-          "Top‑ups with crypto & fiat"
+          "API access to order & manage cards",
+          "Issuance of virtual and branded plastic cards with Apple/Google Pay",
+          "Unlimited transactions for users to partner services",
+          "Top‑ups with both crypto and fiat"
         ]
       },
       "getOffer": "Get an Offer"

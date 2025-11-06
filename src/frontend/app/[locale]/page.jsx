@@ -1,13 +1,13 @@
 import { useTranslations } from 'next-intl';
-import Header from '@/frontend/components/Header';
-import Footer from '@/frontend/components/Footer';
-import HeroSection from '@/frontend/components/sections/HeroSection';
-import NumbersSection from '@/frontend/components/sections/NumbersSection';
-import ProjectsSection from '@/frontend/components/sections/ProjectsSection';
-import BannerSection from '@/frontend/components/sections/BannerSection';
-import MapSection from '@/frontend/components/sections/MapSection';
-import WhySection from '@/frontend/components/sections/WhySection';
-import Loader from '@/frontend/components/Loader';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import HeroSection from '@/components/sections/HeroSection';
+import NumbersSection from '@/components/sections/NumbersSection';
+import ProjectsSection from '@/components/sections/ProjectsSection';
+import BannerSection from '@/components/sections/BannerSection';
+import MapSection from '@/components/sections/MapSection';
+import WhySection from '@/components/sections/WhySection';
+import Loader from '@/components/Loader';
 
 export default function HomePage() {
   const t = useTranslations('home');

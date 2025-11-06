@@ -1,11 +1,11 @@
 import { useTranslations } from 'next-intl';
-import Header from '@/frontend/components/Header';
-import Footer from '@/frontend/components/Footer';
-import Loader from '@/frontend/components/Loader';
-import CareerHero from '@/frontend/components/sections/CareerHero';
-import CareerValues from '@/frontend/components/sections/CareerValues';
-import CareerWork from '@/frontend/components/sections/CareerWork';
-import CareerForm from '@/frontend/components/sections/CareerForm';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Loader from '@/components/Loader';
+import CareerHero from '@/components/sections/CareerHero';
+import CareerValues from '@/components/sections/CareerValues';
+import CareerWork from '@/components/sections/CareerWork';
+import CareerForm from '@/components/sections/CareerForm';
 import '@/styles/career.scss';
 
 export default function CareerPage() {

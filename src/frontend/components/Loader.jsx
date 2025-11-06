@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import initSplitText from '@/frontend/js/modules/init-split-text';
+import initSplitText from '@/js/modules/init-split-text';
 
 export default function Loader() {
   useEffect(() => {

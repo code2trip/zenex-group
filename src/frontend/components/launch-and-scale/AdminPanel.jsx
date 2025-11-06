@@ -1,11 +1,21 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
+import { useEffect, useState } from 'react';
 
 export default function AdminPanel() {
   const t = useTranslations('launchAndScale.admin');
   const locale = useLocale();
   const items = t.raw('items');
+  const [isMobile700, setIsMobile700] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 700px)');
+    const update = () => setIsMobile700(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
   return (
     <section className="ls-admin">
       <div className="container">
@@ -45,7 +55,15 @@ export default function AdminPanel() {
             <img src="/images/shturval.svg" alt="" className="ls-admin__shturval" aria-hidden="true" />
             <img src="/images/shturval2.svg" alt="" className="ls-admin__shturval2" aria-hidden="true" />
             <img src="/images/logo2.svg" alt="" className="ls-admin__logo" aria-hidden="true" />
-            <h3 className="ls-admin__big"><strong>{t('highlight').split(' ')[0]} {t('highlight').split(' ')[1]}</strong> {t('highlight').split(' ').slice(2).join(' ')}</h3>
+            <h3 className="ls-admin__big">
+              {locale === 'ru' && isMobile700
+                ? (
+                  <span><strong>Одно решение</strong> — безграничные возможности</span>
+                )
+                : (
+                  <span><strong>{t('highlight').split(' ')[0]} {t('highlight').split(' ')[1]}</strong> {t('highlight').split(' ').slice(2).join(' ')}</span>
+                )}
+            </h3>
           </div>
         </div>
       </div>
