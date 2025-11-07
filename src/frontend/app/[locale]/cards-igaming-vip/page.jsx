@@ -1,4 +1,3 @@
-import './tailwind.css';
 import '@/styles/cards-igaming-vip.scss';
 import { Header, MarketProblem, OurSolution, BenefitsBusiness, BenefitsVip, GetStarted } from '@/components/cards-igaming-vip/blocks';
 import Footer from '@/components/Footer';

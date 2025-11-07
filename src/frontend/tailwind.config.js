@@ -5,7 +5,6 @@ module.exports = {
     './components/**/*.{js,jsx,ts,tsx}',
     './lib/**/*.{js,jsx,ts,tsx}',
   ],
-  important: '#cards-igaming-vip',
   corePlugins: {
     preflight: false,
   },
