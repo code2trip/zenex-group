@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     './app/**/*.{js,jsx,ts,tsx}',
-    './src/components/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{js,jsx,ts,tsx}',
+    './lib/**/*.{js,jsx,ts,tsx}',
   ],
   important: '#cards-igaming-vip',
   corePlugins: {
@@ -11,9 +12,9 @@ module.exports = {
   theme: {
     extend: {},
     screens: {
-      'mobile': {'max': '767px'},
-      'tablet': {'max': '1024px'},
-      'desktop': '1025px',
+      mobile: { max: '767px' },
+      tablet: { min: '768px', max: '1024px' },
+      desktop: { min: '1025px' },
     },
   },
   plugins: [],

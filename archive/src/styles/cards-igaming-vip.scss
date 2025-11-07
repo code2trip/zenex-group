@@ -1,0 +1,1701 @@
+// Cards iGaming VIP Page Styles
+// Все стили для страницы /cards-igaming-vip
+
+#cards-igaming-vip {
+  position: relative;
+  isolation: isolate;
+  font-family: 'Inter', sans-serif;
+
+  * {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+// ============================================
+// COMMON UTILITY CLASSES
+// ============================================
+
+.section-container {
+  box-sizing: border-box;
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 75px;
+}
+
+.section-inner {
+  box-sizing: border-box;
+  width: 1290px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.section-title-group {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title-row {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.icon-box {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  padding: 9px 8px;
+  border-radius: 10px;
+  border: 1px solid #05aca4;
+
+  img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.title-text {
+  font-family: Inter, sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 50px;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0;
+
+  .accent {
+    color: #05aca4;
+  }
+
+  .dark {
+    color: #282828;
+  }
+}
+
+// ============================================
+// HEADER STYLES
+// ============================================
+
+.cards-vip-header {
+  position: relative;
+  min-height: 1080px;
+  overflow: visible;
+  background-image: url('/assets/card-header.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .header-nav-wrapper {
+    position: relative;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 16px;
+  }
+
+  .header-nav-container {
+    box-shadow: 0px 4px 18.5px rgba(110, 126, 159, 0.10);
+    background: white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 1322px;
+    max-width: calc(100% - 32px);
+    height: 77px;
+    padding: 0 16px 0 32px;
+    border-radius: 20px;
+
+    .header-actions {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      gap: 8px;
+      height: 77px;
+      flex: 0 0 auto;
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 108px 75px 75px 75px;
+    box-sizing: border-box;
+    min-height: 664px;
+    overflow: visible;
+
+          .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 48px;
+        flex: 0 1 auto;
+        width: 50%;
+        max-width: 502px;
+        padding-left: 74px;
+        transform: translateY(-10%);
+
+      .hero-title-group {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .hero-title {
+        font-family: Inter, sans-serif;
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 70px;
+        color: white;
+        margin: 0;
+      }
+
+      .hero-subtitle-group {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        height: 48px;
+
+        .subtitle-icon-box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+
+          img {
+            width: 46px;
+            height: 46px;
+            display: block;
+          }
+        }
+
+        .hero-subtitle {
+          font-family: Inter, sans-serif;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 24px;
+          color: white;
+          margin: 0;
+        }
+      }
+
+      .hero-cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 54px;
+        background: #05aca4;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: white;
+        width: auto;
+        height: 85px;
+        border-radius: 16px;
+        text-decoration: none;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #04968F;
+        }
+      }
+    }
+
+          .hero-right {
+        position: relative;
+        flex: 0 0 auto;
+        width: 46%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transform: translateY(-10%);
+        margin-left: -50px;
+        overflow: visible;
+
+      .vip-image {
+        width: 646px;
+        height: 773px;
+        object-fit: contain;
+        z-index: 5;
+        pointer-events: none;
+        max-width: none;
+      }
+    }
+  }
+}
+
+// ============================================
+// MARKET PROBLEM STYLES
+// ============================================
+
+.market-problem-section {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  width: 1440px;
+  max-width: 100%;
+  padding: 150px 75px 75px;
+
+  &.section-container {
+    padding: 150px 75px 75px;
+  }
+
+  .problem-description {
+    box-sizing: border-box;
+    width: 904px;
+    max-width: 100%;
+
+    p {
+      font-family: Inter, sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: left;
+      line-height: 28px;
+      color: #757575;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .problem-cards-grid {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 1290px;
+    max-width: 100%;
+
+    .problem-card {
+      box-shadow: 0px 4px 18.5px rgba(110, 126, 159, 0.10);
+      background: white;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      gap: 10px;
+      width: 414px;
+      max-width: 100%;
+      padding: 18px;
+      border-radius: 20px;
+
+      p {
+        font-family: Inter, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: left;
+        line-height: 23.5px;
+        color: #757575;
+        flex: 1 1 auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      .problem-icon-box {
+        background: linear-gradient(0deg, rgba(212,226,228,1) 0%, rgba(112,150,164,1) 100%);
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+        width: 122px;
+        height: 122px;
+        flex: 0 0 auto;
+        overflow: hidden;
+        padding: 19px;
+        border-radius: 18px;
+
+        .icon-inner {
+          background: rgba(255,255,255,0.25);
+          box-sizing: border-box;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: row;
+          gap: 10px;
+          flex: 0 0 auto;
+          padding: 16px;
+          border-radius: 36px;
+          border: 0.9px solid rgba(255,255,255,0.40);
+
+          img {
+            width: 40px;
+            height: 40px;
+            display: block;
+            max-width: initial;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ============================================
+// OUR SOLUTION STYLES
+// ============================================
+
+.our-solution-section {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  width: 1440px;
+  max-width: 100%;
+  padding: 75px;
+  font-family: Inter, sans-serif;
+
+  .solution-description {
+    box-sizing: border-box;
+    width: 904px;
+    max-width: 100%;
+
+    p {
+      font-family: Inter, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+      color: #757575;
+      flex: 0 0 auto;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+      .bold {
+        font-weight: 700;
+        color: #282828;
+      }
+    }
+  }
+
+  .solution-cards-row {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 24px;
+    width: 1290px;
+    max-width: 100%;
+
+    .solution-card {
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 32px;
+      border-radius: 20px;
+
+      h3 {
+        position: absolute;
+        top: 32px;
+        left: 32px;
+        font-family: Inter, sans-serif;
+        font-size: 27px;
+        font-weight: 700;
+        line-height: 27px;
+        text-align: left;
+        color: white;
+        width: auto;
+        z-index: 20;
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        position: absolute;
+        bottom: 32px;
+        left: 32px;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        text-align: left;
+        color: white;
+        margin: 0;
+        padding: 0;
+        z-index: 20;
+        width: 50%;
+        max-width: 333px;
+      }
+    }
+
+        .card-unlimited {
+      background: linear-gradient(180deg, rgba(212,226,228,1) 0%, rgba(112,150,164,1) 100%);
+      width: 414px;
+      max-width: 100%;
+      height: 318px;
+
+      .card-image-unlimited {
+        position: absolute;
+        width: 80%;
+        height: 85%;
+        top: 15%;
+        right: -10%;
+        z-index: 1;
+        pointer-events: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+        .card-approval {
+      background: linear-gradient(206.18deg, rgba(23,73,77,1) -0.03%, rgba(7,24,28,1) 100.03%);
+      width: 414px;
+      max-width: 100%;
+      height: 318px;
+      overflow: hidden;
+
+      .card-image-approval {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        top: 0;
+        right: -13%;
+        z-index: 1;
+        pointer-events: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+                 .card-protection {
+      background: linear-gradient(223.48deg, #00CDC3 2.52%, #006F66 100%);
+      width: 413.33px;
+      max-width: 100%;
+      height: 318px;
+      overflow: hidden;
+
+      .card-image-protection {
+        position: absolute;
+        width: 80%;
+        height: 85%;
+        top: 15%;
+        right: -15%;
+        z-index: 1;
+        pointer-events: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .card-fees {
+      background: linear-gradient(315deg, #cab97f 0%, #705f37 100%);
+      width: 633px;
+      max-width: 100%;
+      height: 294px;
+      overflow: hidden;
+
+      .card-image-fees {
+        position: absolute;
+        width: 392px;
+        height: 276px;
+        bottom: 0;
+        right: -4%;
+        z-index: 1;
+        pointer-events: none;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .card-worldwide {
+      border: 1px solid #ebebeb;
+      box-shadow: 0px 4px 37px rgba(0,0,0,0.05);
+      background: #ebfbfb;
+      width: 633px;
+      max-width: 100%;
+      height: 296px;
+      overflow: hidden;
+
+      h3 {
+        color: #282828;
+      }
+
+      p {
+        color: #282828;
+      }
+
+      .card-image-worldwide {
+        position: absolute;
+        width: 332px;
+        height: 388px;
+        right: 50px;
+        top: -57px;
+        z-index: 1;
+        pointer-events: none;
+
+        .worldwide-ellipses {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+
+          .ellipse-outer {
+            position: absolute;
+            width: 246px;
+            height: 246px;
+            left: 46px;
+            top: 57px;
+            border-radius: 50%;
+            border: 1px solid rgba(154, 136, 93, 0.3);
+            opacity: 0.3;
+          }
+
+          .ellipse-inner {
+            position: absolute;
+            width: 246px;
+            height: 246px;
+            left: 46px;
+            top: 57px;
+            border-radius: 50%;
+            border: 1px solid rgba(154, 136, 93, 0.3);
+            opacity: 0.6;
+          }
+        }
+
+        .worldwide-globe {
+          position: absolute;
+          width: 85%;
+          height: 87%;
+          bottom: 0;
+          right: -10%;
+          z-index: 2;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ============================================
+// BENEFITS BUSINESS STYLES
+// ============================================
+
+.benefits-business-section {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+  width: 1440px;
+  max-width: 100%;
+  height: auto;
+  min-height: 762px;
+  padding: 75px;
+  isolation: isolate;
+
+  .business-left-img {
+    position: absolute;
+    left: 59px;
+    top: 140px;
+    width: 380px;
+    height: 449px;
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .benefits-content-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 1290px;
+    max-width: 100%;
+    height: 522px;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 2;
+
+    // Переопределение для планшета и мобильной версии
+    @media (max-width: 1024px) {
+      flex-direction: column !important;
+      flex-wrap: nowrap !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      gap: 24px !important;
+    }
+
+    @media (max-width: 767px) {
+      gap: 10px !important;
+    }
+
+    .benefits-cards-list {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: flex-start;
+      padding: 0px;
+      gap: 24px;
+      width: 856px;
+      max-width: 100%;
+      height: 522px;
+      flex: none;
+      order: 0;
+      flex-grow: 1;
+
+      // Переопределение порядка для планшета и мобильной версии
+      @media (max-width: 1024px) {
+        order: 1 !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+
+      .benefit-card {
+        box-shadow: 0px 4px 18.6px rgba(110, 126, 159, 0.1);
+        background: white;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        width: 414px;
+        min-width: 350px;
+        max-width: 100%;
+        height: 158px;
+        padding: 18px;
+        border-radius: 20px;
+
+        // Переопределение для планшета
+        @media (max-width: 1024px) {
+          width: calc(50% - 10px) !important;
+          height: 167px !important;
+        }
+
+        // Переопределение для мобильной версии
+        @media (max-width: 767px) {
+          width: 100% !important;
+          height: auto !important;
+          min-height: 0 !important;
+        }
+
+        .card-text {
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          flex: 1 1 auto;
+
+          p {
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: left;
+            line-height: 24px;
+            color: #757575;
+            margin: 0;
+            padding: 0;
+
+            .bold {
+              font-weight: 700;
+              color: #282828;
+            }
+          }
+        }
+
+        .card-icon-box {
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          gap: 10px;
+          width: 122px;
+          height: 122px;
+          flex: 0 0 auto;
+          padding: 19px;
+          border-radius: 18px;
+
+          &.gradient-teal {
+            background: linear-gradient(223.48deg, #00CDC3 2.52%, #006F66 100%);
+          }
+
+          &.gradient-dark {
+            background: linear-gradient(206.18deg, #17494D -0.03%, #07181C 100.03%);
+          }
+
+          &.gradient-gold {
+            background: linear-gradient(40.33deg, #9A885D 5.99%, #E5D395 108.23%);
+          }
+
+          .icon-inner {
+            background: rgba(255,255,255,0.25);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 72px;
+            height: 72px;
+            flex: 0 0 auto;
+            padding: 16px;
+            border-radius: 36px;
+            border: 0.857143px solid rgba(255,255,255,0.4);
+
+            img {
+              width: 40px;
+              height: 40px;
+              flex: 0 0 auto;
+            }
+          }
+        }
+      }
+    }
+
+    .zenex-showcase-card {
+      box-shadow: 0px 4px 36.8px rgba(0, 0, 0, 0.05);
+      background: linear-gradient(256.82deg, #01645C 0%, #0A2125 100%);
+      background-image: url('/assets/Background-pattern-vip.svg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-sizing: border-box;
+      width: 410px;
+      min-width: 350px;
+      max-width: 410px;
+      height: 522px;
+      flex: none;
+      order: 1;
+      flex-grow: 1;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+
+      // Переопределение порядка для планшета и мобильной версии
+      @media (max-width: 1024px) {
+        order: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+      }
+
+      .zenex-icon {
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        left: 40px;
+        top: 40px;
+
+        .icon-bg {
+          position: absolute;
+          inset: 0;
+          background: #05ACA4;
+          border-radius: 50%;
+        }
+
+        img {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          padding: 8px;
+        }
+      }
+    }
+  }
+}
+
+// ============================================
+// BENEFITS VIP STYLES
+// ============================================
+
+.benefits-vip-section {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+  width: 1440px;
+  max-width: 100%;
+  height: auto;
+  min-height: 802px;
+  padding: 75px;
+  isolation: isolate;
+
+  .benefits-vip-decor {
+    position: absolute;
+    width: 67.9rem;
+    bottom: -6rem;
+    right: calc(-6rem - 5vw);
+    height: auto;
+    z-index: 20;
+    pointer-events: none;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    object-fit: contain;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  /* benefits-vip-decor-left удалён по требованию */
+
+  .vip-content-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px;
+    width: 1290px;
+    max-width: 100%;
+    height: auto;
+    align-self: stretch;
+    z-index: 2;
+
+    .vip-showcase-card {
+      box-sizing: border-box;
+      width: 414px;
+      max-width: 100%;
+      height: 522px;
+      flex: 0 0 auto;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      background-image: url('/assets/Background-pattern-vip.svg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      .zenex-icon {
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        left: 40px;
+        top: 40px;
+        z-index: 10;
+
+        .icon-bg {
+          position: absolute;
+          inset: 0;
+          background: #05ACA4;
+          border-radius: 50%;
+        }
+
+        img {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          padding: 8px;
+        }
+      }
+    }
+
+    .vip-cards-list {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: flex-start;
+      padding: 0px;
+      gap: 24px;
+      width: 852px;
+      max-width: 100%;
+      height: 522px;
+      flex: none;
+      order: 0;
+      flex-grow: 1;
+      isolation: isolate;
+      z-index: 3;
+
+      // Переопределение порядка для планшета и мобильной версии
+      @media (max-width: 1024px) {
+        order: 1 !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 20px !important;
+        height: auto !important;
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+
+      .vip-benefit-card {
+        box-shadow: 0px 4px 18.6px rgba(110, 126, 159, 0.1);
+        background: white;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        width: 414px;
+        min-width: 350px;
+        max-width: 100%;
+        height: 158px;
+        padding: 18px;
+        border-radius: 20px;
+        flex: 0 0 auto;
+
+        // Переопределение для планшета
+        @media (max-width: 1024px) {
+          width: calc(50% - 10px) !important;
+          height: 167px !important;
+        }
+
+        // Переопределение для мобильной версии
+        @media (max-width: 767px) {
+          width: 100% !important;
+          height: auto !important;
+          min-height: 0 !important;
+        }
+
+        .card-text {
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+          flex: 1 1 auto;
+
+          p {
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: left;
+            line-height: 24px;
+            color: #757575;
+            margin: 0;
+            padding: 0;
+
+            .bold {
+              font-weight: 700;
+              color: #282828;
+            }
+          }
+        }
+
+        .card-icon-box {
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          gap: 10px;
+          width: 122px;
+          height: 122px;
+          flex: 0 0 auto;
+          padding: 19px;
+          border-radius: 18px;
+
+          &.gradient-teal {
+            background: linear-gradient(223.48deg, #00CDC3 2.52%, #006F66 100%);
+          }
+
+          &.gradient-dark {
+            background: linear-gradient(206.18deg, #17494D -0.03%, #07181C 100.03%);
+          }
+
+          &.gradient-gold {
+            background: linear-gradient(40.33deg, #9A885D 5.99%, #E5D395 108.23%);
+          }
+
+          .icon-inner {
+            background: rgba(255,255,255,0.25);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 72px;
+            height: 72px;
+            flex: 0 0 auto;
+            padding: 16px;
+            border-radius: 36px;
+            border: 0.857143px solid rgba(255,255,255,0.4);
+
+            img {
+              width: 40px;
+              height: 40px;
+              flex: 0 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ============================================
+// GET STARTED STYLES
+// ============================================
+
+.get-started-section {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  width: 100%;
+
+  .get-started-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 75px 75px 150px;
+
+    .section-title-group {
+      width: 100%;
+      max-width: 1290px;
+      margin: 0 auto;
+    }
+
+    .get-started-columns {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: row;
+      gap: 24px;
+      width: 100%;
+      max-width: 1290px;
+      margin: 0 auto;
+      height: 454px;
+      overflow: visible;
+
+            .integration-column {
+        background: linear-gradient(329.48deg, #CAB97F 0%, #705F37 100%);
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 414px;
+        max-width: 100%;
+        height: 454px;
+        padding: 60px 24px 80px;
+        border-radius: 20px;
+        position: relative;
+        overflow: visible;
+        isolation: auto;
+
+        .integration-content {
+          box-sizing: border-box;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 24px;
+          width: 366px;
+          max-width: 100%;
+          height: auto;
+          align-self: stretch;
+          z-index: 0;
+
+          h2 {
+            font-family: Inter, sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 50px;
+            color: white;
+            width: 312px;
+            max-width: 100%;
+            height: 100px;
+            margin: 0;
+            padding: 0;
+          }
+
+          .integration-item {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            width: 366px;
+            max-width: 100%;
+            height: auto;
+            align-self: stretch;
+
+            .item-number {
+              background: white;
+              box-sizing: border-box;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: row;
+              gap: 10px;
+              width: 46px;
+              height: 46px;
+              flex: 0 0 auto;
+              padding: 9px 8px;
+              border-radius: 10px;
+
+              span {
+                font-family: Inter, sans-serif;
+                font-size: 27px;
+                font-weight: 700;
+                line-height: 27px;
+                color: #AB996A;
+              }
+            }
+
+            p {
+              font-family: Inter, sans-serif;
+              font-size: 16px;
+              line-height: 24px;
+              color: white;
+              flex: 1 1 auto;
+              margin: 0;
+              padding: 0;
+
+              .bold {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+
+      .issuance-column {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        width: 852px;
+        max-width: 100%;
+        height: 454px;
+        padding: 60px 24px 80px;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        isolation: auto;
+        background-image: url('/assets/Frame-352141.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        // Img Badge desktop - 3D визуал справа
+        .img-badge-desktop {
+          position: absolute;
+          width: 387px;
+          height: 406px;
+          right: -20px;
+          top: calc(50% - 406px / 2);
+          z-index: 2;
+          pointer-events: none;
+
+          // Декоративные эллипсы
+          .ellipse-decorative {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            border: 1px solid rgba(154, 136, 93, 0.3);
+            transform: scaleX(-1);
+          }
+
+          .ellipse-39 {
+            width: 299px;
+            height: 299px;
+            left: 58px;
+            top: 52px;
+          }
+
+          .ellipse-43 {
+            width: 255px;
+            height: 255px;
+            left: 80px;
+            top: 74px;
+          }
+
+          .ellipse-40 {
+            width: 403px;
+            height: 403px;
+            left: 3px;
+            top: 0;
+            opacity: 0.4;
+          }
+
+          // Бейджи
+          .badge {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 10.09px 16px;
+            height: 36px;
+            background: linear-gradient(88.49deg, #0C2426 1.28%, #0F4A44 98.92%);
+            border: 0.84px solid transparent;
+            background-clip: padding-box;
+            box-shadow: 3.36px 9.25px 7.15px rgba(0, 0, 0, 0.31);
+            border-radius: 45.4px;
+            box-sizing: border-box;
+            z-index: 10;
+
+            &::before {
+              content: '';
+              position: absolute;
+              inset: 0;
+              border-radius: 45.4px;
+              padding: 0.84px;
+              background: linear-gradient(90deg, rgba(154, 136, 93, 1) 34%, rgba(255, 238, 180, 1) 56%);
+              -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+              -webkit-mask-composite: xor;
+              mask-composite: exclude;
+              pointer-events: none;
+            }
+
+            span {
+              font-family: Urbanist, sans-serif;
+              font-size: 20.18px;
+              font-weight: 700;
+              line-height: 25px;
+              background: linear-gradient(40.33deg, #9A885D 5.99%, #E5D395 108.23%);
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+              color: transparent;
+            }
+
+            svg {
+              flex-shrink: 0;
+            }
+          }
+
+          .badge-ready {
+            width: 108px;
+            left: -15px;
+            top: 167px;
+
+            svg {
+              width: 14px;
+              height: 19.84px;
+            }
+          }
+
+          .badge-sync {
+            width: 93px;
+            left: 243px;
+            top: 125px;
+
+            svg {
+              width: 12px;
+              height: 18px;
+            }
+          }
+
+          .badge-api {
+            width: 88.63px;
+            left: 92px;
+            top: 280px;
+
+            svg {
+              width: 21.63px;
+              height: 21.63px;
+              transform: rotate(-45deg);
+            }
+          }
+
+          // 3D изображение hourglass
+          .hourglass-3d {
+            position: absolute;
+            width: 437.23px;
+            height: 437.23px;
+            left: -15px;
+            top: -8px;
+            transform: rotate(-15deg);
+            z-index: 0;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+
+        .issuance-content {
+          box-sizing: border-box;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 24px;
+          width: 804px;
+          max-width: 100%;
+          height: auto;
+          z-index: 1;
+
+          h2 {
+            font-family: Inter, sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 50px;
+            color: white;
+            width: 360px;
+            max-width: 100%;
+            height: 100px;
+            margin: 0;
+            padding: 0;
+          }
+
+          .issuance-item {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            width: 804px;
+            max-width: 100%;
+            height: auto;
+            align-self: stretch;
+
+            .item-number {
+              background: #05ACA4;
+              box-sizing: border-box;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: row;
+              gap: 10px;
+              width: 46px;
+              height: 46px;
+              flex: 0 0 auto;
+              padding: 9px 8px;
+              border-radius: 10px;
+
+              span {
+                font-family: Inter, sans-serif;
+                font-size: 27px;
+                font-weight: 700;
+                line-height: 27px;
+                color: white;
+              }
+            }
+
+            p {
+              font-family: Inter, sans-serif;
+              font-size: 16px;
+              line-height: 24px;
+              color: #EBEBEB;
+              flex: 1 1 auto;
+              margin: 0;
+              padding: 0;
+
+              .bold {
+                font-weight: 700;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .cta-banner {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      height: 280px;
+      margin: 50px auto 0;
+      border-radius: 20px;
+      overflow: visible;
+      background-image: url('/assets/Block-Lets-make-real-profit-together.svg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      .cta-content {
+        position: absolute;
+        width: 1210px;
+        max-width: calc(100% - 80px);
+        height: 134.58px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(50% - 67.29px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        z-index: 20;
+
+        .cta-left {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 24px;
+          width: 318px;
+          max-width: 100%;
+          height: auto;
+
+          .cta-logo {
+            width: 175px;
+            height: 23.58px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+
+          .cta-text-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            width: 318px;
+            max-width: 100%;
+            height: auto;
+
+            h3 {
+              font-family: Inter, sans-serif;
+              font-size: 27px;
+              font-weight: 700;
+              line-height: 27px;
+              background: linear-gradient(40.33deg, #9A885D 5.99%, #E5D395 108.23%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              width: 303px;
+              max-width: 100%;
+              height: 27px;
+              margin: 0;
+              padding: 0;
+            }
+
+            p {
+              font-family: Inter, sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              color: #F7F8FA;
+              width: 318px;
+              max-width: 100%;
+              height: 48px;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+
+        .cta-right {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 12px;
+          width: 277px;
+          max-width: 100%;
+          height: 85px;
+
+          button {
+            background: white;
+            border-radius: 16px;
+            padding: 15px 54px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 277px;
+            max-width: 100%;
+            height: 85px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+              background: #f5f5f5;
+            }
+
+            span {
+              font-family: Inter, sans-serif;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 24px;
+              text-transform: uppercase;
+              color: #282828;
+            }
+
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+
+      // Card Visual Background - контейнер для карточек
+      .cta-card-visual-background {
+        position: absolute;
+        top: 0;
+        left: 296px;
+        bottom: 0;
+        width: 709.33px;
+        height: 100%;
+        z-index: 10;
+
+        // Group 48100370 - фоновая картинка
+        .cta-group-bg {
+          position: absolute;
+          top: -100px;
+          left: 35.34px;
+          width: 638.47px;
+          height: 646.26px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        // Gift box элементы
+        .cta-gift-box {
+          position: absolute;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            mix-blend-mode: screen;
+            opacity: 0.4;
+            pointer-events: none;
+          }
+
+          &.gift-box-1 {
+            top: 54px;
+            left: 94.33px;
+            width: 94.44px;
+            height: 96.92px;
+          }
+
+          &.gift-box-2 {
+            top: -27.9px;
+            left: 340.69px;
+            width: 96.91px;
+            height: 104.24px;
+          }
+        }
+
+        // Credit card mockup my 1 - зеленая карточка (нижняя)
+        .cta-card-green {
+          position: absolute;
+          width: 75%;
+          height: 60%;
+          bottom: 0;
+          right: 25%;
+          object-fit: contain;
+          z-index: 20;
+          filter: drop-shadow(2.07px 2.07px 4.14px rgba(0, 0, 0, 0.25));
+        }
+
+        // Credit card mockup my 3 - черная карточка (верхняя)
+        .cta-card-black {
+          position: absolute;
+          width: 75%;
+          height: 85%;
+          bottom: 0;
+          right: 3%;
+          object-fit: contain;
+          z-index: 30;
+          filter: drop-shadow(2.07px 2.07px 4.14px rgba(0, 0, 0, 0.25));
+          transform-origin: center center;
+        }
+      }
+    }
+  }
+}
+
+// ============================================
+// RESPONSIVE STYLES
+// ============================================
+// Адаптивные стили перенесены в компоненты с использованием Tailwind классов
+// Все медиа-запросы удалены, так как теперь используются классы mobile: и tablet:

@@ -1,0 +1,84 @@
+.project-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    background-color: #fff;
+    box-shadow: 0px 4px 36.8px 0px rgba(0, 0, 0, 0.05);
+
+    &__img {
+        display: block;
+        height: auto;
+    }
+
+    &__inner {
+        padding: 3.5rem 3.2rem 2.5rem;
+    }
+
+    &__title {
+        color: #282828;
+        font-size: 2.7rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        color: #757575;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        margin-bottom: 1rem;
+    }
+
+    &__status {
+        height: 3.2rem;
+        padding: 0 1rem;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 2.2rem;
+
+        &.active {
+            color: #05ACA4;
+            background: #EBFBFB;
+        }
+
+        &.soon {
+            background-color: #EBEBEB;
+            color: #757575;
+        }
+    }
+
+    &__row {
+        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+        border-top: 0.1rem solid #EBEBEB;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__domain {
+        color: #282828;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    &__arrow {
+        display: block;
+        width: 2.4rem;
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}

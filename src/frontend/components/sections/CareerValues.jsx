@@ -2,45 +2,57 @@
 
 import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '@/styles/sections/career-values.scss';
-
-gsap.registerPlugin(ScrollTrigger);
+import { getGsapWithScrollTrigger } from '@/lib/gsap';
 
 const values = [
-  { key: 'innovation', icon: '/src/assets/images/value-icon-1.svg' },
-  { key: 'integrity', icon: '/src/assets/images/value-icon-2.svg' },
-  { key: 'excellence', icon: '/src/assets/images/value-icon-3.svg' },
-  { key: 'collaboration', icon: '/src/assets/images/value-icon-4.svg' },
-  { key: 'growth', icon: '/src/assets/images/value-icon-5.svg' },
-  { key: 'impact', icon: '/src/assets/images/value-icon-6.svg' },
+  { key: 'innovation', icon: '/images/value-icon-1.svg' },
+  { key: 'integrity', icon: '/images/value-icon-2.svg' },
+  { key: 'excellence', icon: '/images/value-icon-3.svg' },
+  { key: 'collaboration', icon: '/images/value-icon-4.svg' },
+  { key: 'growth', icon: '/images/value-icon-5.svg' },
+  { key: 'impact', icon: '/images/value-icon-6.svg' },
 ];
 
 export default function CareerValues() {
   const t = useTranslations('career.values');
 
   useEffect(() => {
-    const items = document.querySelectorAll('.career-values__item');
-    gsap.fromTo(items, {
-      opacity: 0,
-      yPercent: 15,
-    }, {
-      scrollTrigger: {
-        trigger: items,
-        start: 'top 75%',
-      },
-      duration: 1,
-      opacity: 1,
-      yPercent: 0,
-      stagger: 0.4,
-    });
+    let tween;
+    let mounted = true;
+
+    (async () => {
+      const { gsap } = await getGsapWithScrollTrigger();
+      if (!mounted) return;
+
+      const items = gsap.utils?.toArray('.career-values__item') ?? Array.from(document.querySelectorAll('.career-values__item'));
+
+      tween = gsap.fromTo(
+        items,
+        { opacity: 0, yPercent: 15 },
+        {
+          scrollTrigger: {
+            trigger: items,
+            start: 'top 75%',
+          },
+          duration: 1,
+          opacity: 1,
+          yPercent: 0,
+          stagger: 0.4,
+        },
+      );
+    })();
+
+    return () => {
+      mounted = false;
+      tween?.kill();
+    };
   }, []);
 
   return (
     <section className="career-values">
       <img
-        src="/src/assets/images/career-decor-1.svg"
+        src="/images/career-decor-1.svg"
         alt=""
         className="career-values__decor"
       />
@@ -49,7 +61,7 @@ export default function CareerValues() {
       <div className="container">
         <div className="career-values__header">
           <h2 className="career-values__title title">
-            <img src="/src/assets/images/core-icon.svg" alt="" />
+            <img src="/images/core-icon.svg" alt="" />
             {t('title')} <strong>{t('titleStrong')}</strong>
           </h2>
           <span className="career-values__label label">{t('label')}</span>

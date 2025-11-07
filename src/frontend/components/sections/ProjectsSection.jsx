@@ -2,14 +2,9 @@
 
 import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import { Swiper } from 'swiper';
-import { FreeMode, Mousewheel } from 'swiper/modules';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'swiper/css';
 import '@/styles/sections/projects-section.scss';
-
-gsap.registerPlugin(ScrollTrigger);
+import { getGsapWithScrollTrigger } from '@/lib/gsap';
 
 const projects = [
   {
@@ -18,7 +13,7 @@ const projects = [
     status: 'active',
     domain: 'zenex-coin.com',
     url: 'https://zenex-coin.com',
-    image: '/src/assets/images/webp/project-card-img-1.webp',
+    image: '/images/webp/project-card-img-1.webp',
   },
   {
     title: 'Next-On',
@@ -26,7 +21,7 @@ const projects = [
     status: 'active',
     domain: 'next-on.pro',
     url: 'https://next-on.pro',
-    image: '/src/assets/images/webp/project-card-img-2.webp',
+    image: '/images/webp/project-card-img-2.webp',
   },
   {
     title: 'NS-Card',
@@ -34,7 +29,7 @@ const projects = [
     status: 'active',
     domain: 'ns.cards',
     url: 'https://ns.cards',
-    image: '/src/assets/images/webp/project-card-img-3.webp',
+    image: '/images/webp/project-card-img-3.webp',
   },
   {
     title: 'WR Bet',
@@ -42,7 +37,7 @@ const projects = [
     status: 'active',
     domain: 'wrbet.ke',
     url: 'https://wrbet.ke',
-    image: '/src/assets/images/webp/project-card-img-4.webp',
+    image: '/images/webp/project-card-img-4.webp',
   },
   {
     title: 'White Rabbit Casino',
@@ -50,7 +45,7 @@ const projects = [
     status: 'active',
     domain: 'whiterabbit.casino',
     url: 'https://whiterabbit.casino',
-    image: '/src/assets/images/webp/project-card-img-5.webp',
+    image: '/images/webp/project-card-img-5.webp',
   },
   {
     title: 'Zenex Group',
@@ -58,7 +53,7 @@ const projects = [
     status: 'soon',
     domain: 'zenex-project.com',
     url: 'https://zenex-project.com',
-    image: '/src/assets/images/webp/project-card-img-6.webp',
+    image: '/images/webp/project-card-img-6.webp',
   },
   {
     title: 'Axioma',
@@ -66,7 +61,7 @@ const projects = [
     status: 'active',
     domain: 'axioma.bet',
     url: 'https://axioma.bet',
-    image: '/src/assets/images/webp/project-card-img-7.webp',
+    image: '/images/webp/project-card-img-7.webp',
   },
   {
     title: 'Mi7 EU',
@@ -74,7 +69,7 @@ const projects = [
     status: 'soon',
     domain: 'mi7eu.bet',
     url: 'https://mi7.eu',
-    image: '/src/assets/images/webp/project-card-img-8.webp',
+    image: '/images/webp/project-card-img-8.webp',
   },
 ];
 
@@ -84,7 +79,22 @@ export default function ProjectsSection() {
   const swiperInstanceRef = useRef(null);
 
   useEffect(() => {
-    if (swiperRef.current && !swiperInstanceRef.current) {
+    let mounted = true;
+    let tween;
+
+    (async () => {
+      if (!swiperRef.current || swiperInstanceRef.current) return;
+
+      const [{ Swiper }, modules, { gsap, ScrollTrigger }] = await Promise.all([
+        import('swiper'),
+        import('swiper/modules'),
+        getGsapWithScrollTrigger(),
+      ]);
+
+      if (!mounted || !swiperRef.current) return;
+
+      const { FreeMode, Mousewheel } = modules;
+
       swiperInstanceRef.current = new Swiper(swiperRef.current, {
         modules: [FreeMode, Mousewheel],
         freeMode: true,
@@ -92,32 +102,36 @@ export default function ProjectsSection() {
         spaceBetween: 20,
         mousewheel: true,
       });
-    }
 
-    const items = gsap.utils.toArray('.project-card');
+      const items = gsap.utils.toArray('.project-card');
 
-    items.forEach((item) => {
-      item.style.opacity = '1';
-      item.style.transform = 'translateY(0)';
-    });
+      items.forEach((item) => {
+        const element = item;
+        if (element && element.style) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
 
-    const tween = gsap.fromTo(
-      items,
-      { opacity: 0, yPercent: 15 },
-      {
-        opacity: 1,
-        yPercent: 0,
-        duration: 1,
-        stagger: 0.3,
-        immediateRender: false,
-        scrollTrigger: {
-          trigger: swiperRef.current,
-          start: 'top bottom',
+      tween = gsap.fromTo(
+        items,
+        { opacity: 0, yPercent: 15 },
+        {
+          opacity: 1,
+          yPercent: 0,
+          duration: 1,
+          stagger: 0.3,
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: swiperRef.current,
+            start: 'top bottom',
+          },
         },
-      },
-    );
+      );
+    })();
 
     return () => {
+      mounted = false;
       if (swiperInstanceRef.current) {
         swiperInstanceRef.current.destroy();
         swiperInstanceRef.current = null;
@@ -131,7 +145,7 @@ export default function ProjectsSection() {
       <div className="container">
         <div className="projects-section__header">
           <h2 className="projects-section__title title">
-            <img src="/src/assets/images/project-icon.svg" alt="" />
+            <img src="/images/project-icon.svg" alt="" />
             {t('title')}
           </h2>
           <p className="projects-section__text">{t('text')}</p>

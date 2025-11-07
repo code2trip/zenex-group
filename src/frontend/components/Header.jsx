@@ -3,9 +3,9 @@
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import gsap from 'gsap';
+import { useState, useEffect, useRef } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
+import { getGsap } from '@/lib/gsap';
 import '@/styles/components/header.scss';
 import '@/styles/components/menu.scss';
 
@@ -15,6 +15,7 @@ export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuInnerHeight, setMenuInnerHeight] = useState(0);
+  const gsapRef = useRef(null);
 
   useEffect(() => {
     const menuElement = document.querySelector('.menu');
@@ -22,9 +23,22 @@ export default function Header() {
     if (menuInnerElement) {
       setMenuInnerHeight(menuInnerElement.offsetHeight);
     }
+
+    let mounted = true;
+    getGsap().then((instance) => {
+      if (mounted) {
+        gsapRef.current = instance;
+      }
+    });
+
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   const openMenu = () => {
+    const gsap = gsapRef.current;
+    if (!gsap) return;
     const menu = document.querySelector('.menu');
     const header = document.querySelector('.header');
     const overlay = document.querySelector('.overlay');
@@ -44,6 +58,8 @@ export default function Header() {
   };
 
   const closeMenu = () => {
+    const gsap = gsapRef.current;
+    if (!gsap) return;
     const menu = document.querySelector('.menu');
     const header = document.querySelector('.header');
     const overlay = document.querySelector('.overlay');

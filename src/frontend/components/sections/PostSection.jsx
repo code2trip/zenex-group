@@ -24,11 +24,11 @@ export default function PostSection() {
         <div className="post-section__body">
           <picture className="post-section__cover">
             <source
-              srcSet="/src/assets/images/webp/article-cover-d.webp"
+              srcSet="/images/webp/article-cover-d.webp"
               type="image/webp"
               media="(min-width: 768px)"
             />
-            <img src="/src/assets/images/webp/article-cover-m.webp" alt="" />
+            <img src="/images/webp/article-cover-m.webp" alt="" />
           </picture>
           <div className="post-section__inner">
             <div className="post-section__row">

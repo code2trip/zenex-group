@@ -10,13 +10,13 @@ export default function WhySection() {
     <section className="why-section">
       <img
         className="why-section__decor"
-        src="/src/assets/images/career-decor-2.svg"
+        src="/images/career-decor-2.svg"
         alt=""
       />
       <div className="container">
         <div className="why-section__header">
           <h2 className="why-section__title title">
-            <img src="/src/assets/images/why-icon.svg" alt="" />
+            <img src="/images/why-icon.svg" alt="" />
             {t('title')} <strong>{t('titleStrong')}</strong>
           </h2>
           <p className="why-section__text">{t('text')}</p>

@@ -9,13 +9,13 @@ export default function HeroSection() {
   return (
     <section className="hero-section">
       <video autoPlay muted loop playsInline className="hero-section__video">
-        <source src="/src/assets/videos/video.mp4" type="video/mp4" />
+        <source src="/videos/video.mp4" type="video/mp4" />
       </video>
 
       <div className="container">
         <div className="hero-section__inner">
           <div className="hero-section__text">
-            <img src="/src/assets/images/hero-icon.svg" alt="" />
+            <img src="/images/hero-icon.svg" alt="" />
             <p data-line-wrap-split>{t('description')}</p>
           </div>
           <h1 className="hero-section__title" data-line-wrap-split>

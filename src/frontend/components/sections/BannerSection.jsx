@@ -16,12 +16,12 @@ export default function BannerSection({ variant = 'style-1' }) {
         <div className="banner__inner">
           <picture className="banner__bg">
             <source
-              srcSet={`/src/assets/images/webp/banner-${variant === 'style-1' ? '1' : '2'}-bg-d.webp`}
+              srcSet={`/images/webp/banner-${variant === 'style-1' ? '1' : '2'}-bg-d.webp`}
               type="image/webp"
               media="(min-width: 768px)"
             />
             <img
-              src={`/src/assets/images/webp/banner-${variant === 'style-1' ? '1' : '2'}-bg-m.webp`}
+              src={`/images/webp/banner-${variant === 'style-1' ? '1' : '2'}-bg-m.webp`}
               alt=""
             />
           </picture>

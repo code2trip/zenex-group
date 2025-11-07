@@ -1,0 +1,74 @@
+@use '../cards/why-card.scss';
+
+.why-section {
+    padding-top: 7rem;
+
+    &__header {
+        display: grid;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        color: #757575;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &__list {
+        display: grid;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .why-section {
+        &__label {
+            display: none;
+        }
+
+        &__decor {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .why-section {
+        padding-top: 15rem;
+        position: relative;
+
+        &__decor {
+            position: absolute;
+            top: 2.3rem;
+            width: 67.9rem;
+            left: 19.5rem;
+
+        }
+
+        &__header {
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        &__label {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &__list {
+            grid-template-columns: 1fr 32.4rem 32.4rem;
+            gap: 2.5rem;
+        }
+
+        &__item {
+            &:nth-child(1) {
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+        }
+    }
+}

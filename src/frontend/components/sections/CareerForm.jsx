@@ -154,14 +154,14 @@ export default function CareerForm() {
   return (
     <section className="career-form" id="form">
       <img
-        src="/src/assets/images/career-decor-3.svg"
+        src="/images/career-decor-3.svg"
         alt=""
         className="career-form__decor"
       />
       <div className="container">
         <div className="career-form__header">
           <h2 className="career-form__title title">
-            <img src="/src/assets/images/form-icon.svg" alt="" />
+            <img src="/images/form-icon.svg" alt="" />
             {t('title')} <strong>{t('titleStrong')}</strong>
           </h2>
           <span className="career-form__label label">{t('label')}</span>
@@ -179,7 +179,7 @@ export default function CareerForm() {
               ].map((item, index) => (
                 <li key={index} className="career-form__list-item">
                   <img
-                    src={`/src/assets/images/career-form-icon-${index + 1}.svg`}
+                    src={`/images/career-form-icon-${index + 1}.svg`}
                     alt=""
                     className="career-form__list-item-icon"
                   />
@@ -194,7 +194,7 @@ export default function CareerForm() {
           <div className="career-form__inner">
             <form ref={formRef} className="form" encType="multipart/form-data" onSubmit={handleSubmit} noValidate>
               <div className="form__title">
-                <img src="/src/assets/images/contact-icon.svg" alt="" />
+                <img src="/images/contact-icon.svg" alt="" />
                 {t('contactTitle')}
               </div>
 
@@ -249,7 +249,7 @@ export default function CareerForm() {
                         accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.webp"
                       />
                       <div className="upload__icon">
-                        <img src="/src/assets/images/upload.svg" alt="Upload" />
+                        <img src="/images/upload.svg" alt="Upload" />
                       </div>
                       <div className="upload__content">
                         <p className="upload__title">{t('fields.cv')}</p>

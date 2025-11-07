@@ -1,0 +1,196 @@
+@use './upload.scss';
+
+.form {
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: #000;
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        margin-bottom: 1.4rem;
+
+        img {
+            width: 1.6rem;
+            height: auto;
+        }
+    }
+
+    &__body {
+        display: grid;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__field {
+        position: relative;
+        min-height: 4.8rem;
+        display: flex;
+        align-items: flex-end;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 0.1rem solid #757575;
+            transition: 0.3s;
+        }
+
+        &.focus {
+            &::after {
+                border-bottom: 0.2rem solid #05ACA4;
+            }
+
+            .form {
+                &__label {
+                    top: 0.4rem;
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                    color: #05ACA4;
+                }
+            }
+        }
+
+        &.fill {
+            .form {
+                &__label {
+                    top: 0.4rem;
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+
+        &.error {
+            &::after {
+                border-bottom-color: #E85143;
+            }
+        }
+    }
+
+    // &__field--textarea {
+    //     .form {
+    //         &__label {
+    //             top: 2.4rem;
+    //         }
+    //     }
+    // }
+
+    &__label {
+        position: absolute;
+        top: 1.6rem;
+        left: 0;
+        color: #757575;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem;
+        letter-spacing: 0.05rem;
+        transition: 0.3s;
+        pointer-events: none;
+    }
+
+    &__input {
+        border: none;
+        background-color: #fff;
+        width: 100%;
+        color: #282828;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem;
+        letter-spacing: 0.05rem;
+        padding: 0 0 0.8rem 0;
+    }
+
+    &__textarea {
+        margin-top: 2.4rem;
+        border: none;
+        background-color: #fff;
+        width: 100%;
+        color: #282828;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.4rem;
+        letter-spacing: 0.05rem;
+        box-sizing: border-box;
+        padding: 0 0 0.8rem 0;
+        height: auto;
+        min-height: 3.2rem;
+    }
+
+    &__button {
+        border-radius: 1.6rem;
+        background: #05ACA4;
+        backdrop-filter: blur(50px);
+        padding: 0 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 6.5rem;
+        color: #fff;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+        width: 100%;
+
+        svg {
+            width: 2.4rem;
+            height: auto;
+        }
+    }
+
+    &__notice {
+        color: #757575;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}
+
+@media (min-width: 768px) {
+    .form {
+        &__title {
+            font-size: 2.7rem;
+            margin-bottom: 2.3rem;
+
+            img {
+                width: 2.2rem;
+                height: auto;
+            }
+        }
+
+        &__body {
+            gap: 2.3rem;
+        }
+
+        &__field {
+            min-height: 5.6rem;
+        }
+
+        &__button {
+            transition: background-color 0.3s;
+            height: 6.5rem;
+
+            &:hover {
+                background-color: #04968F;
+            }
+        }
+
+        &__notice {
+            font-size: 1.2rem;
+        }
+    }
+}

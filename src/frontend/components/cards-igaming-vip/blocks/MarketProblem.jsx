@@ -4,6 +4,14 @@ import { useTranslations } from 'next-intl';
 
 export default function MarketProblem() {
   const t = useTranslations('cardsVip.marketProblem');
+  const cards = [
+    { key: 'blocked', image: '/assets/image_c92b9845.png' },
+    { key: 'fees', image: '/assets/image_8daddbc1.png' },
+    { key: 'limits', image: '/assets/image_a5190a7d.png' },
+    { key: 'settlement', image: '/assets/image_e31ad966.png' },
+    { key: 'regions', image: '/assets/image_31bfa3fb.png' },
+    { key: 'privacy', image: '/assets/image_ba116ca.png' },
+  ];
 
   return (
     <div className="market-problem-section section-container tablet:pt-[100px] tablet:pb-[50px] tablet:px-10 mobile:pt-[70px] mobile:pb-[35px] mobile:px-0">
@@ -24,66 +32,22 @@ export default function MarketProblem() {
       </div>
 
       {/* Карточки проблем — 3 колонки × 2 строки, во всю ширину контейнера */}
-      <div className="problem-cards-grid tablet:grid-cols-2 tablet:gap-5 tablet:w-full mobile:grid-cols-1 mobile:gap-2.5 mobile:w-full mobile:max-w-[350px]">
-        {/* Blocked or declined transactions */}
-        <div className="problem-card tablet:p-[18px] tablet:gap-2.5 mobile:flex-row mobile:items-center mobile:p-[18px] mobile:gap-2.5 mobile:h-auto mobile:min-h-0">
-          <p className="tablet:text-[27px] tablet:leading-[27px] mobile:text-lg mobile:leading-[23.5px] mobile:flex-1">{t('problems.blocked')}</p>
-          <div className="problem-icon-box tablet:w-[122px] tablet:h-[122px] tablet:p-[19px] mobile:w-20 mobile:h-20 mobile:p-[12.459px] mobile:flex-none">
-            <div className="icon-inner tablet:w-[72px] tablet:h-[72px] tablet:p-4 mobile:w-12 mobile:h-12 mobile:p-[10.492px]">
-              <img src="/assets/image_c92b9845.png" alt="" className="tablet:w-10 tablet:h-10 mobile:w-7 mobile:h-7" />
+      <div className="problem-cards-grid grid w-full max-w-[1290px] mx-auto grid-cols-1 gap-4 tablet:max-w-[720px] tablet:grid-cols-2 tablet:gap-5 desktop:max-w-[1290px] desktop:grid-cols-3 desktop:gap-6">
+        {cards.map(({ key, image }) => (
+          <div
+            key={key}
+            className="flex w-full items-center gap-[10px] rounded-[20px] bg-white px-[18px] py-[18px] shadow-[0_4px_36.8px_rgba(0,0,0,0.05)] tablet:h-[116px] tablet:max-w-[350px] tablet:min-w-[350px] tablet:justify-between desktop:max-w-[414px]"
+          >
+            <p className="m-0 flex-1 text-[16px] font-normal leading-[24px] text-[#757575] tablet:text-[27px] tablet:leading-[27px] tablet:w-[150px] tablet:min-w-[150px] tablet:max-w-[150px] tablet:flex-none desktop:text-[18px] desktop:leading-[23.5px] desktop:font-bold">
+              {t(`problems.${key}`)}
+            </p>
+            <div className="flex h-[100px] w-[100px] flex-none items-center justify-center gap-[10px] rounded-[18px] bg-[linear-gradient(180deg,#D4E2E4_0%,#7096A4_100%)] p-[16px] tablet:h-[122px] tablet:w-[122px] tablet:p-[19px]">
+              <div className="flex h-[60px] w-[60px] items-center justify-center rounded-full border border-[rgba(255,255,255,0.40)] bg-[rgba(255,255,255,0.25)] p-3 tablet:h-[72px] tablet:w-[72px] tablet:p-4">
+                <img src={image} alt="" className="h-8 w-8 tablet:h-10 tablet:w-10" />
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* High transaction fees */}
-        <div className="problem-card tablet:p-[18px] tablet:gap-2.5 mobile:flex-row mobile:items-center mobile:p-[18px] mobile:gap-2.5 mobile:h-auto mobile:min-h-0">
-          <p className="tablet:text-[27px] tablet:leading-[27px] mobile:text-lg mobile:leading-[23.5px] mobile:flex-1">{t('problems.fees')}</p>
-          <div className="problem-icon-box tablet:w-[122px] tablet:h-[122px] tablet:p-[19px] mobile:w-20 mobile:h-20 mobile:p-[12.459px] mobile:flex-none">
-            <div className="icon-inner tablet:w-[72px] tablet:h-[72px] tablet:p-4 mobile:w-12 mobile:h-12 mobile:p-[10.492px]">
-              <img src="/assets/image_8daddbc1.png" alt="" className="tablet:w-10 tablet:h-10 mobile:w-7 mobile:h-7" />
-            </div>
-          </div>
-        </div>
-
-        {/* Deposit and withdrawal limits */}
-        <div className="problem-card tablet:p-[18px] tablet:gap-2.5 mobile:flex-row mobile:items-center mobile:p-[18px] mobile:gap-2.5 mobile:h-auto mobile:min-h-0">
-          <p className="tablet:text-[27px] tablet:leading-[27px] mobile:text-lg mobile:leading-[23.5px] mobile:flex-1">{t('problems.limits')}</p>
-          <div className="problem-icon-box tablet:w-[122px] tablet:h-[122px] tablet:p-[19px] mobile:w-20 mobile:h-20 mobile:p-[12.459px] mobile:flex-none">
-            <div className="icon-inner tablet:w-[72px] tablet:h-[72px] tablet:p-4 mobile:w-12 mobile:h-12 mobile:p-[10.492px]">
-              <img src="/assets/image_a5190a7d.png" alt="" className="tablet:w-10 tablet:h-10 mobile:w-7 mobile:h-7" />
-            </div>
-          </div>
-        </div>
-
-        {/* Long settlement times */}
-        <div className="problem-card tablet:p-[18px] tablet:gap-2.5 mobile:flex-row mobile:items-center mobile:p-[18px] mobile:gap-2.5 mobile:h-auto mobile:min-h-0">
-          <p className="tablet:text-[27px] tablet:leading-[27px] mobile:text-lg mobile:leading-[23.5px] mobile:flex-1">{t('problems.settlement')}</p>
-          <div className="problem-icon-box tablet:w-[122px] tablet:h-[122px] tablet:p-[19px] mobile:w-20 mobile:h-20 mobile:p-[12.459px] mobile:flex-none">
-            <div className="icon-inner tablet:w-[72px] tablet:h-[72px] tablet:p-4 mobile:w-12 mobile:h-12 mobile:p-[10.492px]">
-              <img src="/assets/image_e31ad966.png" alt="" className="tablet:w-10 tablet:h-10 mobile:w-7 mobile:h-7" />
-            </div>
-          </div>
-        </div>
-
-        {/* Difficulty in regions */}
-        <div className="problem-card tablet:p-[18px] tablet:gap-2.5 mobile:flex-row mobile:items-center mobile:p-[18px] mobile:gap-2.5 mobile:h-auto mobile:min-h-0">
-          <p className="tablet:text-[27px] tablet:leading-[27px] mobile:text-lg mobile:leading-[23.5px] mobile:flex-1">{t('problems.regions')}</p>
-          <div className="problem-icon-box tablet:w-[122px] tablet:h-[122px] tablet:p-[19px] mobile:w-20 mobile:h-20 mobile:p-[12.459px] mobile:flex-none">
-            <div className="icon-inner tablet:w-[72px] tablet:h-[72px] tablet:p-4 mobile:w-12 mobile:h-12 mobile:p-[10.492px]">
-              <img src="/assets/image_31bfa3fb.png" alt="" className="tablet:w-10 tablet:h-10 mobile:w-7 mobile:h-7" />
-            </div>
-          </div>
-        </div>
-
-        {/* No privacy */}
-        <div className="problem-card tablet:p-[18px] tablet:gap-2.5 mobile:flex-row mobile:items-center mobile:p-[18px] mobile:gap-2.5 mobile:h-auto mobile:min-h-0">
-          <p className="tablet:text-[27px] tablet:leading-[27px] mobile:text-lg mobile:leading-[23.5px] mobile:flex-1">{t('problems.privacy')}</p>
-          <div className="problem-icon-box tablet:w-[122px] tablet:h-[122px] tablet:p-[19px] mobile:w-20 mobile:h-20 mobile:p-[12.459px] mobile:flex-none">
-            <div className="icon-inner tablet:w-[72px] tablet:h-[72px] tablet:p-4 mobile:w-12 mobile:h-12 mobile:p-[10.492px]">
-              <img src="/assets/image_ba116ca.png" alt="" className="tablet:w-10 tablet:h-10 mobile:w-7 mobile:h-7" />
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

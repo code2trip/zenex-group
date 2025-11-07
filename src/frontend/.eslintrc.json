@@ -57,14 +57,14 @@
         ],
         "moduleDirectory": [
           "node_modules",
-          "src"
+          "."
         ]
       },
       "alias": {
         "map": [
           [
             "@",
-            "./src"
+            "./"
           ]
         ],
         "extensions": [

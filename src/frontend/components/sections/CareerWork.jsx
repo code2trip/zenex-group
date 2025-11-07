@@ -2,32 +2,29 @@
 
 import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '@/styles/sections/career-work.scss';
-
-gsap.registerPlugin(ScrollTrigger);
+import { getGsapWithScrollTrigger } from '@/lib/gsap';
 
 const workItems = [
   {
     key: 'professional',
-    icon: '/src/assets/images/work-icon-1.svg',
-    checkIcon: '/src/assets/images/check-gold.svg',
+    icon: '/images/work-icon-1.svg',
+    checkIcon: '/images/check-gold.svg',
   },
   {
     key: 'workLife',
-    icon: '/src/assets/images/work-icon-2.svg',
-    checkIcon: '/src/assets/images/check-green.svg',
+    icon: '/images/work-icon-2.svg',
+    checkIcon: '/images/check-green.svg',
   },
   {
     key: 'benefits',
-    icon: '/src/assets/images/work-icon-3.svg',
-    checkIcon: '/src/assets/images/check-green.svg',
+    icon: '/images/work-icon-3.svg',
+    checkIcon: '/images/check-green.svg',
   },
   {
     key: 'culture',
-    icon: '/src/assets/images/work-icon-4.svg',
-    checkIcon: '/src/assets/images/check-gold.svg',
+    icon: '/images/work-icon-4.svg',
+    checkIcon: '/images/check-gold.svg',
   },
 ];
 
@@ -35,33 +32,48 @@ export default function CareerWork() {
   const t = useTranslations('career.work');
 
   useEffect(() => {
-    const items = document.querySelectorAll('.career-work__item');
-    gsap.fromTo(items, {
-      opacity: 0,
-      yPercent: 15,
-    }, {
-      scrollTrigger: {
-        trigger: items,
-        start: 'top 75%',
-      },
-      duration: 1,
-      opacity: 1,
-      yPercent: 0,
-      stagger: 0.4,
-    });
+    let tween;
+    let mounted = true;
+
+    (async () => {
+      const { gsap } = await getGsapWithScrollTrigger();
+      if (!mounted) return;
+
+      const items = gsap.utils?.toArray('.career-work__item') ?? Array.from(document.querySelectorAll('.career-work__item'));
+
+      tween = gsap.fromTo(
+        items,
+        { opacity: 0, yPercent: 15 },
+        {
+          scrollTrigger: {
+            trigger: items,
+            start: 'top 75%',
+          },
+          duration: 1,
+          opacity: 1,
+          yPercent: 0,
+          stagger: 0.4,
+        },
+      );
+    })();
+
+    return () => {
+      mounted = false;
+      tween?.kill();
+    };
   }, []);
 
   return (
     <section className="career-work">
       <img
-        src="/src/assets/images/career-decor-2.svg"
+        src="/images/career-decor-2.svg"
         alt=""
         className="career-work__decor"
       />
       <div className="container">
         <div className="career-work__header">
           <h2 className="career-work__title title">
-            <img src="/src/assets/images/work-icon.svg" alt="" />
+            <img src="/images/work-icon.svg" alt="" />
             {t('title')} <strong>{t('titleStrong')}</strong>
           </h2>
           <span className="career-work__label label">{t('label')}</span>

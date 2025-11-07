@@ -1,6 +1,6 @@
 import './tailwind.css';
 import '@/styles/cards-igaming-vip.scss';
-import { Header, Hero, MarketProblem, OurSolution, BenefitsBusiness, BenefitsVip, GetStarted } from '@/components/cards-igaming-vip/blocks';
+import { Header, MarketProblem, OurSolution, BenefitsBusiness, BenefitsVip, GetStarted } from '@/components/cards-igaming-vip/blocks';
 import Footer from '@/components/Footer';
 import { setRequestLocale } from 'next-intl/server';
 
@@ -12,7 +12,6 @@ export default async function CardsIGamingVipPage({ params }) {
   return (
     <div id="cards-igaming-vip">
       <Header />
-      <Hero />
       <MarketProblem />
       <OurSolution />
       {/* Левый glow между Our Solution и Benefits Business */}

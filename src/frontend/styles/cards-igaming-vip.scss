@@ -291,76 +291,7 @@
   }
 
   .problem-cards-grid {
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    width: 1290px;
-    max-width: 100%;
-
-    .problem-card {
-      box-shadow: 0px 4px 18.5px rgba(110, 126, 159, 0.10);
-      background: white;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      flex-direction: row;
-      gap: 10px;
-      width: 414px;
-      max-width: 100%;
-      padding: 18px;
-      border-radius: 20px;
-
-      p {
-        font-family: Inter, sans-serif;
-        font-size: 18px;
-        font-weight: 700;
-        text-align: left;
-        line-height: 23.5px;
-        color: #757575;
-        flex: 1 1 auto;
-        margin: 0;
-        padding: 0;
-      }
-
-      .problem-icon-box {
-        background: linear-gradient(0deg, rgba(212,226,228,1) 0%, rgba(112,150,164,1) 100%);
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        gap: 10px;
-        width: 122px;
-        height: 122px;
-        flex: 0 0 auto;
-        overflow: hidden;
-        padding: 19px;
-        border-radius: 18px;
-
-        .icon-inner {
-          background: rgba(255,255,255,0.25);
-          box-sizing: border-box;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          flex-direction: row;
-          gap: 10px;
-          flex: 0 0 auto;
-          padding: 16px;
-          border-radius: 36px;
-          border: 0.9px solid rgba(255,255,255,0.40);
-
-          img {
-            width: 40px;
-            height: 40px;
-            display: block;
-            max-width: initial;
-          }
-        }
-      }
-    }
+    width: 100%;
   }
 }
 

@@ -10,21 +10,21 @@ const newsItems = [
     title: 'Zenex 2.0: Revolutionizing the iGaming Industry in 2025',
     text: 'Zenex introduces innovative investment pools, enhanced tokenomics, and expanded ecosystem to transform the iGaming landscape in 2025.',
     url: 'https://europeangaming.eu/portal/latest-news/2025/01/27/174982/zenex-2-0-revolutionizing-the-igaming-industry-in-2025/',
-    image: '/src/assets/images/webp/new-img-1.webp',
+    image: '/images/webp/new-img-1.webp',
   },
   {
     date: 'February 15, 2025',
     title: 'Zenex Secures a Multi-Million Private Investment Deal',
     text: 'Zenex Group announces a major funding round to accelerate growth and expand its Web3 ecosystem.',
     url: '#',
-    image: '/src/assets/images/webp/new-img-2.webp',
+    image: '/images/webp/new-img-2.webp',
   },
   {
     date: 'March 10, 2025',
     title: 'New Partnership: Zenex and Leading iGaming Platform',
     text: 'Strategic alliance formed to deliver next-generation gaming experiences powered by blockchain technology.',
     url: '#',
-    image: '/src/assets/images/webp/new-img-3.webp',
+    image: '/images/webp/new-img-3.webp',
   },
 ];
 
@@ -47,7 +47,7 @@ export default function NewsCatalog() {
       <div className="container">
         <div className="news-catalog__header">
           <h2 className="title news-catalog__title">
-            <img src="/src/assets/images/news-title-icon.svg" alt="" />
+            <img src="/images/news-title-icon.svg" alt="" />
             {t('title')} <strong>{t('titleStrong')}</strong>
           </h2>
           <span className="label news-catalog__label">{t('label')}</span>
