@@ -1,0 +1,586 @@
+{
+  "common": {
+    "nav": {
+      "main": "Main",
+      "projects": "Projects",
+      "career": "Career",
+      "news": "News",
+      "contact": "Contact"
+    },
+    "becomePartner": "Become a partner",
+    "contactUs": "Contact us",
+    "letsMakeProfit": "Lets make real profit together",
+    "email": "info@zenex-coin.com",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "home": {
+    "hero": {
+      "description": "An international holding powering next-gen ventures in Web3, finance, gaming, and real-world entertainment.",
+      "title": "We Don't Follow Trends.",
+      "titleStrong": "We Launch Them",
+      "button": "Explore Zenex Brands"
+    },
+    "numbers": {
+      "title": "We are in",
+      "titleStrong": "numbers",
+      "text": "From innovative betting platforms to groundbreaking reality shows — if it's ahead of the curve, it's probably ours. Our ventures operate independently with diverse teams and products, yet share one mindset: innovate strategically, execute efficiently, stay ahead. Zenex Group isn't just another holding — we're a launchpad for transformative ideas.",
+      "label": "High Level",
+      "since": "Since",
+      "sinceValue": "2010",
+      "sinceText": "2010 (as Tau Impex S.R.O.), 2022 (ZENEX GAME PTE. LTD.)",
+      "brands": "8+",
+      "brandsText": "8+ active brands with more launching soon",
+      "countries": "6+",
+      "countriesText": "Active operations in 6+ countries around the world",
+      "team": "500+",
+      "teamText": "A large, growing team of 500+ industry experts"
+    },
+    "projects": {
+      "title": "Our Portfolio",
+      "text": "Each project in Zenex Group is a fledged play in its own field — whether it's betting, fintech, or real-life thrills.",
+      "label": "Brands",
+      "active": "Active",
+      "soon": "Launching Q2 2025"
+    },
+    "banner1": {
+      "title": "We open the way",
+      "titleStrong": "for your ideas!",
+      "text": "We build fast, we build smart. Let's make it happen — write to us!",
+      "button": "Contact us"
+    },
+    "map": {
+      "title": "We're",
+      "titleStrong": "Everywhere",
+      "text": "Our worldwide representatives are in 5 continents. We operate where things move fast, and we speak the language of every market.",
+      "label": "Worldwide"
+    },
+    "why": {
+      "title": "Why Choose",
+      "titleStrong": "Zenex",
+      "text": "Here's why teams, founders, and partners choose Zenex Group:",
+      "label": "Best Offer",
+      "fullCommitment": {
+        "title": "Full Commitment",
+        "text": "We go beyond funding — we get involved when it matters most."
+      },
+      "clearPath": {
+        "title": "Clear Path",
+        "text": "You build. We back you. Fast-track support, zero bureaucracy."
+      },
+      "web3": {
+        "title": "Web3. Real Way",
+        "text": "Flexible, fast, and user-obsessed — always."
+      },
+      "speed": {
+        "title": "Built for Speed",
+        "text": "We launch in weeks and scale across continents."
+      },
+      "independent": {
+        "title": "Born Independent",
+        "text": "Full autonomy for each product with zero corporate interference"
+      }
+    },
+    "banner2": {
+      "title": "Lets make",
+      "titleStrong": "real profit together",
+      "text": "We're open to bold ideas and fresh minds. Let's build something great — write to us.",
+      "button": "Contact us"
+    }
+  },
+  "news": {
+    "title": "News",
+    "titleStrong": "About Zenex",
+    "label": "Interesting",
+    "readArticle": "Read article",
+    "share": "Share",
+    "copied": "Copied"
+  },
+  "career": {
+    "hero": {
+      "title": "Career",
+      "titleStrong": "in Zenex",
+      "label": "Millioners",
+      "joinTitle": "Join Our Team",
+      "joinText": "At Zenex Group, we're always looking for talented individuals passionate about technology, innovation, and creating impact. Join us in building the future of digital finance and gaming.",
+      "joinTextStrong": "talented individuals",
+      "missionTitle": "Our Mission & Values",
+      "missionText": "To create an integrated ecosystem where innovative technology drives real-world value across digital finance and gaming.",
+      "missionTextStrong": "technology drives real-world",
+      "brands": "Brands"
+    },
+    "values": {
+      "title": "Core",
+      "titleStrong": "Values",
+      "label": "Easy",
+      "innovation": {
+        "title": "Innovation",
+        "text": "We embrace change and seek new solutions, pushing industry boundaries."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "text": "We act with honesty and transparency, building trust with our team, partners, users."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "text": "We uphold high standards in everything — from product to service."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "text": "We believe in the power of teamwork and open communication to achieve shared goals."
+      },
+      "growth": {
+        "title": "Growth",
+        "text": "We invest in our team's development and learning, helping them unlock their potential."
+      },
+      "impact": {
+        "title": "Impact",
+        "text": "We strive to create solutions that make a real difference for our users and community."
+      }
+    },
+    "work": {
+      "title": "Why Work",
+      "titleStrong": "With Us",
+      "label": "Best",
+      "professional": {
+        "title": "Professional Development:",
+        "items": [
+          "Continuous learning and career development programs",
+          "Opportunities to work on innovative projects",
+          "Access to latest technologies and tools",
+          "Mentorship from experienced industry professionals"
+        ]
+      },
+      "workLife": {
+        "title": "Work-Life Balance:",
+        "items": [
+          "Flexible working hours and remote work options",
+          "Mental health days and wellness programs",
+          "20+ days of paid annual leave to rest and recharge",
+          "Family-friendly policies that support work-life balance"
+        ]
+      },
+      "benefits": {
+        "title": "Competitive Benefits",
+        "items": [
+          "Performance-based bonuses for outstanding contributions",
+          "Health insurance coverage to support your peace of mind",
+          "Relocation assistance for international talents",
+          "Modern equipment and tools provided for your daily work"
+        ]
+      },
+      "culture": {
+        "title": "Team & Culture:",
+        "items": [
+          "Regular team-building activities and events",
+          "Cross-departmental collaboration opportunities",
+          "Flat organizational structure with access to leadership",
+          "International, diverse, and inclusive environment"
+        ]
+      }
+    },
+    "form": {
+      "title": "How We",
+      "titleStrong": "Hire",
+      "label": "Looking for you",
+      "contactTitle": "Contact us",
+      "steps": {
+        "step1": "Step 1",
+        "step1Title": "Application Review",
+        "step2": "Step 2",
+        "step2Title": "Initial HR Interview",
+        "step3": "Step 3",
+        "step3Title": "Technical Assessment",
+        "step4": "Step 4",
+        "step4Title": "Meeting with Team Lead",
+        "step5": "Step 5",
+        "step5Title": "Final Interview & Offer"
+      },
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "position": "Position of Interest",
+        "message": "Message",
+        "cv": "Upload CV"
+      },
+      "submit": "Submit Application",
+      "notice": "Don't see a position that matches your skills? We're always looking for exceptional talent. Send us your CV and tell us how you can contribute to our ecosystem."
+    }
+  },
+  "article": {
+    "share": "Share",
+    "copied": "Copied",
+    "relatedArticlesTitle": "Related Articles",
+    "readArticle": "Read article",
+    "date": "May 12, 2025",
+    "title": "Beyond the Spin: How Web3 is Transforming iGaming from Within",
+    "paragraphs": {
+      "intro1": "The iGaming industry stands at a pivotal inflection point. As we navigate 2025, the sector isn't just growing — it's fundamentally transforming. With global market projections reaching $125.6 billion by 2027 and a user base expected to hit 290.5 million by 2029, the numbers tell only part of the story.",
+      "intro2": "The real revolution isn't in the growth metrics but in how blockchain and Web3 are rewriting the rules of engagement between players, operators, and regulators. At Zenex, we're not just observing this shift — we're actively building at the intersection of these converging forces.",
+      "landscape1": "Traditional iGaming has thrived on centralization. Operators control the gaming environment, hold player funds, dictate withdrawal timeframes, and maintain opacity around key mechanics like RTP (Return to Player) and game algorithms. This model created a fundamental trust gap that players simply had to accept.",
+      "landscape2": "But the industry is evolving rapidly across multiple dimensions:",
+      "aiPersonalization": "The one-size-fits-all casino floor is disappearing. Today's systems analyze player behavior in real-time, creating dynamic experiences where everything from game recommendations to bonus structures adjusts to individual preferences and play styles.",
+      "mobileDominance": "With over 50% of online gambling now occurring on mobile devices, the shift to mobile-first design has moved from competitive advantage to basic requirement. The casino now lives in players' pockets, accessible anywhere, anytime.",
+      "immersive": "Gamification elements borrowed from video gaming — progression systems, achievements, leaderboards — are transforming the traditional gambling experience into something more engaging and sticky, especially for younger demographics.",
+      "landscape3": "These trends are significant, but they represent evolution rather than revolution. The true transformation is happening through Web3 technology.",
+      "web3Intro": "Traditional gambling has always struggled with a fundamental paradox: players must trust operators who have a direct financial incentive to maximize house edge. Web3 technology addresses this paradox through several key innovations:",
+      "provableFairness1": "Blockchain enables a new standard of transparency in iGaming. When game outcomes are recorded on an immutable ledger with verifiable random number generation, players no longer need to trust the operator's claims about fairness — they can verify it themselves.",
+      "provableFairness2": "At Zenex, we're pioneering the concept of \"verifiable iGaming\" where every spin, hand, or bet can be independently audited by players. This represents a fundamental shift in the power dynamic between players and operators.",
+      "digitalOwnership1": "In traditional iGaming, players never truly own their in-game assets. Promotional credits, loyalty points, and even account balances exist at the discretion of the operator. Web3 changes this through tokenization.",
+      "digitalOwnership2": "When in-game assets exist as tokens on a blockchain rather than entries in a proprietary database, players gain true ownership that exists independently of any single platform. These assets become portable, tradeable, and valuable beyond the confines of a specific casino.",
+      "governance1": "Perhaps most revolutionary is the shift toward player-governed platforms. Through tokenization, players can gain actual governance rights in the platforms they use—voting on everything from new game additions to changes in house edge percentages.",
+      "governance2": "This alignment of incentives creates a fundamentally different relationship between players and platforms. When players have a stake in the long-term success of the platform, the adversarial relationship between house and player transforms into a collaborative one.",
+      "businessIntro": "These technological shifts aren't just interesting in theory — they're creating entirely new business models in iGaming:",
+      "transparency1": "Web3 casinos are flipping the script on opacity. Rather than hiding house edges and game mechanics, they're competing on transparency. Platforms openly publish their code, prove the fairness of their random number generators, and make their profit margins transparent.",
+      "transparency2": "This transparency isn't just about ethics — it's good business. Data shows that players gamble more freely when they can verify fairness, leading to higher average session values and reduced customer acquisition costs through improved trust.",
+      "community1": "The most innovative Web3 casinos are becoming DAOs (Decentralized Autonomous Organizations) where players collectively own and govern the platform. This creates powerful network effects where players become evangelists and the line between operator and customer blurs.",
+      "community2": "In these models, a portion of house profits flows back to token holders, creating a virtuous cycle where success is shared among all stakeholders rather than extracted by a central operator.",
+      "tokenized1": "Perhaps most exciting is the tokenization of traffic itself. At Zenex, we've pioneered a model where investors can gain exposure to the growing iGaming market through tokens backed by actual traffic to casino and betting platforms.",
+      "tokenized2": "This creates an entirely new asset class that bridges traditional finance and gaming while providing unprecedented transparency into the business operations through on-chain metrics.",
+      "challengesIntro": "Despite the promising potential, several challenges remain:",
+      "regulatory": "Web3 gaming exists in a regulatory gray area in many jurisdictions. The borderless nature of blockchain technology creates compliance challenges that traditional operators don't face.",
+      "friction": "The technical complexity of wallets, gas fees, and blockchain interactions creates friction that mainstream users struggle with, limiting adoption to crypto-native audiences.",
+      "education": "Both operators and regulators lack deep understanding of blockchain technology, creating misconceptions and slowing adoption of innovative models.",
+      "pathIntro": "The most likely path forward isn't a complete replacement of traditional iGaming but rather a gradual integration of Web3 elements into existing platforms. We're already seeing this happen through:",
+      "dualCurrency": "Traditional platforms adding cryptocurrency payment options alongside fiat, giving players choice while maintaining familiar interfaces.",
+      "optIn": "Features that allow players to verify fairness through blockchain without requiring them to understand the underlying technology.",
+      "progressive": "Platforms starting with centralized control but gradually transferring governance to their communities as they mature.",
+      "hybrid": "At Zenex, we believe this hybrid approach offers the best of both worlds — the regulatory compliance and user experience of traditional platforms combined with the transparency and ownership benefits of Web3.",
+      "future1": "One of the most exciting developments in the space is the emergence of \"business vertical shows\" that take audiences behind the scenes of iGaming operations. For an industry historically shrouded in secrecy, this represents a dramatic shift toward transparency.",
+      "future2": "Zenex is pioneering this concept with the world's first vertical business show focused on iGaming. By showing the inner workings of the industry — from traffic acquisition to player conversion and retention strategies — we're demystifying a sector that has long operated in the shadows.",
+      "future3": "This transparency isn't just good for players; it's creating new investment opportunities for those who want exposure to iGaming without directly operating platforms. By tokenizing traffic and providing verifiable on-chain metrics, we're creating an investment vehicle that bridges traditional finance and Web3.",
+      "conclusion1": "As we look toward the future of iGaming, one thing is clear: the status quo is unsustainable. Players increasingly demand transparency, ownership, and fairness guarantees that traditional models struggle to provide.",
+      "conclusion2": "Web3 technology offers solutions to these demands while creating entirely new business models and investment opportunities. The operators who thrive won't be those who resist these changes but those who embrace them strategically — finding the right balance between innovation and accessibility.",
+      "conclusion3": "At Zenex, we're committed to leading this transformation — not just building Web3 gambling platforms, but reimagining what the relationship between players, operators, and investors can look like in a tokenized world.",
+      "conclusion4": "The stakes are high, but so are the potential rewards for those willing to rethink fundamental assumptions about how iGaming should work. We invite you to join us on this journey toward a more transparent, equitable, and engaging future for digital gambling."
+    },
+    "headings": {
+      "landscape": "The iGaming Landscape: Beyond the Numbers",
+      "aiPersonalization": "AI-Powered Personalization",
+      "mobileDominance": "Mobile Dominance",
+      "immersive": "Immersive Experiences",
+      "web3": "Web3: The Trust Revolution in iGaming",
+      "provableFairness": "1. Provable Fairness Through Blockchain",
+      "digitalOwnership": "2. True Digital Asset Ownership",
+      "governance": "3. Decentralized Governance",
+      "business": "The Business Impact: New Models Emerging",
+      "transparency": "Transparency as Competitive Advantage",
+      "community": "Community-Owned Gaming",
+      "tokenized": "Tokenized Traffic and Investment",
+      "challenges": "Challenges and Roadblocks",
+      "regulatory": "Regulatory Uncertainty",
+      "friction": "User Experience Friction",
+      "education": "Education Gap",
+      "path": "The Path Forward: Hybrid Models Leading the Way",
+      "dualCurrency": "Dual Currency Systems",
+      "optIn": "Opt-In Transparency",
+      "progressive": "Progressive Decentralization",
+      "future": "The Future: Business Vertical Shows and Transparency",
+      "conclusion": "Conclusion: The Stakes Are High"
+    },
+    "relatedArticles": {
+      "article2": {
+        "date": "January 27, 2025",
+        "title": "Zenex 2.0: Revolutionizing the iGaming Industry in 2025",
+        "summary": "Zenex introduces innovative investment pools, enhanced tokenomics, and an expanded ecosystem to transform the iGaming market in 2025."
+      },
+      "article3": {
+        "date": "February 15, 2025",
+        "title": "Zenex Secures Investment for XT.com Listing",
+        "summary": "Strategic funding supports Zenex's expansion plans and preparation for token listing on the XT.com exchange."
+      }
+    }
+  },
+  "terms": {
+    "title": "Terms of Service"
+  },
+  "privacy": {
+    "title": "Privacy Policy"
+  },
+  "cardsVip": {
+    "header": {
+      "title": "Cards iGaming VIP",
+      "subtitle": "A New Level of Freedom and Convenience for Your VIP Players",
+      "cta": "contact sales",
+      "learnMore": "Learn more"
+    },
+    "marketProblem": {
+      "title": "Market Problem",
+      "description": "Traditional card solutions don't meet the expectations of VIP players and high-rollers. They face constant friction and limitations when managing their funds:",
+      "problems": {
+        "blocked": "Blocked or declined transactions",
+        "blockedDesc": "Blocked or declined transactions",
+        "fees": "High transaction fees",
+        "feesDesc": "High transaction fees",
+        "limits": "Deposit and withdrawal limits",
+        "limitsDesc": "Deposit and withdrawal limits",
+        "settlement": "Long settlement times",
+        "settlementDesc": "Long settlement times for deposits and winnings accrual",
+        "regions": "Difficulty in regions",
+        "regionsDesc": "Difficulty in funding accounts and withdrawals in certain regions",
+        "privacy": "No privacy",
+        "privacyDesc": "No privacy"
+      }
+    },
+    "ourSolution": {
+      "title": "Our Solution — Ns.Cards iGaming VIP",
+      "description": "The first card product built specifically for iGaming — offering unlimited transactions, privacy, and service excellence.",
+      "features": {
+        "unlimited": {
+          "title": "Unlimited",
+          "description": "Unlimited deposits and withdrawals by amount or number of transactions for your brand"
+        },
+        "approval": {
+          "title": "100% approval rate",
+          "description": "100% transaction approval rate and instant payouts delivery to players"
+        },
+        "protection": {
+          "title": "Protection",
+          "description": "Protection from fines and chargeback dispute options"
+        },
+        "fees": {
+          "title": "Transparent fees",
+          "description": "Transparent fees and no hidden charges: up to 4% on deposits and 2% on payouts"
+        },
+        "worldwide": {
+          "title": "Access worldwide",
+          "description": "Access to hard-to-reach regions and local top-up methods"
+        }
+      }
+    },
+    "benefitsBusiness": {
+      "title": "Benefits for your Business",
+      "benefits": {
+        "customization": "Custom client dashboard and branded card design",
+        "unlimited": "Unlimited issuance of virtual and physical cards — with worldwide delivery",
+        "communication": "Easy communication with players through push notifications, pop-ups, banners, and email campaigns",
+        "loyalty": "Tailored loyalty and bonus programs to strengthen retention",
+        "analytics": "Full control and analytics over player balances and transactions",
+        "support": "24/7 support for users"
+      }
+    },
+    "benefitsVip": {
+      "title": "Benefits for VIP Players",
+      "description": "Give your top clients the premium experience they expect — and increase loyalty and LTV.",
+      "benefits": {
+        "instant": "Instant payouts to players",
+        "limits": "Spending limits up to $100,000 per month per card",
+        "integration": "Integration with Apple Pay and Google Pay",
+        "withdrawals": "Cash withdrawals in 150+ countries",
+        "deposits": "Deposits via cryptocurrency, SWIFT and SEPA — with the option to add local methods",
+        "recovery": "Balance recovery options in case the card gets blocked"
+      }
+    },
+    "getStarted": {
+      "title": "Get Started with Ns.Cards iGaming VIP in Just 96 Hours",
+      "integration": {
+        "title": "Integration Options",
+        "option1": "Turnkey API Integrations — seamless connection to your existing platforms",
+        "option2": "Custom API Integrations — product setup based on your technical requirements"
+      },
+      "issuance": {
+        "title": "Card issuance options",
+        "option1": "Players receive a link to apply for a card directly",
+        "option2": "You provide client data via API — we set-up a card and give you a link to receive it",
+        "option3": "Fully custom onboarding flow adapted to your business processes"
+      },
+      "cta": {
+        "title": "Your Competitive Edge",
+        "description": "Give your players true transactional freedom — and grow your revenue.",
+        "button": "CONTACT SALES"
+      }
+    }
+  },
+  "launchAndScale": {
+    "hero": {
+      "title": "Launch and scale your business in 96 hours",
+      "subtitle": "A complete set of tools for working with fiat and cryptocurrency assets and creating financial products under your brand.",
+      "requestDemo": "Request a Demo",
+      "getOffer": "Get an Offer"
+    },
+    "about": {
+      "title": "About the Product",
+      "unlimited": "One solution — unlimited possibilities",
+      "dashboards": {
+        "title": "Dashboards",
+        "text": "Multifunctional dashboards for admins and clients."
+      },
+      "crossPlatform": {
+        "title": "Cross‑platform",
+        "text": "Web, Mobile, PWA, and Telegram Mini‑App."
+      },
+      "branding": {
+        "title": "Branding",
+        "text": "Extensive options for customization and white-label branding."
+      },
+      "cryptoFiat": {
+        "title": "Crypto & Fiat",
+        "text": "Full toolkit for working with crypto and fiat assets."
+      },
+      "cards": {
+        "title": "Cards",
+        "text": "Issuance of virtual and plastic cards with Apple Pay and Google Pay."
+      }
+    },
+    "modules": {
+      "title": "Zenex B2B Modules",
+      "crypto": {
+        "title": "Cryptocurrency Module",
+        "items": [
+          "Integration with exchanges (Binance, Xt.com, Bitfinex) and liquidity providers",
+          "Full functionality for exchange operations: Fiat ↔ Crypto, Crypto ↔ Crypto",
+          "Custodial wallets (individual and master)",
+          "Staking and OTC desk",
+          "Ability to add tokens — fiat, crypto, and custom"
+        ]
+      },
+      "fiat": {
+        "title": "Fiat Module",
+        "items": [
+          "Integration with fiat payment providers",
+          "Deposits/withdrawals via SWIFT, SEPA, cards, local methods",
+          "Instant peer‑to‑peer transfers",
+          "IBAN integration",
+          "On/Off‑ramp functionality"
+        ]
+      },
+      "card": {
+        "title": "Card Module",
+        "items": [
+          "Integration with card issuers",
+          "API access to order & manage cards",
+          "Issuance of virtual and branded plastic cards with Apple/Google Pay",
+          "Unlimited transactions for users to partner services",
+          "Top‑ups with both crypto and fiat"
+        ]
+      },
+      "getOffer": "Get an Offer"
+    },
+    "admin": {
+      "title": "Zenex B2B Admin Panel",
+      "items": [
+        {
+          "text": "Currency pair management and fee configuration"
+        },
+        {
+          "text": "Staking strategy setup"
+        },
+        {
+          "text": "Statistics across all operations, wallets, and reserves"
+        },
+        {
+          "text": "Deposit and withdrawal management"
+        },
+        {
+          "text": "Card product management"
+        },
+        {
+          "text": "Balance control, fees, and card limits"
+        },
+        {
+          "text": "API key management"
+        },
+        {
+          "text": "KYC monitoring and management"
+        }
+      ],
+      "highlight": "Full control of your business processes in one place"
+    },
+    "customization": {
+      "title": "Customization & Marketing Tools",
+      "interface": {
+        "title": "Interface Customization",
+        "items": [
+          "Logo and corporate colors",
+          "Personal cabinet banners (10+ options)",
+          "Custom pop-ups"
+        ]
+      },
+      "marketing": {
+        "title": "Marketing & Communications",
+        "items": [
+          "E-mail campaigns and push notifications",
+          "Referral system",
+          "Promo codes and marketing campaigns",
+          "Cashback programs"
+        ]
+      }
+    },
+    "pricing": {
+      "title": "Launch in 96 Hours with Zenex B2B",
+      "subtitle": "For the first time on the market — your fintech product in 96 hours starting from €2,500 + monthly fee.",
+      "from": "from",
+      "monthlyFee": "+ Monthly Fee",
+      "mainTitle": "Full customization and branding of the Personal Cabinet",
+      "features": {
+        "branding": {
+          "title": "Branding",
+          "text": "Placement of your logo and partner banners in the dashboard"
+        },
+        "promos": {
+          "title": "Promos & Bonuses",
+          "text": "Custom promo codes, staking and referral programs"
+        },
+        "brandedCards": {
+          "title": "Branded Cards",
+          "text": "Logo printing on plastic cards"
+        },
+        "flexiblePayments": {
+          "title": "Flexible Payments",
+          "text": "Integration of payment methods upon request"
+        },
+        "license": {
+          "title": "Financial License",
+          "text": "Use of our financial license"
+        },
+        "customFees": {
+          "title": "Custom Fees",
+          "text": "Custom fee settings"
+        },
+        "communications": {
+          "title": "Communications",
+          "text": "Custom Pop-up notifications and email campaigns"
+        },
+        "newCurrencies": {
+          "title": "New Currencies",
+          "text": "Adding new currencies (incl. custom tokens)"
+        }
+      },
+      "getOffer": "Get an Offer",
+      "notices": [
+        "Domain name cannot be replaced",
+        "Terms & Conditions and Legal Entity cannot be changed",
+        "Limited back-office functionality"
+      ]
+    },
+    "solutions": {
+      "api": {
+        "price": "€6,000",
+        "title": "White Label via API",
+        "description": "Full platform functionality via API",
+        "getOffer": "Get an Offer"
+      },
+      "turnkey": {
+        "price": "€25 000",
+        "title": "Full Turn-Key White Label",
+        "description": "Ready-to-use branded platform (Web, PWA, Telegram mini-app) Launch without development from scratch",
+        "getOffer": "Get an Offer"
+      },
+      "sourceCode": {
+        "price": "€300,000",
+        "title": "Source Code License",
+        "description": "Full source code, all features, complete freedom for further development and integrations",
+        "getOffer": "Get an Offer"
+      },
+      "from": "from"
+    },
+    "finalCta": {
+      "title": "Ready to launch your own fintech product?",
+      "subtitle": "Zenex B2B — the easiest path from idea to a fully functional platform",
+      "requestDemo": "Request a Demo",
+      "contactSales": "Contact Sales"
+    }
+  }
+}
+

@@ -1,0 +1,259 @@
+.header {
+    position: fixed;
+    top: 1rem;
+    left: 2rem;
+    width: calc(100% - 4rem);
+    box-shadow: 0px 4px 18.6px 0px rgba(110, 126, 159, 0.10);
+    border-radius: 1.7rem;
+    padding: 1rem 1rem 1rem 1.8rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+
+    &.active {
+        box-shadow: none;
+    }
+
+    &__logo {
+        width: 10rem;
+        min-width: 10rem;
+        display: block;
+        margin-right: auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__button {
+        height: 4.5rem;
+        padding: 0 1.4rem;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1em;
+        background-color: #05ACA4;
+        backdrop-filter: blur(100px);
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background 0.3s;
+
+        &:hover {
+            background-color: #04968F;
+        }
+    }
+
+    &__menu-button {
+        width: 4.6rem;
+        height: 4.6rem;
+        background-color: #EBFBFB;
+        border-radius: 1rem;
+        position: relative;
+        cursor: pointer;
+        margin-left: 0.8rem;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.3s;
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+        }
+
+        &.active {
+            svg {
+                &:nth-child(1) {
+                    opacity: 0;
+                }
+
+                &:nth-child(2) {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// Универсальная кнопка CTA для использования везде (включая cards-igaming-vip)
+.header-cta-button {
+    height: 4.5rem;
+    min-width: 19.7rem;
+    padding: 0 1.4rem;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1em;
+    background-color: #05ACA4;
+    backdrop-filter: blur(100px);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.3s;
+
+    &:hover {
+        background-color: #04968F;
+    }
+}
+
+// Скрываем CTA кнопку на планшете и мобиле
+@media (max-width: 1023px) {
+    .header-cta-button {
+        display: none !important;
+    }
+}
+
+// Универсальный переключатель языка
+.language-switcher {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    margin-right: 0.8rem;
+
+    button {
+        width: 4.5rem;
+        height: 4.5rem;
+        background-color: #fff;
+        border: 0.1rem solid #05ACA4;
+        border-radius: 1rem;
+        color: #05ACA4;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1em;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        padding: 0;
+
+        &:hover {
+            background-color: #EBFBFB;
+        }
+
+        &.active {
+            background-color: #EBFBFB;
+            border-color: #05ACA4;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        &__nav {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        top: 2rem;
+        left: 2.4rem;
+        width: calc(100% - 4.8rem);
+        border-radius: 2rem;
+        padding: 1.1rem 1.2rem 1.1rem 2.3rem;
+
+        &__menu-button {
+            display: none;
+        }
+
+        &__nav {
+            display: flex;
+            gap: 4.2rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-right: auto;
+
+            li {
+                &.active {
+                    a {
+                        color: #07C2B9;
+
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            a {
+                color: #282828;
+                transition: color 0.3s;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -2.4rem;
+                    left: 50%;
+                    transform: translate(-50%);
+                    width: 4.7rem;
+                    height: 1.2rem;
+                    background-image: url(/images/active-menu.svg);
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                    background-size: contain;
+                    transition: opacity 0.3s;
+                    opacity: 0;
+                }
+
+                &:hover {
+                    color: #07C2B9;
+                }
+            }
+        }
+
+        &__button {
+            transition: background 0.3s;
+            margin-right: 0;
+            border-radius: 1.6rem;
+
+            &:hover {
+                background-color: #04968F;
+            }
+        }
+    }
+
+    .header-cta-button {
+        border-radius: 1.6rem;
+        margin-right: 0;
+    }
+}
+
+// Крупнее логотип на десктопе
+@media (min-width: 1024px) {
+    .header {
+        &__logo {
+            width: 12rem;
+            min-width: 12rem;
+        }
+    }
+}
