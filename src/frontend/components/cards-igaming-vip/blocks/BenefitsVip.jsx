@@ -4,6 +4,8 @@ import { useTranslations } from 'next-intl';
 
 export default function BenefitsVip() {
   const t = useTranslations('cardsVip.benefitsVip');
+  const benefits = t.raw('benefits');
+  const benefitOrder = ['instant', 'limits', 'integration', 'withdrawals', 'deposits', 'recovery'];
 
   return (
     <div className="benefits-vip-section section-container">
@@ -45,72 +47,50 @@ export default function BenefitsVip() {
 
         {/* Cards list - карточки справа */}
         <div className="vip-cards-list">
-          {/* Card 1 */}
-          <div className="vip-benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.instant')}</p>
-            </div>
-            <div className="card-icon-box gradient-teal">
-              <div className="icon-inner">
-                <img src="/assets/vip-beenhere.svg" alt="Instant payouts icon" />
+          {benefitOrder.map((key) => {
+            const benefit = benefits[key];
+            if (!benefit) return null;
+
+            const iconMap = {
+              instant: '/assets/vip-beenhere.svg',
+              limits: '/assets/vip-speed.svg',
+              integration: '/assets/vip-reviews.svg',
+              withdrawals: '/assets/vip-web3.svg',
+              deposits: '/assets/vip-credit_card_clock.svg',
+              recovery: '/assets/vip-credit_card_gear.svg',
+            };
+
+            const gradientMap = {
+              instant: 'gradient-teal',
+              limits: 'gradient-dark',
+              integration: 'gradient-gold',
+              withdrawals: 'gradient-teal',
+              deposits: 'gradient-dark',
+              recovery: 'gradient-gold',
+            };
+
+            const value = typeof benefit === 'string'
+              ? { before: '', highlight: benefit, after: '' }
+              : benefit;
+            const { before = '', highlight = '', after = '' } = value;
+
+            return (
+              <div className="vip-benefit-card" key={key}>
+                <div className="card-text">
+                  <p>
+                    {before}
+                    {highlight && <strong>{highlight}</strong>}
+                    {after}
+                  </p>
+                </div>
+                <div className={`card-icon-box ${gradientMap[key] || ''}`}>
+                  <div className="icon-inner">
+                    <img src={iconMap[key]} alt="" />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          {/* Card 2 */}
-          <div className="vip-benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.limits')}</p>
-            </div>
-            <div className="card-icon-box gradient-dark">
-              <div className="icon-inner">
-                <img src="/assets/vip-speed.svg" alt="Spending limits icon" />
-              </div>
-            </div>
-          </div>
-          {/* Card 3 */}
-          <div className="vip-benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.integration')}</p>
-            </div>
-            <div className="card-icon-box gradient-gold">
-              <div className="icon-inner">
-                <img src="/assets/vip-reviews.svg" alt="Apple/Google Pay icon" />
-              </div>
-            </div>
-          </div>
-          {/* Card 4 */}
-          <div className="vip-benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.withdrawals')}</p>
-            </div>
-            <div className="card-icon-box gradient-teal">
-              <div className="icon-inner">
-                <img src="/assets/vip-web3.svg" alt="Cash withdrawals icon" />
-              </div>
-            </div>
-          </div>
-          {/* Card 5 */}
-          <div className="vip-benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.deposits')}</p>
-            </div>
-            <div className="card-icon-box gradient-dark">
-              <div className="icon-inner">
-                <img src="/assets/vip-credit_card_clock.svg" alt="Deposits methods icon" />
-              </div>
-            </div>
-          </div>
-          {/* Card 6 */}
-          <div className="vip-benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.recovery')}</p>
-            </div>
-            <div className="card-icon-box gradient-gold">
-              <div className="icon-inner">
-                <img src="/assets/vip-credit_card_gear.svg" alt="Balance recovery icon" />
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>

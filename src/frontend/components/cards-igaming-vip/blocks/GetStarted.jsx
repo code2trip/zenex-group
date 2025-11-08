@@ -5,6 +5,26 @@ import { useTranslations } from 'next-intl';
 export default function GetStarted() {
   const t = useTranslations('cardsVip.getStarted');
 
+  const normalizeOption = (option) => {
+    if (typeof option === 'string') {
+      return { before: '', highlight: option, after: '' };
+    }
+
+    const { before = '', highlight = '', after = '' } = option || {};
+    return { before, highlight, after };
+  };
+
+  const integrationOptions = [
+    normalizeOption(t.raw('integration.option1')),
+    normalizeOption(t.raw('integration.option2')),
+  ];
+
+  const issuanceOptions = [
+    normalizeOption(t.raw('issuance.option1')),
+    normalizeOption(t.raw('issuance.option2')),
+    normalizeOption(t.raw('issuance.option3')),
+  ];
+
   return (
     <div className="get-started-section">
       <div className="get-started-container">
@@ -26,19 +46,18 @@ export default function GetStarted() {
             <div className="integration-content">
               <h2>{t('integration.title')}</h2>
 
-              <div className="integration-item">
-                <div className="item-number">
-                  <span>1</span>
+              {integrationOptions.map(({ before, highlight, after }, index) => (
+                <div className="integration-item" key={`integration-${index}`}>
+                  <div className="item-number">
+                    <span>{index + 1}</span>
+                  </div>
+                  <p>
+                    {before}
+                    {highlight && <strong>{highlight}</strong>}
+                    {after}
+                  </p>
                 </div>
-                <p>{t('integration.option1')}</p>
-              </div>
-
-              <div className="integration-item">
-                <div className="item-number">
-                  <span>2</span>
-                </div>
-                <p>{t('integration.option2')}</p>
-              </div>
+              ))}
             </div>
 
             <div className="integration-column__decor">
@@ -52,26 +71,18 @@ export default function GetStarted() {
             <div className="issuance-content">
               <h2>{t('issuance.title')}</h2>
 
-              <div className="issuance-item">
-                <div className="item-number">
-                  <span>1</span>
+              {issuanceOptions.map(({ before, highlight, after }, index) => (
+                <div className="issuance-item" key={`issuance-${index}`}>
+                  <div className="item-number">
+                    <span>{index + 1}</span>
+                  </div>
+                  <p>
+                    {before}
+                    {highlight && <strong>{highlight}</strong>}
+                    {after}
+                  </p>
                 </div>
-                <p>{t('issuance.option1')}</p>
-              </div>
-
-              <div className="issuance-item">
-                <div className="item-number">
-                  <span>2</span>
-                </div>
-                <p>{t('issuance.option2')}</p>
-              </div>
-
-              <div className="issuance-item">
-                <div className="item-number">
-                  <span>3</span>
-                </div>
-                <p>{t('issuance.option3')}</p>
-              </div>
+              ))}
             </div>
 
             <div className="img-badge-desktop">
@@ -130,9 +141,6 @@ export default function GetStarted() {
           <div className="cta-banner__pattern cta-banner__pattern--right" aria-hidden />
 
           <div className="cta-card-visual-background">
-            <div className="cta-group-bg">
-              <img src="/assets/image_decorative_pattern.png" alt="Decorative pattern" />
-            </div>
             <img
               src="/assets/image_bbc94c23-green.png"
               alt="Credit card mockup VIP"

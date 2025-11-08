@@ -482,7 +482,7 @@
 
         .hero-subtitle {
           font-family: Inter, sans-serif;
-          font-size: 24px;
+          font-size: 22px;
           font-weight: 400;
           line-height: 24px;
           color: white;
@@ -509,8 +509,28 @@
         text-decoration: none;
         transition: background 0.3s;
 
+        img {
+          width: 24px;
+          height: 24px;
+          display: block;
+          filter: brightness(0) invert(1);
+        }
+
         &:hover {
           background: #04968F;
+        }
+
+        @media (max-width: 1100px) {
+          width: auto;
+          height: 85px;
+          padding: 15px 54px;
+        }
+
+        @media (max-width: 767px) {
+          width: 100%;
+          max-width: 100%;
+          min-height: 55px;
+          padding: 15px 18px;
         }
       }
     }
@@ -621,19 +641,20 @@
     font-family: Inter, sans-serif;
     font-size: 18px;
     font-weight: 700;
-    line-height: 23.5px;
+    line-height: 24px;
     color: #757575;
 
     @media (max-width: 1100px) {
-      font-size: 27px;
-      line-height: 27px;
+      font-size: 18px;
+      line-height: 24px;
       font-weight: 400;
-      max-width: 150px;
+      max-width: none;
     }
 
     @media (max-width: 767px) {
       font-size: 16px;
       line-height: 24px;
+      font-weight: 600;
       max-width: none;
     }
   }
@@ -1147,6 +1168,11 @@
             margin: 0;
             padding: 0;
 
+            strong {
+              font-weight: 700;
+              color: #282828;
+            }
+
             .bold {
               font-weight: 700;
               color: #282828;
@@ -1440,7 +1466,7 @@
             margin: 0;
             padding: 0;
 
-            .bold {
+            strong {
               font-weight: 700;
               color: #282828;
             }
@@ -1531,10 +1557,8 @@
 
     .get-started-columns {
       box-sizing: border-box;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
       gap: 24px;
       width: 100%;
       max-width: 100%;
@@ -1543,7 +1567,7 @@
       overflow: visible;
 
       @media (max-width: 767px) {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         height: auto;
         gap: 20px;
       }
@@ -1630,6 +1654,10 @@
               flex: 1 1 auto;
               margin: 0;
               padding: 0;
+
+              strong {
+                font-weight: 700;
+              }
 
               .bold {
                 font-weight: 700;
@@ -1846,7 +1874,7 @@
           align-items: flex-start;
           flex-direction: column;
           gap: 24px;
-          width: 100%;
+          width: 32vw;
           height: auto;
           z-index: 1;
 
@@ -1856,7 +1884,6 @@
             font-weight: 700;
             line-height: 50px;
             color: white;
-            width: 360px;
             max-width: 100%;
             height: 100px;
             margin: 0;
@@ -1906,9 +1933,12 @@
               margin: 0;
               padding: 0;
 
+              strong {
+                font-weight: 700;
+              }
+
               .bold {
                 font-weight: 700;
-                color: white;
               }
             }
           }
@@ -1938,39 +1968,9 @@
         padding: 60px 18px;
       }
 
-      .cta-banner__pattern {
-        position: absolute;
-        pointer-events: none;
-        background-image: url('/assets/image_decorative_pattern.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        mix-blend-mode: screen;
-        opacity: 0.3;
-
-        &--left {
-          width: 463.82px;
-          height: 531.89px;
-          left: 113px;
-          top: -374.43px;
-          transform: rotate(64.62deg);
-        }
-
-        &--right {
-          width: 463.82px;
-          height: 677.94px;
-          left: 568.23px;
-          top: -282.41px;
-          transform: matrix(-0.75, 0.66, 0.66, 0.75, 0, 0);
-        }
-
-        @media (max-width: 1100px) {
-          display: none;
-        }
-      }
-
       .cta-content {
         position: absolute;
-        width: 1210px;
+        width: 100%;
         max-width: calc(100% - 80px);
         height: 134.58px;
         left: 50%;
@@ -2073,7 +2073,6 @@
           flex-direction: row;
           align-items: flex-start;
           gap: 12px;
-          width: 277px;
           max-width: 100%;
           height: 85px;
           margin: 0;
@@ -2092,7 +2091,6 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-            width: 277px;
             max-width: 100%;
             height: 85px;
             border: none;
@@ -2216,8 +2214,3 @@
   }
 }
 
-// ============================================
-// RESPONSIVE STYLES
-// ============================================
-// Адаптивные стили перенесены в компоненты с использованием Tailwind классов
-// Все медиа-запросы удалены, так как теперь используются классы mobile: и tablet:

@@ -350,40 +350,108 @@
       }
     },
     "benefitsBusiness": {
-      "title": "Benefits for your Business",
+      "title": "What does your business get?",
       "benefits": {
-        "customization": "Custom client dashboard and branded card design",
-        "unlimited": "Unlimited issuance of virtual and physical cards — with worldwide delivery",
-        "communication": "Easy communication with players through push notifications, pop-ups, banners, and email campaigns",
-        "loyalty": "Tailored loyalty and bonus programs to strengthen retention",
-        "analytics": "Full control and analytics over player balances and transactions",
-        "support": "24/7 support for users"
+        "customization": {
+          "before": "",
+          "highlight": "Custom client dashboard",
+          "after": " and branded card design"
+        },
+        "unlimited": {
+          "before": "",
+          "highlight": "Unlimited issuance",
+          "after": " of virtual and physical cards — with worldwide delivery"
+        },
+        "communication": {
+          "before": "",
+          "highlight": "Easy communication with players",
+          "after": " through push notifications, pop-ups, banners, and email campaigns"
+        },
+        "loyalty": {
+          "before": "Tailored ",
+          "highlight": "loyalty and bonus programs",
+          "after": " to strengthen retention"
+        },
+        "analytics": {
+          "before": "",
+          "highlight": "Full control and analytics",
+          "after": " over player balances and transactions"
+        },
+        "support": {
+          "before": "",
+          "highlight": "24/7 support",
+          "after": " for users"
+        }
       }
     },
     "benefitsVip": {
-      "title": "Benefits for VIP Players",
-      "description": "Give your top clients the premium experience they expect — and increase loyalty and LTV.",
+      "title": "Benefits for VIP players",
+      "description": "Your business receives an exclusive product that boosts loyalty and significantly increases the LTV of your most valuable clients.",
       "benefits": {
-        "instant": "Instant payouts to players",
-        "limits": "Spending limits up to $100,000 per month per card",
-        "integration": "Integration with Apple Pay and Google Pay",
-        "withdrawals": "Cash withdrawals in 150+ countries",
-        "deposits": "Deposits via cryptocurrency, SWIFT and SEPA — with the option to add local methods",
-        "recovery": "Balance recovery options in case the card gets blocked"
+        "instant": {
+          "before": "",
+          "highlight": "Instant",
+          "after": " payouts to players"
+        },
+        "limits": {
+          "before": "",
+          "highlight": "Spending limits",
+          "after": " up to $100,000 per month per card"
+        },
+        "integration": {
+          "before": "Integration with ",
+          "highlight": "Apple Pay and Google Pay",
+          "after": ""
+        },
+        "withdrawals": {
+          "before": "Cash withdrawals ",
+          "highlight": "in 150+ countries",
+          "after": ""
+        },
+        "deposits": {
+          "before": "",
+          "highlight": "Deposits",
+          "after": " via cryptocurrency, SWIFT and SEPA — with the option to add local methods"
+        },
+        "recovery": {
+          "before": "",
+          "highlight": "Balance recovery options",
+          "after": " in case the card gets blocked"
+        }
       }
     },
     "getStarted": {
       "title": "Get Started with Ns.Cards iGaming VIP in Just 96 Hours",
       "integration": {
         "title": "Integration Options",
-        "option1": "Turnkey API Integrations — seamless connection to your existing platforms",
-        "option2": "Custom API Integrations — product setup based on your technical requirements"
+        "option1": {
+          "before": "",
+          "highlight": "Turnkey API Integrations",
+          "after": " — seamless connection to your existing platforms"
+        },
+        "option2": {
+          "before": "",
+          "highlight": "Custom API Integrations",
+          "after": " — product setup based on your technical requirements"
+        }
       },
       "issuance": {
         "title": "Card issuance options",
-        "option1": "Players receive a link to apply for a card directly",
-        "option2": "You provide client data via API — we set-up a card and give you a link to receive it",
-        "option3": "Fully custom onboarding flow adapted to your business processes"
+        "option1": {
+          "before": "Players receive a link to apply for a card ",
+          "highlight": "directly",
+          "after": ""
+        },
+        "option2": {
+          "before": "You provide ",
+          "highlight": "client data via API",
+          "after": " — we set-up a card and give you a link to receive it"
+        },
+        "option3": {
+          "before": "",
+          "highlight": "Fully custom onboarding flow",
+          "after": " adapted to your business processes"
+        }
       },
       "cta": {
         "title": "Your Competitive Edge",

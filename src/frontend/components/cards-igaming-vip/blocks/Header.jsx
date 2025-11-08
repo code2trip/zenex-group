@@ -28,6 +28,7 @@ export default function Header() {
             className="hero-cta-button tablet:w-auto tablet:h-[85px] tablet:px-[54px] tablet:py-[15px] mobile:w-full mobile:max-w-full mobile:min-h-[55px] mobile:px-[18px] mobile:py-[15px]"
           >
             {tCardsVip('cta')}
+            <img src="/images/right.png" alt="" aria-hidden="true" />
           </Link>
         </div>
         <div className="hero-right flex desktop:justify-start desktop:items-center tablet:order-[-1] tablet:w-full tablet:justify-center tablet:items-start tablet:mb-0 tablet:ml-0 tablet:transform-none desktop:-translate-y-[10%] desktop:ml-[-50px] mobile:order-[-1] mobile:w-full mobile:justify-center mobile:items-center mobile:mt-0 mobile:mb-0 mobile:ml-0 relative z-[5] overflow-visible">

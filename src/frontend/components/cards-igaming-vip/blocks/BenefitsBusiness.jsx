@@ -8,6 +8,8 @@ export default function BenefitsBusiness() {
   const titleWords = titleFull.split(' ');
   const titleDark = titleWords.slice(0, Math.max(0, titleWords.length - 2)).join(' ');
   const titleAccent = titleWords.slice(-2).join(' ');
+  const benefits = t.raw('benefits');
+  const benefitOrder = ['customization', 'unlimited', 'communication', 'loyalty', 'analytics', 'support'];
 
   return (
     <div className="benefits-business-section section-container">
@@ -42,77 +44,50 @@ export default function BenefitsBusiness() {
 
         {/* Cards list - карточки вторыми */}
         <div className="benefits-cards-list">
-          {/* Card 1 */}
-          <div className="benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.customization')}</p>
-            </div>
-            <div className="card-icon-box gradient-teal">
-              <div className="icon-inner">
-                <img src="/assets/image_50727951.png" alt="" />
-              </div>
-            </div>
-          </div>
+          {benefitOrder.map((key) => {
+            const benefit = benefits[key];
+            if (!benefit) return null;
 
-          {/* Card 2 */}
-          <div className="benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.unlimited')}</p>
-            </div>
-            <div className="card-icon-box gradient-dark">
-              <div className="icon-inner">
-                <img src="/assets/image_77a6e2e0.png" alt="" />
-              </div>
-            </div>
-          </div>
+            const iconMap = {
+              customization: '/assets/image_50727951.png',
+              unlimited: '/assets/image_77a6e2e0.png',
+              communication: '/assets/image_39df2c01.png',
+              loyalty: '/assets/image_dd8ecfcf.png',
+              analytics: '/assets/image_1351319b.png',
+              support: '/assets/image_a8493888.png',
+            };
 
-          {/* Card 3 */}
-          <div className="benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.communication')}</p>
-            </div>
-            <div className="card-icon-box gradient-gold">
-              <div className="icon-inner">
-                <img src="/assets/image_39df2c01.png" alt="" />
-              </div>
-            </div>
-          </div>
+            const gradientMap = {
+              customization: 'gradient-teal',
+              unlimited: 'gradient-dark',
+              communication: 'gradient-gold',
+              loyalty: 'gradient-teal',
+              analytics: 'gradient-dark',
+              support: 'gradient-gold',
+            };
 
-          {/* Card 4 */}
-          <div className="benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.loyalty')}</p>
-            </div>
-            <div className="card-icon-box gradient-teal">
-              <div className="icon-inner">
-                <img src="/assets/image_dd8ecfcf.png" alt="" />
-              </div>
-            </div>
-          </div>
+            const value = typeof benefit === 'string'
+              ? { before: '', highlight: benefit, after: '' }
+              : benefit;
+            const { before = '', highlight = '', after = '' } = value;
 
-          {/* Card 5 */}
-          <div className="benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.analytics')}</p>
-            </div>
-            <div className="card-icon-box gradient-dark">
-              <div className="icon-inner">
-                <img src="/assets/image_1351319b.png" alt="" />
+            return (
+              <div className="benefit-card" key={key}>
+                <div className="card-text">
+                  <p>
+                    {before}
+                    {highlight && <strong>{highlight}</strong>}
+                    {after}
+                  </p>
+                </div>
+                <div className={`card-icon-box ${gradientMap[key] || ''}`}>
+                  <div className="icon-inner">
+                    <img src={iconMap[key]} alt="" />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          {/* Card 6 */}
-          <div className="benefit-card">
-            <div className="card-text">
-              <p>{t('benefits.support')}</p>
-            </div>
-            <div className="card-icon-box gradient-gold">
-              <div className="icon-inner">
-                <img src="/assets/image_a8493888.png" alt="" />
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>
