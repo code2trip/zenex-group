@@ -33,7 +33,7 @@ export default function Footer() {
             <a href="#projects" className="menuLink">
               {tNav('projects')}
             </a>
-            <Link href={`/${locale}/career`} className="menuLink">
+            <Link href={`/${locale}/career#form`} className="menuLink">
               {tNav('career')}
             </Link>
             <Link href={`/${locale}/news`} className="menuLink">
