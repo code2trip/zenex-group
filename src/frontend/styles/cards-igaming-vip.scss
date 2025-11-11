@@ -1090,6 +1090,7 @@
       }
 
       @media (max-width: 600px) {
+        border-radius: 6vw;
         padding: 3.2vw;
         height: 30vw !important;
         min-height: unset !important;
@@ -1708,13 +1709,6 @@
             border-radius: 1.6vw;
           }
 
-          @media (max-width: 600px) {
-            width: 12.2vw;
-            height: 12.2vw;
-            padding: 1.6vw;
-            border-radius: 1.6vw;
-          }
-
           &.gradient-teal {
             background: linear-gradient(223.48deg, #00CDC3 2.52%, #006F66 100%);
           }
@@ -2132,6 +2126,13 @@
             border-radius: 1.1vw;
           }
 
+          @media (max-width: 600px) {
+            width: 12.2vw;
+            height: 12.2vw;
+            padding: 1.6vw;
+            border-radius: 1.6vw;
+          }
+
           &.gradient-teal {
             background: linear-gradient(223.48deg, #00CDC3 2.52%, #006F66 100%);
           }
@@ -2277,6 +2278,7 @@
 
       @media (max-width: 400px) {
         height: 55vw;
+        border-radius: 6vw;
       }
 
       .integration-content {
@@ -2515,6 +2517,7 @@
         flex-direction: column;
         padding: 3.2vw 4vw;
         height: 120vw;
+        border-radius: 6vw;
       }
 
       @media (max-width: 400px) {
@@ -2797,6 +2800,7 @@
     }
 
     @media (max-width: 600px) {
+      border-radius: 6vw;
       margin-top: 5vw;
       height: 140vw;
       background-image: url('/assets/background-get-started-mobile.svg');
