@@ -350,7 +350,11 @@
       }
     },
     "benefitsBusiness": {
-      "title": "What does your business get?",
+      "title": "Benefits for your Business",
+      "titleAccentWords": [
+        "your",
+        "business"
+      ],
       "benefits": {
         "customization": {
           "before": "",
@@ -422,6 +426,10 @@
     },
     "getStarted": {
       "title": "Get Started with Ns.Cards iGaming VIP in Just 96 Hours",
+      "titleAccentSegments": [
+        "Get Started",
+        "in Just 96 Hours"
+      ],
       "integration": {
         "title": "Integration Options",
         "option1": {

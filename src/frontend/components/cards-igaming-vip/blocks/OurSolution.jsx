@@ -29,31 +29,37 @@ export default function OurSolution() {
       <div className="solution-cards-row">
         {/* Unlimited Card */}
         <div className="solution-card card-unlimited">
-          <h3>{t('features.unlimited.title')}</h3>
-          <p>{t('features.unlimited.description')}</p>
+          <div className="solution-card-text">
+            <h3>{t('features.unlimited.title')}</h3>
+            <p>{t('features.unlimited.description')}</p>
+          </div>
           {/* Group 48100372 - изображение */}
           <div className="card-image-unlimited">
-            <img src="/assets/image_a9ae2e7c.png" alt="" />
+            <img src="/assets/image_c92b986575685687.svg" alt="" />
           </div>
         </div>
 
         {/* 100% Approval Rate Card */}
         <div className="solution-card card-approval">
-          <h3>{t('features.approval.title')}</h3>
-          <p>{t('features.approval.description')}</p>
+          <div className="solution-card-text">
+            <h3>{t('features.approval.title')}</h3>
+            <p>{t('features.approval.description')}</p>
+          </div>
           {/* Group 48100371 - изображение */}
           <div className="card-image-approval">
-            <img src="/assets/image_a70b7741.png" alt="" />
+            <img src="/assets/image_c92b98657687.svg" alt="" />
           </div>
         </div>
 
         {/* Protection Card */}
         <div className="solution-card card-protection">
-          <h3>{t('features.protection.title')}</h3>
-          <p>{t('features.protection.description')}</p>
+          <div className="solution-card-text">
+            <h3>{t('features.protection.title')}</h3>
+            <p>{t('features.protection.description')}</p>
+          </div>
           {/* Group 48100372 - изображение */}
           <div className="card-image-protection">
-            <img src="/assets/image_b60a68d7.png" alt="" />
+            <img src="/assets/image_c92b98456545.svg" alt="" />
           </div>
         </div>
       </div>
@@ -62,26 +68,26 @@ export default function OurSolution() {
       <div className="solution-cards-row solution-cards-row-second">
         {/* Transparent Fees Card */}
         <div className="solution-card card-fees">
-          <h3>{t('features.fees.title')}</h3>
-          <p>{t('features.fees.description')}</p>
+          <div className="solution-card-text">
+            <h3>{t('features.fees.title')}</h3>
+            <p>{t('features.fees.description')}</p>
+          </div>
           {/* Group 48100372 - монеты */}
           <div className="card-image-fees">
-            <img src="/assets/image_c5ebdd65.png" alt="" />
+            <img src="/assets/image_c92b91848987.svg" alt="" />
           </div>
         </div>
 
         {/* Access Worldwide Card */}
         <div className="solution-card card-worldwide">
-          <h3>{t('features.worldwide.title')}</h3>
-          <p>{t('features.worldwide.description')}</p>
+          <div className="solution-card-text">
+            <h3>{t('features.worldwide.title')}</h3>
+            <p>{t('features.worldwide.description')}</p>
+          </div>
           {/* Group с эллипсами и глобусом */}
           <div className="card-image-worldwide">
-            <div className="worldwide-ellipses">
-              <div className="ellipse-outer"></div>
-              <div className="ellipse-inner"></div>
-            </div>
             <div className="worldwide-globe">
-              <img src="/assets/image_7d6021e4.png" alt="" />
+              <img src="/assets/image_c92b7055.svg" alt="" />
             </div>
           </div>
         </div>

@@ -36,10 +36,10 @@ export default function BenefitsVip() {
       <div className="vip-content-wrapper section-inner">
         {/* Изображение слева */}
         <picture className="vip-visual">
-          <source media="(min-width: 1025px)" srcSet="/assets/background-pattern-vip.png" />
-          <source media="(min-width: 768px) and (max-width: 1024px)" srcSet="/assets/background-pattern-vip-tablet.png" />
+          <source media="(max-width: 600px)" srcSet="/assets/background-pattern-vip-mobile.svg" />
+          <source media="(max-width: 1024px)" srcSet="/assets/background-pattern-vip-tablet.svg" />
           <img
-            src="/assets/background-pattern-vip-mobile.png"
+            src="/assets/background-pattern-vip.png"
             alt="VIP background pattern"
             className="vip-visual__image"
           />

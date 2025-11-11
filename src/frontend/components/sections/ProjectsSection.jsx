@@ -21,7 +21,7 @@ const projects = [
     status: 'active',
     domain: 'Explore more',
     url: 'https://zenex-coin.com',
-    image: '/images/ns-cards-project-igaming-vip.svg',
+    image: '/assets/project2.svg',
   },
   {
     title: 'Zenex B2B Fintech Software',

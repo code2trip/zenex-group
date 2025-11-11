@@ -5,9 +5,56 @@ import { useTranslations } from 'next-intl';
 export default function BenefitsBusiness() {
   const t = useTranslations('cardsVip.benefitsBusiness');
   const titleFull = t('title');
-  const titleWords = titleFull.split(' ');
-  const titleDark = titleWords.slice(0, Math.max(0, titleWords.length - 2)).join(' ');
-  const titleAccent = titleWords.slice(-2).join(' ');
+  const accentWordsRaw = t.raw('titleAccentWords') ?? [];
+  const accentWords = Array.isArray(accentWordsRaw) ? accentWordsRaw : [];
+  const escapedWords = accentWords
+    .map((word) => word?.toString().trim())
+    .filter(Boolean)
+    .map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+
+  const highlightRegex =
+    escapedWords.length > 0
+      ? new RegExp(`\\b(${escapedWords.join('|')})\\b`, 'giu')
+      : null;
+
+  const titleContent = [];
+
+  if (highlightRegex) {
+    let lastIndex = 0;
+    let match;
+    while ((match = highlightRegex.exec(titleFull)) !== null) {
+      if (match.index > lastIndex) {
+        const plainSegment = titleFull.slice(lastIndex, match.index);
+        titleContent.push(
+          <span key={`plain-${lastIndex}`} className="title-text__plain">
+            {plainSegment}
+          </span>
+        );
+      }
+
+      titleContent.push(
+        <span key={`accent-${match.index}`} className="accent">
+          {match[0]}
+        </span>
+      );
+
+      lastIndex = match.index + match[0].length;
+    }
+
+    if (lastIndex < titleFull.length) {
+      titleContent.push(
+        <span key={`plain-${lastIndex}-end`} className="title-text__plain">
+          {titleFull.slice(lastIndex)}
+        </span>
+      );
+    }
+  } else {
+    titleContent.push(
+      <span key="plain-full" className="title-text__plain">
+        {titleFull}
+      </span>
+    );
+  }
   const benefits = t.raw('benefits');
   const benefitOrder = ['customization', 'unlimited', 'communication', 'loyalty', 'analytics', 'support'];
 
@@ -22,10 +69,7 @@ export default function BenefitsBusiness() {
           <div className="icon-box">
             <img src="/assets/Benefits-icon.svg" alt="" />
           </div>
-          <p className="title-text">
-            <span className="dark">{titleDark} </span>
-            <span className="accent">{titleAccent}</span>
-          </p>
+          <p className="title-text">{titleContent}</p>
         </div>
       </div>
 
@@ -33,10 +77,10 @@ export default function BenefitsBusiness() {
       <div className="benefits-content-wrapper">
         {/* Изображение первым */}
         <picture className="benefits-visual">
-          <source media="(min-width: 1025px)" srcSet="/assets/background-pattern-bussines.png" />
-          <source media="(min-width: 768px) and (max-width: 1024px)" srcSet="/assets/background-pattern-bussines-tablet.png" />
+          <source media="(max-width: 600px)" srcSet="/assets/background-pattern-business-mobile.svg" />
+          <source media="(max-width: 1024px)" srcSet="/assets/background-pattern-business-tablet.svg" />
           <img
-            src="/assets/background-pattern-bussines-mobile.png"
+            src="/assets/background-pattern-business.svg"
             alt="Business background pattern"
             className="benefits-visual__image"
           />

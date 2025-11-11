@@ -350,7 +350,11 @@
       }
     },
     "benefitsBusiness": {
-      "title": "Что получает Ваш бизнес?",
+      "title": "Преимущества для Вашего бизнеса",
+      "titleAccentWords": [
+        "вашего",
+        "бизнеса"
+      ],
       "benefits": {
         "customization": {
           "before": "",
@@ -422,6 +426,10 @@
     },
     "getStarted": {
       "title": "Подключите Ns.Сards iGaming VIP за 96 часов",
+      "titleAccentSegments": [
+        "Подключите",
+        "за 96 часов"
+      ],
       "integration": {
         "title": "Интеграция",
         "option1": {
