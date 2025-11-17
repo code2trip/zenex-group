@@ -108,16 +108,16 @@ export default function Header() {
             <Link href={`/${locale}`}>{t('main')}</Link>
           </li>
           <li>
-            <a href="#projects">{t('projects')}</a>
+            <a href={`/${locale}#projects`}>{t('projects')}</a>
           </li>
-          <li className={isActive('/career#form') ? 'active' : ''}>
-            <Link href={`/${locale}/career#form`}>{t('career')}</Link>
+          <li className={isActive('/career') ? 'active' : ''}>
+            <Link href={`/${locale}/career`}>{t('career')}</Link>
           </li>
           <li className={isActive('/news') ? 'active' : ''}>
             <Link href={`/${locale}/news`}>{t('news')}</Link>
           </li>
           <li>
-            <a href="#footer">{t('contact')}</a>
+            <a href={`/${locale}/contact`}>{t('contact')}</a>
           </li>
         </ul>
 
@@ -256,7 +256,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <a href="#footer" onClick={closeMenu}>
+              <a href={`/${locale}/contact`} onClick={closeMenu}>
                 <svg
                   width="16"
                   height="16"

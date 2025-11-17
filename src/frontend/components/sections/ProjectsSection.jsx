@@ -1,104 +1,174 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import 'swiper/css';
 import '@/styles/sections/projects-section.scss';
 import { getGsapWithScrollTrigger } from '@/lib/gsap';
 
 const projects = [
   {
-    title: 'Zenex × NS.Cards Affiliate',
-    text: 'Industry leading card solutions for media buying — with the best rates and service on the market.',
+    title: {
+      en: 'Zenex × NS.Cards Affiliate',
+      ru: 'Zenex × NS.Cards Affiliate',
+    },
+    text: {
+      en: 'Industry leading card solutions for media buying — with the best rates and service on the market.',
+      ru: 'Передовые карточные решения для Медиабаинга с лучшими условиями и сервисом на рынке.',
+    },
     status: 'active',
-    domain: 'Explore more',
+    domain: {
+      en: 'Explore more',
+      ru: 'Подробнее',
+    },
     url: 'https://zenex-coin.com',
     image: '/images/ns-cards-project-affilate.svg',
   },
   {
-    title: 'Zenex × NS.Cards iGaming VIP',
-    text: 'First on the market — a card product offering unlimited transactions for casino VIP players and high rollers.',
+    title: {
+      en: 'Zenex × NS.Cards iGaming VIP',
+      ru: 'Zenex × NS.Cards iGaming VIP',
+    },
+    text: {
+      en: 'First on the market — a card product offering unlimited transactions for casino VIP players and high rollers.',
+      ru: 'Впервые на рынке - карточный продукт с безлимитными транзакциями для VIP-игроков казино и хайроллеров.',
+    },
     status: 'active',
-    domain: 'Explore more',
+    domain: {
+      en: 'Explore more',
+      ru: 'Подробнее',
+    },
     url: 'https://zenex-coin.com',
-    image: '/assets/project2.svg',
+    image: '/images/ns-cards-project-igaming-vip.svg',
   },
   {
-    title: 'Zenex B2B Fintech Software',
-    text: 'Turnkey modular solutions for crypto, financial, payment and card projects - launch your business with us skipping years of development.',
+    title: {
+      en: 'Zenex B2B Fintech Software',
+      ru: 'Zenex B2B Fintech Software',
+    },
+    text: {
+      en: 'Turnkey modular solutions for crypto, financial, payment and card projects - launch your business with us skipping years of development.',
+      ru: 'Готовые модульные решения для Web3, финансовых, платежных и карточных проектов — запустите свой бизнес без многолетней software-разработки.',
+    },
     status: 'active',
-    domain: 'Explore more',
+    domain: {
+      en: 'Explore more',
+      ru: 'Подробнее',
+    },
     url: 'https://zenex-coin.com',
     image: '/images/ns-cards-project-b2b-software.svg',
   },
   {
-    title: 'ZNX Token',
-    text: 'Loyalty, rewards, unlocks — one utility token, multiple experiences.',
+    title: {
+      en: 'ZNX Token',
+      ru: 'ZNX Token',
+    },
+    text: {
+      en: 'Innovative blockchain products and access to Zenex Ecosystem - one utility token, unlimited possibilities. ',
+      ru: 'Инновационные блокчейн-продукты и доступ к экосистеме — один токен, множество возможностей.',
+    },
     status: 'active',
-    domain: 'zenex-coin.com',
+    domain: {
+      en: 'zenex-coin.com • zenexhub.com',
+      ru: 'zenex-coin.com • zenexhub.com',
+    },
     url: 'https://zenex-coin.com',
     image: '/images/webp/project-card-img-1.webp',
   },
   {
-    title: 'Next-On',
-    text: 'All-in-one payment system: cards, crypto — seamless for both ends.',
+    title: {
+      en: 'Next-On',
+      ru: 'Next-On',
+    },
+    text: {
+      en: 'All-in-one payment system: fiat, crypto, cards, APMs and much more.',
+      ru: 'Универсальная платежная система: фиат, крипта, карты, APMs и многое другое.',
+    },
     status: 'active',
-    domain: 'next-on.pro',
+    domain: {
+      en: 'next-on.pro',
+      ru: 'next-on.pro',
+    },
     url: 'https://next-on.pro',
     image: '/images/webp/project-card-img-2.webp',
   },
   {
-    title: 'NS-Card',
-    text: 'Hybrid banking card your Web3 customers will love. Fiat meets crypto, securely.',
+    title: {
+      en: 'White Rabbit Casino',
+      ru: 'White Rabbit Casino',
+    },
+    text: {
+      en: 'An international Curacao-licensed casino platform with slick design, clean gambling experience and real thrill loved by tens of thousands players.',
+      ru: 'Международное казино с лицензией Кюрасао, современным дизайном и лучшим игровым опытом, которое обожают десятки тысяч игроков.',
+    },
     status: 'active',
-    domain: 'ns.cards',
-    url: 'https://ns.cards',
-    image: '/images/webp/project-card-img-3.webp',
-  },
-  {
-    title: 'WR Bet',
-    text: 'No-fluff betting on sports, esports, and more. Fast, intuitive, addictive.',
-    status: 'active',
-    domain: 'wrbet.ke',
-    url: 'https://wrbet.ke',
-    image: '/images/webp/project-card-img-4.webp',
-  },
-  {
-    title: 'White Rabbit Casino',
-    text: 'Slick design, clean experience, real thrill. For smart players.',
-    status: 'active',
-    domain: 'whiterabbit.casino',
+    domain: {
+      en: 'whiterabbit.casino',
+      ru: 'whiterabbit.casino',
+    },
     url: 'https://whiterabbit.casino',
     image: '/images/webp/project-card-img-5.webp',
   },
   {
-    title: 'Zenex Group',
-    text: 'Central Zenex platform: unified access to all products, services, and features.',
-    status: 'soon',
-    domain: 'zenex-project.com',
-    url: 'https://zenex-project.com',
-    image: '/images/webp/project-card-img-6.webp',
+    title: {
+      en: 'WR Bet',
+      ru: 'WR Bet',
+    },
+    text: {
+      en: 'An innovative online casino & sportsbook project for the Kenyan market with local and international licenses and thousands of active monthly users.',
+      ru: 'Современная игровая и беттинг-платформа для кенийского рынка — с международными лицензиями и тысячами активных пользователей каждый месяц.',
+    },
+    status: 'active',
+    domain: {
+      en: 'wrbet.ke',
+      ru: 'wrbet.ke',
+    },
+    url: 'https://wrbet.ke',
+    image: '/images/webp/project-card-img-4.webp',
   },
   {
-    title: 'Axioma',
-    text: 'Pro-grade sportsbook backend. Data-first, flexible, and highly scalable.',
+    title: {
+      en: 'White Rabbit Betshop Franchise',
+      ru: 'White Rabbit Betshop Franchise',
+    },
+    text: {
+      en: 'The first product to allow retail investors to own & earn from real betshop locations all over Kenya.',
+      ru: 'Первый продукт, позволяющий частным инвесторам владеть и зарабатывать на реальных бетшопах по всей Кении.',
+    },
+    status: 'soon',
+    when: {
+      en: 'Launching Q4 2025',
+      ru: 'Запуск: IV квартал 2025 года',
+    },
+    domain: {
+      en: '',
+      ru: '',
+    },
+    url: '',
+    image: '/images/webp/project-card-img-5.webp',
+  },
+  {
+    title: {
+      en: 'Axioma',
+      ru: 'Axioma',
+    },
+    text: {
+      en: 'Pro-grade sportsbook backend. Data-first, flexible, and highly scalable.',
+      ru: 'Профессиональное программное обеспечение для букмекеров: аналитически-совершенное, гибкое, масштабируемое',
+    },
     status: 'active',
-    domain: 'axioma.bet',
+    domain: {
+      en: 'axioma.bet',
+      ru: 'axioma.bet',
+    },
     url: 'https://axioma.bet',
     image: '/images/webp/project-card-img-7.webp',
-  },
-  {
-    title: 'Mi7 EU',
-    text: 'A next-gen online casino designed for the European scene. Pure fire, zero bullshit.',
-    status: 'soon',
-    domain: 'mi7eu.bet',
-    url: 'https://mi7.eu',
-    image: '/images/webp/project-card-img-8.webp',
   },
 ];
 
 export default function ProjectsSection() {
   const t = useTranslations('home.projects');
+  const locale = useLocale();
   const swiperRef = useRef(null);
   const swiperInstanceRef = useRef(null);
 
@@ -229,15 +299,19 @@ export default function ProjectsSection() {
                 <a href={project.url} className="project-card" target="_blank" rel="noopener noreferrer">
                   <img src={project.image} alt="" className="project-card__img" />
                   <div className="project-card__inner">
-                    <h3 className="project-card__title">{project.title}</h3>
-                    <p className="project-card__text">{project.text}</p>
+                    <h3 className="project-card__title">{project.title[locale] || project.title.en}</h3>
+                    <p className="project-card__text">{project.text[locale] || project.text.en}</p>
                     <div className="project-card__footer">
                       <span className={`project-card__status ${project.status}`}>
-                        {project.status === 'active' ? t('active') : t('soon')}
+                        {project.status === 'active' ? t('active') : `${project.when[locale] || project.when.en}`}
                       </span>
                       <div className="project-card__row">
-                        <span className="project-card__domain">{project.domain}</span>
-                        <span className="project-card__arrow">
+                        <span className="project-card__domain">
+                          {typeof project.domain === 'string'
+                            ? project.domain
+                            : project.domain[locale] || project.domain.en}
+                        </span>
+                        <span className="project-card__arrow" style={{ display: project.status === 'active' ? 'block' : 'none' }}>
                           <svg
                             width="24"
                             height="25"

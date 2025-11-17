@@ -72,8 +72,10 @@
         color: #FFF;
         font-size: 3.8rem;
         font-style: normal;
-        font-weight: 200;
+        font-weight: 100;
         line-height: 119.092%;
+        font-family: "Inter:Extra Light", sans-serif;
+        font-variation-settings: normal;
 
         strong {
             font-weight: 700;
@@ -133,8 +135,8 @@
         }
 
         &__title {
-            max-width: 83.4rem;
-            font-size: 6.8225rem;
+            max-width: 100%;
+            font-size: 68px;
         }
 
         &__button {

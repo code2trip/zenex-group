@@ -116,7 +116,7 @@ export default function PrimaryNav() {
             <Link href={`/${locale}/news`}>{t('news')}</Link>
           </li>
           <li>
-            <a href={`/${locale}#footer`}>{t('contact')}</a>
+            <a href={`/${locale}/contact`}>{t('contact')}</a>
           </li>
         </ul>
 
@@ -175,7 +175,7 @@ export default function PrimaryNav() {
               </Link>
             </li>
             <li>
-              <a href={`/${locale}#footer`} onClick={closeMenu}>
+              <a href={`/${locale}/contact`} onClick={closeMenu}>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.92925 6.52734C8.39458 6.68334 8.84658 6.68401 9.31125 6.52734C9.40858 6.49467 9.48658 6.41667 9.51925 6.32001C9.67525 5.85467 9.67525 5.40267 9.51925 4.93734C9.48658 4.84001 9.40858 4.76267 9.31125 4.73001C8.84658 4.57401 8.39458 4.57401 7.92925 4.73001C7.83191 4.76267 7.75391 4.84067 7.72125 4.93734C7.56525 5.40267 7.56525 5.85467 7.72125 6.32001C7.75391 6.41734 7.83191 6.49467 7.92925 6.52734Z" fill="currentColor" />
                 </svg>

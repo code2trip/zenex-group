@@ -7,18 +7,23 @@
       "news": "News",
       "contact": "Contact"
     },
-    "becomePartner": "Become a partner",
+    "becomePartner": "Learn more",
     "contactUs": "Contact us",
     "letsMakeProfit": "Lets make real profit together",
     "email": "info@zenex-coin.com",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service"
+    "termsOfService": "Terms of Service",
+    "footer": {
+      "company1": "Name: ZENEX Game Ltd. Address: 10 ANSON ROAD #20-05, INTERNATIONAL PLAZA, SINGAPORE, 079903. Reg.number: (UEN): 202243071W. Activities: Development of software and applications (except games and cybersecurity).",
+      "company2": "Name: TAU impex s.r.o. Address: Klecanska 369 Zdiby; Stredocesky; 25066. Reg.number: 247 09 891 Klecanská 369, 250 66 Zdiby, Czech republic. Activity: Provision of services related to virtual assets (Poskytování služeb spojených s virtuálním активом).",
+      "copyright": "Copyright © 2025\nZenex. All rights reserved."
+    }
   },
   "home": {
     "hero": {
       "description": "An international holding powering next-gen ventures in Web3, finance, gaming, and real-world entertainment.",
       "title": "We Don't Follow Trends.",
-      "titleStrong": "We Launch Them",
+      "titleStrong": " We Launch Them",
       "button": "Explore Zenex Brands"
     },
     "numbers": {
@@ -46,7 +51,7 @@
     "banner1": {
       "title": "We open the way",
       "titleStrong": "for your ideas!",
-      "text": "We build fast, we build smart. Let's make it happen — write to us!",
+      "text": "We build fast and smart. Let’s make it happen — contact us!",
       "button": "Contact us"
     },
     "map": {
@@ -62,29 +67,29 @@
       "label": "Best Offer",
       "fullCommitment": {
         "title": "Full Commitment",
-        "text": "We go beyond funding — we get involved when it matters most."
+        "text": "We go beyond investment — supporting our ventures operationally, strategically, and creatively when it matters most."
       },
       "clearPath": {
         "title": "Clear Path",
-        "text": "You build. We back you. Fast-track support, zero bureaucracy."
+        "text": "We simplify growth. Fast-track onboarding, transparent processes, and direct communication — no bureaucracy."
       },
       "web3": {
         "title": "Web3. Real Way",
-        "text": "Flexible, fast, and user-obsessed — always."
+        "text": "Practical Web3 adoption — not hype. We build real products used by real users across gaming, fintech, and blockchain."
       },
       "speed": {
         "title": "Built for Speed",
-        "text": "We launch in weeks and scale across continents."
+        "text": "From concept to launch in weeks — our teams and tech infrastructure are designed for rapid scaling across continents."
       },
       "independent": {
         "title": "Born Independent",
-        "text": "Full autonomy for each product with zero corporate interference"
+        "text": "Each brand operates autonomously, empowered by shared Zenex resources but free from corporate limits."
       }
     },
     "banner2": {
       "title": "Lets make",
-      "titleStrong": "real profit together",
-      "text": "We're open to bold ideas and fresh minds. Let's build something great — write to us.",
+      "titleStrong": "history together!",
+      "text": "Open to strategic partnerships with forward-thinking entities. Ready to shape industry standards while generating substantial results? Reach out now.",
       "button": "Contact us"
     }
   },
@@ -107,7 +112,8 @@
       "missionTitle": "Our Mission & Values",
       "missionText": "To create an integrated ecosystem where innovative technology drives real-world value across digital finance and gaming.",
       "missionTextStrong": "technology drives real-world",
-      "brands": "Brands"
+      "brands": "Brands",
+      "value-brands": "Culture"
     },
     "values": {
       "title": "Core",
@@ -206,6 +212,23 @@
       },
       "submit": "Submit Application",
       "notice": "Don't see a position that matches your skills? We're always looking for exceptional talent. Send us your CV and tell us how you can contribute to our ecosystem."
+    }
+  },
+  "contact": {
+    "hero": {
+      "titlePrimary": "Ready to",
+      "titleAccent": "launch?",
+      "subtitle": "Ready for the next level?"
+    },
+    "form": {
+      "title": "Contact us",
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message"
+      },
+      "submit": "Submit"
     }
   },
   "article": {

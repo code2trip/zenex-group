@@ -116,6 +116,7 @@
         font-weight: 700;
         line-height: 100%;
         margin-bottom: 1rem;
+        width: 70%;
     }
 
     &__item-text {
@@ -196,7 +197,7 @@
                     }
 
                     &__item-title {
-                        max-width: 31.2rem;
+                        width: 100%;
                     }
                 }
             }

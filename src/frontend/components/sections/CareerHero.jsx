@@ -1,12 +1,13 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import '@/styles/sections/career-hero.scss';
 import { getGsapWithScrollTrigger } from '@/lib/gsap';
 
 export default function CareerHero() {
   const t = useTranslations('career.hero');
+  const locale = useLocale();
 
   useEffect(() => {
     let tween;
@@ -62,7 +63,17 @@ export default function CareerHero() {
               <img src="/images/webp/career-img-m.webp" alt="" />
             </picture>
             <span className="career-hero__item-label">{t('brands')}</span>
-            <h2 className="career-hero__item-title">{t('joinTitle')}</h2>
+            <h2 className="career-hero__item-title">
+              {locale === 'ru' ? (
+                <>
+                  Присоединяйтесь
+                  <br />
+                  к нашей команде
+                </>
+              ) : (
+                t('joinTitle')
+              )}
+            </h2>
             <p className="career-hero__item-text">
               {t('joinText').split(t('joinTextStrong'))[0]}
               <strong>{t('joinTextStrong')}</strong>
@@ -75,8 +86,18 @@ export default function CareerHero() {
               alt=""
               className="career-hero__item-img"
             />
-            <span className="career-hero__item-label">{t('brands')}</span>
-            <h2 className="career-hero__item-title">{t('missionTitle')}</h2>
+            <span className="career-hero__item-label">{t('value-brands')}</span>
+            <h2 className="career-hero__item-title">
+              {locale === 'ru' ? (
+                <>
+                  Наша миссия
+                  <br />
+                  и ценности
+                </>
+              ) : (
+                t('missionTitle')
+              )}
+            </h2>
             <p className="career-hero__item-text">
               {t('missionText').split(t('missionTextStrong'))[0]}
               <strong>{t('missionTextStrong')}</strong>
