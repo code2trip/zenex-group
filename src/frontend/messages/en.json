@@ -491,6 +491,184 @@
       }
     }
   },
+  "aff": {
+    "header": {
+      "title": "Cards for Media Buyers",
+      "subtitle": "A New Level of Freedom and Convenience for Your Partners",
+      "cta": "Contact Sales",
+      "learnMore": "Learn more"
+    },
+    "marketProblem": {
+      "title": "Market Problem",
+      "description": "Every day, media buyers face major challenges when paying for ads — issues that slow down operations and increase the cost of traffic acquisition:",
+      "problems": {
+        "blocked": "Card blocks and low spending limits",
+        "fees": "Long KYC checks",
+        "limits": "Commission fees on every transaction",
+        "settlement": "High top-up commissions",
+        "regions": "No flexibility in choosing top-up methods",
+        "privacy": "Minimum order of 50 cards for affiliate networks"
+      }
+    },
+    "ourSolution": {
+      "title": "Our Solution — NS.Cards MediaBuy",
+      "description": "The first card product built specifically for media buyers — offering unlimited transactions, privacy, and service excellence:",
+      "features": {
+        "unlimited": {
+          "title": "0% transaction fee",
+          "description": "Zero transaction fees — pay only for cards"
+        },
+        "approval": {
+          "title": "Dynamic BINs and protection from card blocks",
+          "description": "Dynamic BIN codes and protection from card blocks"
+        },
+        "protection": {
+          "title": "No limits on top-ups or purchases",
+          "description": "Unlimited top-ups and purchases without restrictions"
+        },
+        "fees": {
+          "title": "Transparent fees",
+          "description": "Transparent fees and no hidden charges: up to 4% on deposits and 2% on payouts"
+        },
+        "worldwide": {
+          "title": "Access worldwide",
+          "description": "Access to hard-to-reach regions and local top-up methods"
+        }
+      }
+    },
+    "benefitsBusiness": {
+      "title": "NS.Cards has more benefits",
+      "titleAccentWords": [
+        "NS.Cards",
+        "benefits"
+      ],
+      "benefits": {
+        "customization": {
+          "before": "",
+          "highlight": "Issue as many cards as you need",
+          "after": " with high spending limits on each card"
+        },
+        "unlimited": {
+          "before": "",
+          "highlight": "€5,000 per day",
+          "after": ""
+        },
+        "communication": {
+          "before": "",
+          "highlight": "€100,000 per month",
+          "after": ""
+        },
+        "loyalty": {
+          "before": "",
+          "highlight": "Payment Freedom",
+          "after": ""
+        },
+        "analytics": {
+          "before": "",
+          "highlight": "Bonuses",
+          "after": ""
+        },
+        "support": {
+          "before": "",
+          "highlight": "Control",
+          "after": ""
+        }
+      },
+      "descriptions": {
+        "customization": "Issue as many cards as you need with high spending limits on each card",
+        "unlimited": "€5,000 per day",
+        "communication": "€100,000 per month",
+        "loyalty": "Payment Freedom",
+        "analytics": "Referral program and promo codes",
+        "support": "Real-time expense tracking"
+      }
+    },
+    "benefitsVip": {
+      "title": "Exclusive: For Affiliate Networks & Media Buying Agencies",
+      "description": "Custom solutions designed for your workflow:",
+      "benefits": {
+        "instant": {
+          "before": "",
+          "highlight": "Enjoy total control and flexibility",
+          "after": ""
+        },
+        "limits": {
+          "before": "",
+          "highlight": "Master account with sub-account management",
+          "after": ""
+        },
+        "integration": {
+          "before": "",
+          "highlight": "Branded dashboard and custom UI",
+          "after": ""
+        },
+        "withdrawals": {
+          "before": "",
+          "highlight": "Referral system and promo codes",
+          "after": ""
+        },
+        "deposits": {
+          "before": "",
+          "highlight": "Adjustable markups and discounts",
+          "after": ""
+        },
+        "recovery": {
+          "before": "",
+          "highlight": "Mass card issuance in one click",
+          "after": ""
+        },
+        "shared": {
+          "before": "",
+          "highlight": "Link multiple cards to a shared balance",
+          "after": ""
+        }
+      }
+    },
+    "getStarted": {
+      "title": "Take your media buying to the next level of profitability and convenience",
+      "titleAccentSegments": [
+        "next level",
+        "profitability",
+        "convenience"
+      ],
+      "integration": {
+        "title": "Custom solutions",
+        "option1": {
+          "before": "",
+          "highlight": "Master account with sub-account management",
+          "after": ""
+        },
+        "option2": {
+          "before": "",
+          "highlight": "Branded dashboard and custom UI",
+          "after": ""
+        }
+      },
+      "issuance": {
+        "title": "Additional features",
+        "option1": {
+          "before": "",
+          "highlight": "Referral system and promo codes",
+          "after": ""
+        },
+        "option2": {
+          "before": "",
+          "highlight": "Adjustable markups and discounts",
+          "after": ""
+        },
+        "option3": {
+          "before": "",
+          "highlight": "Mass card issuance in one click",
+          "after": ""
+        }
+      },
+      "cta": {
+        "title": "Take your media buying to the next level",
+        "description": "Join NS.Cards and optimize your ad spend",
+        "button": "Contact Sales"
+      }
+    }
+  },
   "launchAndScale": {
     "hero": {
       "title": "Launch and scale your business in 96 hours",

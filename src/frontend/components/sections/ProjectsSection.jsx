@@ -21,7 +21,7 @@ const projects = [
       en: 'Explore more',
       ru: 'Подробнее',
     },
-    url: 'https://zenex-coin.com',
+    url: '/aff',
     image: '/images/ns-cards-project-affilate.svg',
   },
   {
@@ -38,7 +38,7 @@ const projects = [
       en: 'Explore more',
       ru: 'Подробнее',
     },
-    url: 'https://zenex-coin.com',
+    url: '/cards-igaming-vip',
     image: '/images/ns-cards-project-igaming-vip.svg',
   },
   {
