@@ -18,37 +18,24 @@ export default function BenefitsVip() {
       titleAfterBreak = titleMain.slice(breakEnd);
     }
   }
-  
-  const features = [
-    {
-      icon: '/assets/image-user-check.svg',
-      text: 'Master account with sub-account management'
-    },
-    {
-      icon: '/assets/palette.svg',
-      text: 'Branded dashboard and custom UI'
-    },
-    {
-      icon: '/assets/gift-01.svg',
-      text: 'Referral system and promo codes'
-    },
-    {
-      icon: '/assets/sale-03.svg',
-      text: 'Adjustable markups and discounts'
-    },
-    {
-      icon: '/assets/sliders-02.svg',
-      text: 'Tailored customization for specific business processes'
-    },
-    {
-      icon: '/assets/layers-three-01.svg',
-      text: 'Mass card issuance in one click'
-    },
-    {
-      icon: '/assets/link-01.svg',
-      text: 'Link multiple cards to a shared balance'
-    }
+
+  const featureConfigs = [
+    { key: 'limits', icon: '/assets/image-user-check.svg' },
+    { key: 'integration', icon: '/assets/palette.svg' },
+    { key: 'withdrawals', icon: '/assets/gift-01.svg' },
+    { key: 'deposits', icon: '/assets/sale-03.svg' },
+    { key: 'instant', icon: '/assets/sliders-02.svg' },
+    { key: 'recovery', icon: '/assets/layers-three-01.svg' },
+    { key: 'shared', icon: '/assets/link-01.svg' },
   ];
+
+  const features = featureConfigs
+    .map(({ key, icon }) => {
+      const benefitNode = t.raw(`benefits.${key}`);
+      const text = benefitNode?.highlight ?? t(`benefits.${key}.highlight`);
+      return text ? { icon, text } : null;
+    })
+    .filter(Boolean);
 
   return (
     <div className="exclusive-section section-container">
