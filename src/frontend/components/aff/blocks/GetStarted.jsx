@@ -76,96 +76,16 @@ function highlightTitleSegments(title, segments) {
 export default function GetStarted() {
   const t = useTranslations('aff.getStarted');
 
-  const normalizeOption = (option) => {
-    if (typeof option === 'string') {
-      return { before: '', highlight: option, after: '' };
-    }
-
-    const { before = '', highlight = '', after = '' } = option || {};
-    return { before, highlight, after };
-  };
-
-  const integrationOptions = [
-    normalizeOption(t.raw('integration.option1')),
-    normalizeOption(t.raw('integration.option2')),
-  ];
-
-  const issuanceOptions = [
-    normalizeOption(t.raw('issuance.option1')),
-    normalizeOption(t.raw('issuance.option2')),
-    normalizeOption(t.raw('issuance.option3')),
-  ];
-
-  const titleAccentSegments = t.raw('titleAccentSegments') ?? [];
-  const titleContent = highlightTitleSegments(t('title'), titleAccentSegments);
+  const ctaTitle = t('cta.title');
+  const accentPhrase = t('cta.titleAccentPhrase');
+  const titleContent = highlightTitleSegments(ctaTitle, [accentPhrase]);
 
   return (
     <div className="get-started-section section-container">
-      {/* Title */}
-      <div className="section-title-group section-inner">
-        <div className="title-row">
-          <div className="icon-box">
-            <img src="/assets/Career-icon.svg" alt="" />
-          </div>
-          <p className="title-text">{titleContent}</p>
-        </div>
-      </div>
-
-      {/* Columns */}
-      <div className="get-started-columns">
-        <div className="integration-column">
-          <div className="integration-content">
-            <h2>{t('integration.title')}</h2>
-
-            <div className="integration-items">
-              {integrationOptions.map(({ before, highlight, after }, index) => (
-                <div className="integration-item" key={`integration-${index}`}>
-                  <div className="item-number">
-                    <span>{index + 1}</span>
-                  </div>
-                  <p>
-                    {before}
-                    {highlight && <strong>{highlight}</strong>}
-                    {after}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="integration-column__decor">
-            <img src="/assets/sandcircle.svg" alt="Sand circular pattern" />
-          </div>
-        </div>
-
-        <div className="issuance-column">
-          <div className="issuance-content">
-            <h2>{t('issuance.title')}</h2>
-
-            {issuanceOptions.map(({ before, highlight, after }, index) => (
-              <div className="issuance-item" key={`issuance-${index}`}>
-                <div className="item-number">
-                  <span>{index + 1}</span>
-                </div>
-                <p>
-                  {before}
-                  {highlight && <strong>{highlight}</strong>}
-                  {after}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="issuance-visual">
-            <img src="/assets/sandclock.svg" alt="Sand clock illustration" />
-          </div>
-        </div>
-      </div>
-
       <div className="cta-banner">
         <div className="cta-card-visual-background">
           <img
-            src="/assets/image_3cac89wergwetg81.svg"
+            src="/assets/cta-aff.svg"
             alt="Credit card mockup VIP"
           />
         </div>
@@ -176,8 +96,7 @@ export default function GetStarted() {
               <img src="/assets/logo_ns_cards.svg" alt="NS.CARDS" />
             </div>
             <div className="cta-text-group">
-              <h3>{t('cta.title')}</h3>
-              <p>{t('cta.description')}</p>
+              <h3>{titleContent}</h3>
             </div>
           </div>
           <div className="cta-right">

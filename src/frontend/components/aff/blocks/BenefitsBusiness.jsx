@@ -10,11 +10,19 @@ export default function BenefitsBusiness() {
   const escapedWords = accentWords
     .map((word) => word?.toString().trim())
     .filter(Boolean)
-    .map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    .map((word) => {
+      const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      // Если фраза содержит пробел, ищем её целиком без word boundaries
+      if (word.includes(' ')) {
+        return escaped;
+      }
+      // Для отдельных слов используем word boundaries
+      return `\\b${escaped}\\b`;
+    });
 
   const highlightRegex =
     escapedWords.length > 0
-      ? new RegExp(`\\b(${escapedWords.join('|')})\\b`, 'giu')
+      ? new RegExp(`(${escapedWords.join('|')})`, 'giu')
       : null;
 
   const titleContent = [];
@@ -56,7 +64,29 @@ export default function BenefitsBusiness() {
     );
   }
   const benefits = t.raw('benefits');
-  const benefitOrder = ['customization', 'unlimited', 'communication', 'loyalty', 'analytics', 'support'];
+  const descriptions = t.raw('descriptions');
+  const benefitOrder = ['customization', 'unlimited', 'loyalty', 'support'];
+
+  const imageMap = {
+    customization: '/assets/wallet.svg',
+    unlimited: '/assets/baggage.svg',
+    loyalty: '/assets/gift.svg',
+    support: '/assets/control.svg',
+  };
+
+  const gradientMap = {
+    customization: 'gradient-gold',
+    unlimited: 'gradient-blue',
+    loyalty: 'gradient-dark',
+    support: 'gradient-teal',
+  };
+
+  const imageClassMap = {
+    customization: 'card-image-customization',
+    unlimited: 'card-image-unlimited',
+    loyalty: 'card-image-loyalty',
+    support: 'card-image-support',
+  };
 
   return (
     <div className="benefits-business-section section-container">
@@ -68,67 +98,85 @@ export default function BenefitsBusiness() {
           </div>
           <p className="title-text">{titleContent}</p>
         </div>
+        <div className="section-description">
+          <p>{t('description')}</p>
+        </div>
       </div>
 
       {/* Frame 2085662083 - основной контент */}
       <div className="benefits-content-wrapper">
-        {/* Изображение первым */}
-        <picture className="benefits-visual">
-          <source media="(max-width: 600px)" srcSet="/assets/background-pattern-business-mobile.svg" />
-          <source media="(max-width: 1024px)" srcSet="/assets/background-pattern-business-tablet.svg" />
-          <img
-            src="/assets/background-pattern-business.svg"
-            alt="Business background pattern"
-            className="benefits-visual__image"
-          />
-        </picture>
-
-        {/* Cards list - карточки вторыми */}
-        <div className="benefits-cards-list">
-          {benefitOrder.map((key) => {
-            const benefit = benefits[key];
-            if (!benefit) return null;
-
-            const iconMap = {
-              customization: '/assets/image_50727951.png',
-              unlimited: '/assets/image_77a6e2e0.png',
-              communication: '/assets/image_39df2c01.png',
-              loyalty: '/assets/image_dd8ecfcf.png',
-              analytics: '/assets/image_1351319b.png',
-              support: '/assets/image_a8493888.png',
-            };
-
-            const gradientMap = {
-              customization: 'gradient-teal',
-              unlimited: 'gradient-dark',
-              communication: 'gradient-gold',
-              loyalty: 'gradient-teal',
-              analytics: 'gradient-dark',
-              support: 'gradient-gold',
-            };
-
-            const value = typeof benefit === 'string'
-              ? { before: '', highlight: benefit, after: '' }
-              : benefit;
-            const { before = '', highlight = '', after = '' } = value;
-
-            return (
-              <div className="benefit-card" key={key}>
-                <div className="card-text">
-                  <p>
-                    {before}
-                    {highlight && <strong>{highlight}</strong>}
-                    {after}
-                  </p>
-                </div>
-                <div className={`card-icon-box ${gradientMap[key] || ''}`}>
-                  <div className="icon-inner">
-                    <img src={iconMap[key]} alt="" />
-                  </div>
-                </div>
+        {/* Первая карточка (customization) - большая слева */}
+        {benefits.customization && (
+          <div className={`benefit-card benefit-card-large ${gradientMap.customization}`}>
+            <img src="/assets/lines-oursolution.svg" alt="" className="card-lines-decoration" />
+            <div className="card-text">
+              <p>
+                {benefits.customization.before}
+                {benefits.customization.highlight}
+                {benefits.customization.after}
+              </p>
+              <div className="card-limits">
+                <p className="limit-item">
+                  <span className="limit-amount">€5,000</span> per day
+                </p>
+                <p className="limit-item">
+                  <span className="limit-amount">€100,000</span> per month
+                </p>
               </div>
-            );
-          })}
+            </div>
+            <div className={imageClassMap.customization}>
+              <img src={imageMap.customization} alt="" />
+            </div>
+          </div>
+        )}
+
+        {/* Вторая карточка (loyalty - Payment Freedom) - первая строка справа */}
+        {benefits.loyalty && (
+          <div className={`benefit-card benefit-card-second ${gradientMap.unlimited}`}>
+            <img src="/assets/lines-oursolution.svg" alt="" className="card-lines-decoration" />
+            <div className="card-text">
+              <h3>{benefits.loyalty.highlight}</h3>
+              {descriptions?.loyalty && (
+                <p className="card-description">{descriptions.loyalty}</p>
+              )}
+            </div>
+            <div className={imageClassMap.unlimited}>
+              <img src={imageMap.unlimited} alt="" />
+            </div>
+          </div>
+        )}
+
+        {/* Третья и четвертая карточки - вторая строка справа */}
+        <div className="benefits-cards-row-second">
+          {benefits.analytics && (
+            <div className={`benefit-card ${gradientMap.loyalty}`}>
+              <img src="/assets/lines-oursolution.svg" alt="" className="card-lines-decoration" />
+              <div className="card-text">
+                <h3>{benefits.analytics.highlight}</h3>
+                {descriptions?.analytics && (
+                  <p className="card-description">{descriptions.analytics}</p>
+                )}
+              </div>
+              <div className={imageClassMap.loyalty}>
+                <img src={imageMap.loyalty} alt="" />
+              </div>
+            </div>
+          )}
+
+          {benefits.support && (
+            <div className={`benefit-card ${gradientMap.support}`}>
+              <img src="/assets/lines-oursolution.svg" alt="" className="card-lines-decoration" />
+              <div className="card-text">
+                <h3>{benefits.support.highlight}</h3>
+                {descriptions?.support && (
+                  <p className="card-description">{descriptions.support}</p>
+                )}
+              </div>
+              <div className={imageClassMap.support}>
+                <img src={imageMap.support} alt="" />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

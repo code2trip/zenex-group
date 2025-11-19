@@ -493,8 +493,8 @@
   },
   "aff": {
     "header": {
-      "title": "Cards for Media Buyers",
-      "subtitle": "A New Level of Freedom and Convenience for Your Partners",
+      "title": "Cards\nfor Media Buyers",
+      "subtitle": "The best way to pay for traffic\nand efficiently fund ad accounts",
       "cta": "Contact Sales",
       "learnMore": "Learn more"
     },
@@ -512,7 +512,43 @@
     },
     "ourSolution": {
       "title": "Our Solution — NS.Cards MediaBuy",
-      "description": "The first card product built specifically for media buyers — offering unlimited transactions, privacy, and service excellence:",
+      "titleAccentWords": [
+        "NS.Cards",
+        "MediaBuy"
+      ],
+      "description": "We built a tool that solves all the pain points of media buying and lets you focus on what really matters — launching effective campaigns.",
+      "benefits": {
+        "customization": {
+          "before": "",
+          "highlight": "Card issuance without KYC, in any quantity you need",
+          "after": ""
+        },
+        "unlimited": {
+          "before": "",
+          "highlight": "0% transaction fee",
+          "after": ""
+        },
+        "communication": {
+          "before": "",
+          "highlight": "Top-ups in crypto up to 3,5%* Discounts available for affiliate teams",
+          "after": ""
+        },
+        "loyalty": {
+          "before": "",
+          "highlight": "Instant balance transfers between cards",
+          "after": ""
+        },
+        "analytics": {
+          "before": "",
+          "highlight": "Dynamic BINs and protection from card blocks",
+          "after": ""
+        },
+        "support": {
+          "before": "",
+          "highlight": "No limits on top-ups or purchases",
+          "after": ""
+        }
+      },
       "features": {
         "unlimited": {
           "title": "0% transaction fee",
@@ -539,9 +575,9 @@
     "benefitsBusiness": {
       "title": "NS.Cards has more benefits",
       "titleAccentWords": [
-        "NS.Cards",
-        "benefits"
+        "more benefits"
       ],
+      "description": "Beyond savings, we provide unlimited scalability and convenience for your business.",
       "benefits": {
         "customization": {
           "before": "",
@@ -576,16 +612,19 @@
       },
       "descriptions": {
         "customization": "Issue as many cards as you need with high spending limits on each card",
-        "unlimited": "€5,000 per day",
+        "unlimited": "Not just ADs: use cards to pay for flights, hotels, and more",
         "communication": "€100,000 per month",
-        "loyalty": "Payment Freedom",
+        "loyalty": "Not just ADs: use cards to pay for flights, hotels, and more",
         "analytics": "Referral program and promo codes",
         "support": "Real-time expense tracking"
       }
     },
-    "benefitsVip": {
-      "title": "Exclusive: For Affiliate Networks & Media Buying Agencies",
-      "description": "Custom solutions designed for your workflow:",
+    "exclusive": {
+      "titleAccent": "Exclusive:",
+      "titleRest": " For Affiliate Networks & Media Buying Agencies",
+      "subtitle": "Custom solutions designed for your workflow:",
+      "titleMain": "Enjoy total control and flexibility",
+      "titleMainBreakWord": "control",
       "benefits": {
         "instant": {
           "before": "",
@@ -663,8 +702,8 @@
         }
       },
       "cta": {
-        "title": "Take your media buying to the next level",
-        "description": "Join NS.Cards and optimize your ad spend",
+        "title": "Take your media buying to the next level of profitability and convenience",
+        "titleAccentPhrase": "of profitability and convenience",
         "button": "Contact Sales"
       }
     }
@@ -860,4 +899,5 @@
     }
   }
 }
+
 

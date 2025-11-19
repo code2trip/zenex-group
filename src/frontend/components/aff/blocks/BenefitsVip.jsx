@@ -3,99 +3,112 @@
 import { useTranslations } from 'next-intl';
 
 export default function BenefitsVip() {
-  const t = useTranslations('aff.benefitsVip');
-  const benefits = t.raw('benefits');
-  const benefitOrder = ['instant', 'limits', 'integration', 'withdrawals', 'deposits', 'recovery', 'shared'];
+  const t = useTranslations('aff.exclusive');
+  const titleMain = t('titleMain');
+  const breakWord = t('titleMainBreakWord');
+
+  let titleBeforeBreak = titleMain;
+  let titleAfterBreak = '';
+
+  if (breakWord) {
+    const breakIndex = titleMain.indexOf(breakWord);
+    if (breakIndex !== -1) {
+      const breakEnd = breakIndex + breakWord.length;
+      titleBeforeBreak = titleMain.slice(0, breakEnd);
+      titleAfterBreak = titleMain.slice(breakEnd);
+    }
+  }
+  
+  const features = [
+    {
+      icon: '/assets/image-user-check.svg',
+      text: 'Master account with sub-account management'
+    },
+    {
+      icon: '/assets/palette.svg',
+      text: 'Branded dashboard and custom UI'
+    },
+    {
+      icon: '/assets/gift-01.svg',
+      text: 'Referral system and promo codes'
+    },
+    {
+      icon: '/assets/sale-03.svg',
+      text: 'Adjustable markups and discounts'
+    },
+    {
+      icon: '/assets/sliders-02.svg',
+      text: 'Tailored customization for specific business processes'
+    },
+    {
+      icon: '/assets/layers-three-01.svg',
+      text: 'Mass card issuance in one click'
+    },
+    {
+      icon: '/assets/link-01.svg',
+      text: 'Link multiple cards to a shared balance'
+    }
+  ];
 
   return (
-    <div className="benefits-vip-section section-container">
-      {/* Декоративный фон справа снизу */}
-      <img
-        src="/assets/code_decor-vip.svg"
-        alt=""
-        className="benefits-vip-decor"
-      />
-
+    <div className="exclusive-section section-container">
       {/* Title */}
       <div className="section-title-group section-inner">
         <div className="title-row">
           <div className="icon-box">
-            <img src="/assets/Excellence-icon.svg" alt="" />
+            <img src="/assets/Values.svg" alt="" />
           </div>
           <p className="title-text">
-            <span className="dark">{t('title').split(' ').slice(0, 2).join(' ')} </span>
-            <span className="accent">{t('title').split(' ').slice(2).join(' ')}</span>
+            <span className="accent">{t('titleAccent')}</span>
+            <span className="dark">{t('titleRest')}</span>
           </p>
-        </div>
-        <div className="benefits-vip-description">
-          <p>{t('description')}</p>
         </div>
       </div>
 
-      {/* Frame 2085662083 - основной контент */}
-      <div className="vip-content-wrapper section-inner">
-        {/* Изображение слева */}
-        <picture className="vip-visual">
-          <source media="(max-width: 600px)" srcSet="/assets/background-pattern-vip-mobile.svg" />
-          <source media="(max-width: 1024px)" srcSet="/assets/background-pattern-vip-tablet.svg" />
-          <img
-            src="/assets/background-pattern-vip.png"
-            alt="VIP background pattern"
-            className="vip-visual__image"
+      {/* Main content with grid */}
+      <div className="exclusive-content-wrapper section-inner">
+        {/* First column */}
+        <div className="exclusive-column-left">
+          <div className="exclusive-text-block">
+            <p className="exclusive-subtitle">{t('subtitle')}</p>
+            <h3 className="exclusive-title">
+              {titleBeforeBreak}
+              {titleAfterBreak && (
+                <span className="exclusive-title-line-break">{titleAfterBreak}</span>
+              )}
+            </h3>
+          </div>
+          <img 
+            src="/assets/hand.svg" 
+            alt="" 
+            className="exclusive-hand-image"
           />
-        </picture>
+          <img 
+            src="/assets/logo.svg" 
+            alt="" 
+            className="exclusive-logo"
+          />
+        </div>
 
-        {/* Cards list - карточки справа */}
-        <div className="vip-cards-list">
-          {benefitOrder.map((key) => {
-            const benefit = benefits[key];
-            if (!benefit) return null;
-
-            const iconMap = {
-              instant: '/assets/image_50727951.png',
-              limits: '/assets/image_77a6e2e0.png',
-              integration: '/assets/image_39df2c01.png',
-              withdrawals: '/assets/image_dd8ecfcf.png',
-              deposits: '/assets/image_1351319b.png',
-              recovery: '/assets/image_a8493888.png',
-              shared: '/assets/image_50727951.png',
-            };
-
-            const gradientMap = {
-              instant: 'gradient-teal',
-              limits: 'gradient-dark',
-              integration: 'gradient-gold',
-              withdrawals: 'gradient-teal',
-              deposits: 'gradient-dark',
-              recovery: 'gradient-gold',
-              shared: 'gradient-teal',
-            };
-
-            const value = typeof benefit === 'string'
-              ? { before: '', highlight: benefit, after: '' }
-              : benefit;
-            const { before = '', highlight = '', after = '' } = value;
-
-            return (
-              <div className="vip-benefit-card" key={key}>
-                <div className="card-text">
-                  <p>
-                    {before}
-                    {highlight && <strong>{highlight}</strong>}
-                    {after}
-                  </p>
+        {/* Second column */}
+        <div className="exclusive-column-right">
+          <img 
+            src="/assets/demicircle.svg" 
+            alt="" 
+            className="exclusive-demicircle"
+          />
+          <ul className="exclusive-features-list">
+            {features.map((feature, index) => (
+              <li key={index} className="exclusive-feature-item">
+                <div className="exclusive-feature-icon">
+                  <img src={feature.icon} alt="" />
                 </div>
-                <div className={`card-icon-box ${gradientMap[key] || ''}`}>
-                  <div className="icon-inner">
-                    <img src={iconMap[key]} alt="" />
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+                <p className="exclusive-feature-text">{feature.text}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
   );
 }
-

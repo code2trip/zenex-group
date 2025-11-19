@@ -6,11 +6,11 @@ export default function MarketProblem() {
   const t = useTranslations('aff.marketProblem');
   const cards = [
     { key: 'blocked', image: '/assets/image_c92b9845.png' },
-    { key: 'fees', image: '/assets/image_8daddbc1.png' },
-    { key: 'limits', image: '/assets/image_a5190a7d.png' },
-    { key: 'settlement', image: '/assets/image_e31ad966.png' },
-    { key: 'regions', image: '/assets/image_31bfa3fb.png' },
-    { key: 'privacy', image: '/assets/image_ba116ca.png' },
+    { key: 'fees', image: '/assets/image_e31ad966.png' },
+    { key: 'limits', image: '/assets/image_a5190a7d3546876.svg' },
+    { key: 'settlement', image: '/assets/image_a5190a7d.png' },
+    { key: 'regions', image: '/assets/image_39df2c01654684.svg' },
+    { key: 'privacy', image: '/assets/image_77a6e2e0685468451.svg' },
   ];
 
   return (
