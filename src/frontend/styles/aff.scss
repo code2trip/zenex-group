@@ -577,14 +577,19 @@
           white-space: nowrap;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
           font-size: 7.2vw;
           line-height: 8.2vw;
+          white-space: normal;
         }
 
         .hero-title-br {
           @media (max-width: 1023px) {
             display: none;
+          }
+
+          @media (max-width: 768px) {
+            display: block;
           }
         }
 
@@ -593,6 +598,10 @@
 
           @media (max-width: 1023px) {
             display: inline;
+          }
+
+          @media (max-width: 768px) {
+            display: none;
           }
         }
       }
@@ -655,7 +664,7 @@
           }
 
           @media (max-width: 600px) {
-            width: 80%;
+            width: 85%;
             font-size: 3.2vw;
             line-height: 4.2vw;
           }
