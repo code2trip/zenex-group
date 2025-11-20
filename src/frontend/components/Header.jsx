@@ -18,12 +18,6 @@ export default function Header() {
   const gsapRef = useRef(null);
 
   useEffect(() => {
-    const menuElement = document.querySelector('.menu');
-    const menuInnerElement = document.querySelector('.menu__inner');
-    if (menuInnerElement) {
-      setMenuInnerHeight(menuInnerElement.offsetHeight);
-    }
-
     let mounted = true;
     getGsap().then((instance) => {
       if (mounted) {
@@ -40,9 +34,19 @@ export default function Header() {
     const gsap = gsapRef.current;
     if (!gsap) return;
     const menu = document.querySelector('.menu');
+    const menuInnerElement = document.querySelector('.menu__inner');
     const header = document.querySelector('.header');
     const overlay = document.querySelector('.overlay');
     const headerMenuButton = document.querySelector('.header__menu-button');
+
+    // Вычисляем актуальную высоту меню каждый раз при открытии
+    let actualHeight = menuInnerHeight;
+    if (menuInnerElement) {
+      // Используем scrollHeight для получения полной высоты контента
+      // Это работает даже когда элемент имеет height: 0 и overflow: hidden
+      actualHeight = menuInnerElement.scrollHeight;
+      setMenuInnerHeight(actualHeight);
+    }
 
     headerMenuButton?.classList.add('active');
     header?.classList.add('active');
@@ -53,7 +57,7 @@ export default function Header() {
     gsap.to(menu, {
       duration: 0.5,
       ease: 'power2.out',
-      height: menuInnerHeight,
+      height: actualHeight,
     });
   };
 
