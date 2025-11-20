@@ -39,7 +39,7 @@ export default function Header() {
             </div>
             <img src="/assets/aff-hero-logos.svg" alt="" className="aff-hero-logos" />
           </div>
-          <Link href={`/${locale}/career#form`} className="hero-cta-button">
+          <Link href={`http://t.me/Kate_Sales_NextOn`} className="hero-cta-button">
             {tAff('cta')}
             <img src="/images/right.png" alt="" aria-hidden="true" />
           </Link>

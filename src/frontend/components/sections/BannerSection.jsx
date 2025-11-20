@@ -31,7 +31,7 @@ export default function BannerSection({ variant = 'style-1' }) {
             </h2>
             <p className="banner__text">{t('text')}</p>
           </div>
-          <Link href={`/${locale}/career#form`} className="button banner__button">
+          <Link href={`/${locale}/contact`} className="button banner__button">
             {t('button')}
             <svg
               width="24"

@@ -128,7 +128,7 @@ export default function Header() {
         <LanguageSwitcher />
 
         <Link
-          href={`/${locale}/career#form`}
+          href={`/${locale}/contact`}
           className="header-cta-button"
         >
           {tCommon('becomePartner')}

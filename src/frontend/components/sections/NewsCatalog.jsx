@@ -16,14 +16,14 @@ const newsItems = [
     date: 'February 15, 2025',
     title: 'Zenex Secures a Multi-Million Private Investment Deal',
     text: 'Zenex Group announces a major funding round to accelerate growth and expand its Web3 ecosystem.',
-    url: '#',
+    url: 'https://www.globenewswire.com/news-release/2025/02/03/3019818/0/en/Zenex-Secures-a-Multi-Million-Private-Investment-Deal-and-Heads-for-Listing-on-XT-com.html?utm_source=chatgpt.com',
     image: '/images/webp/new-img-2.webp',
   },
   {
     date: 'March 10, 2025',
     title: 'New Partnership: Zenex and Leading iGaming Platform',
     text: 'Strategic alliance formed to deliver next-generation gaming experiences powered by blockchain technology.',
-    url: '#',
+    url: '/article/news-article-1',
     image: '/images/webp/new-img-3.webp',
   },
 ];
