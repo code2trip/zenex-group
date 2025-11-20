@@ -55,7 +55,7 @@ const projects = [
       en: 'Explore more',
       ru: 'Подробнее',
     },
-    url: 'https://zenex-coin.com',
+    url: '/b2b',
     image: '/images/ns-cards-project-b2b-software.svg',
   },
   {
