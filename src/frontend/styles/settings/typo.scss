@@ -10,6 +10,29 @@
 
     strong {
         color: #05ACA4;
+        margin-left: 0;
+    }
+
+    @media (max-width: 767px) {
+        gap: 0.3rem;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        img {
+            flex-shrink: 0;
+        }
+
+        .title__text {
+            flex: 1 1 auto;
+            min-width: 0;
+            word-break: break-word;
+            line-height: 1.2;
+        }
+
+        strong {
+            margin-left: 0;
+            display: inline;
+        }
     }
 
     img {

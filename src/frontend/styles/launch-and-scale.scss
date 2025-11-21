@@ -12,7 +12,7 @@ main {
   margin: 0 auto;
   padding: 0 2rem;
 
-  @media (min-width: 768px) { 
+  @media (min-width: 768px) {
     padding: 0 7.5rem;
   }
 }
@@ -28,11 +28,21 @@ main {
   align-items: center;
   overflow: hidden;
 
-  @media (max-width: 800px) { 
-    min-height: 80vh !important;
+  @media (max-width: 1024px) {
+    min-height: 60vh !important;
+    height: 60vh;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .ls-hero__grid {
+      align-items: center;
+      justify-content: center;
+    }
   }
 
-  @media (max-width: 470px) { 
+  @media (max-width: 470px) {
     min-height: 65vh !important;
     padding: 0;
   }
@@ -132,12 +142,16 @@ main {
     }
   }
 
-  .container { 
+  .container {
     position: relative;
     z-index: 10;
     width: 100%;
 
-    @media (max-width: 470px) { 
+    @media (max-width: 1024px) and (min-width: 471px) {
+      margin-top: 0;
+    }
+
+    @media (max-width: 470px) {
       margin-top: 20vw;
     }
   }
@@ -155,16 +169,16 @@ main {
     min-height: 50vh;
   }
 
-  &__title { 
+  &__title {
     font-family: 'Inter', sans-serif;
     font-weight: 300 !important;
-    font-size: 60px; 
-    line-height: 1.1; 
-    margin: 0 0 12px; 
+    font-size: 60px;
+    line-height: 1.1;
+    margin: 0 0 12px;
     color: #fff;
     text-align: center;
     font-weight: normal;
-    
+
     span {
       font-weight: 700;
     }
@@ -174,24 +188,24 @@ main {
     }
 
   }
-  &__subtitle { 
+  &__subtitle {
     font-family: 'Inter', sans-serif;
     font-weight: 300 !important;
-    color: #fff; 
-    max-width: 28vw; 
-    margin: 30px auto; 
+    color: #fff;
+    max-width: 28vw;
+    margin: 30px auto;
     line-height: 1.6;
     font-size: 15px;
     text-align: center;
-    
+
     html[lang="ru"] & {
       max-width: 34vw;
     }
-    
+
     @media (max-width: 1250px) {
       max-width: 50vw;
     }
-    
+
     @media (max-width: 1250px) {
       html[lang="ru"] & {
         max-width: 50vw;
@@ -201,7 +215,7 @@ main {
     @media (max-width: 870px) {
       max-width: 90vw;
     }
-    
+
     @media (max-width: 870px) {
       html[lang="ru"] & {
         max-width: 90vw;
@@ -211,19 +225,19 @@ main {
     @media (max-width: 550px) {
       font-size: 3vw;
     }
-    
+
     @media (max-width: 550px) {
       html[lang="ru"] & {
         font-size: 3vw;
       }
     }
   }
-  &__actions { 
-    display: flex; 
-    gap: 12px; 
-    flex-wrap: wrap; 
+  &__actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
     justify-content: center;
-    
+
     html[lang="ru"] & {
       .btn {
         font-size: 15px;
@@ -290,8 +304,8 @@ main {
     position: relative;
     z-index: 11;
   }
-  
-  &__media { 
+
+  &__media {
     position: absolute;
     top: 0;
     left: 0;
@@ -392,7 +406,7 @@ main {
     display: block;
     object-fit: contain;
     scale: 3;
-    
+
     // Большие звезды
     &--1 {
       width: 60px;
@@ -400,14 +414,14 @@ main {
       top: 13%;
       left: 27%;
     }
-    
+
     &--2 {
       width: 60px;
       height: 60px;
       bottom: 8%;
       right: 40%;
     }
-    
+
     // Средние звезды
     &--3 {
       width: 50px;
@@ -419,7 +433,7 @@ main {
         display: none;
       }
     }
-    
+
     &--4 {
       width: 50px;
       height: 50px;
@@ -430,7 +444,7 @@ main {
         display: none;
       }
     }
-    
+
     &--5 {
       width: 50px;
       height: 50px;
@@ -446,24 +460,24 @@ main {
 }
 
 // ABOUT
-.ls-badge { 
-  color: #05aca4; 
-  font-weight: 700; 
-  margin-right: 1vw; 
+.ls-badge {
+  color: #05aca4;
+  font-weight: 700;
+  margin-right: 1vw;
   display: inline-flex;
   align-items: end;
-  
+
   img {
     width: auto;
     height: 3vw;
     display: block;
     object-fit: contain;
-    
+
     @media (max-width: 1100px) {
       position: absolute;
       height: 5vw;
     }
-    
+
     @media (max-width: 570px) {
       position: absolute;
       height: 7vw;
@@ -471,46 +485,46 @@ main {
   }
 }
 .ls-about {
-  padding-top: 16vw;
-  
+  padding-top: 5vw;
+
   &__head {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
     margin-bottom: 2.5vw;
-    
+
     @media (max-width: 1100px) {
       margin-bottom: 4.5vw;
     }
   }
-  
+
   &__title {
     font-size: 3.5vw;
     font-weight: 800;
     letter-spacing: 0.2px;
     color: #0b0b0c;
-    
+
     @media (max-width: 1100px) {
       font-size: 5.5vw;
       margin-left: 5vw;
     }
-    
+
     @media (max-width: 570px) {
       font-size: 7.5vw;
       margin-left: 7.5vw;
     }
-    
+
     span {
       color: #05aca4;
     }
   }
-  
+
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
-    
+
     @media (max-width: 1100px) {
       grid-template-columns: 1fr 1fr;
     }
@@ -527,7 +541,7 @@ main {
   &__hero {
     position: relative;
   }
-  
+
   &__hero-img {
     top: 0;
     left: 0;
@@ -536,16 +550,16 @@ main {
     object-fit: cover;
     border-radius: 20px;
     z-index: 0;
-    
+
     @media (max-width: 1100px) {
       height: 32vw;
     }
-    
+
     @media (max-width: 570px) {
       height: 69vw;
     }
   }
-  
+
   &__hero-card {
     position: relative;
     border-radius: 20px;
@@ -560,24 +574,24 @@ main {
     text-align: left;
     z-index: 1;
   }
-  
+
   &__hero-title {
     font-size: 28px;
     line-height: 1.1;
     max-width: 320px;
-    
+
     span {
       display: block;
       opacity: 0.9;
     }
-    
+
     strong {
       display: block;
       color: #54ffda;
       font-size: 36px;
     }
   }
-  
+
   &__item {
     background: #fff;
     border-radius: 16px;
@@ -587,11 +601,11 @@ main {
     gap: 8px;
     height: 23vw;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
-    
+
     @media (max-width: 1100px) {
       height: 32vw;
     }
-    
+
     @media (max-width: 570px) {
       justify-content: space-between;
       flex-direction: row-reverse;
@@ -607,19 +621,19 @@ main {
     display: flex;
     justify-content: center;
     font-size: 20px;
-    
+
     @media (max-width: 1100px) {
       width: 11.5vw;
       height: 11.5vw;
     }
-    
+
     @media (max-width: 570px) {
       width: 17.5vw;
       height: 17.5vw;
       z-index: 1000;
       position: absolute;
     }
-    
+
     img {
       object-fit: contain;
       display: block;
@@ -630,27 +644,27 @@ main {
     font-size: 1.8vw;
     margin-top: 4.2vw;
     color: #222;
-    
+
     @media (max-width: 1100px) {
       font-size: 2.8vw;
     }
-    
+
     @media (max-width: 570px) {
       font-size: 4vw;
       margin-bottom: 2vw;
       margin-top: 0;
     }
   }
-  
+
   &__text {
     color: #666;
     font-size: 1.1vw;
     line-height: 1.5;
-    
+
     @media (max-width: 1100px) {
       font-size: 1.75vw;
     }
-    
+
     @media (max-width: 570px) {
       font-size: 3vw;
       width: 90%;
@@ -673,15 +687,15 @@ main {
 
 // MODULES
 .ls-mod {
-  padding-top: 16vw;
-  
+  padding-top: 5vw;
+
   &__head {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
     margin-bottom: 2.5vw;
   }
-  
+
   &__title {
     font-size: 3.5vw;
     font-weight: 800;
@@ -691,46 +705,46 @@ main {
       font-size: 5.5vw;
       margin-left: 5vw;
     }
-    
+
     @media (max-width: 570px) {
       font-size: 7.5vw;
       margin-left: 7.5vw;
     }
-    
+
     span {
       color: #05aca4;
     }
   }
-  
+
   &__grid {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    
+
     @media (max-width: 1000px) {
       grid-template-columns: 1fr;
     }
   }
-  
+
   &__card {
     color: #fff;
     border-radius: 20px;
     padding: 28px;
     box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15);
-    
+
     &-head {
       display: flex;
       align-items: center;
       gap: 1.5vw;
     }
-    
+
     &-icon {
       width: 3vw;
       height: 3vw;
       display: flex;
       align-items: center;
       justify-content: center;
-      
+
       img {
         width: 100%;
         height: 100%;
@@ -749,7 +763,7 @@ main {
         height: 7vw;
       }
     }
-    
+
     &-title {
       font-size: 1.7vw;
       font-weight: 800;
@@ -763,14 +777,14 @@ main {
       }
     }
   }
-  
+
   &__list {
     display: grid;
     gap: 2vw;
     margin-top: 3vw;
     padding: 0;
     list-style: none;
-    
+
     li {
       position: relative;
       padding-left: 40px;
@@ -778,11 +792,11 @@ main {
       font-size: 1.1vw;
       font-weight: 400; // Обычный вес для всего текста
       color: #fff;
-      
+
       strong {
         font-weight: 700; // Жирный для выделенных слов
       }
-      
+
       &::before {
         content: '';
         position: absolute;
@@ -819,19 +833,19 @@ main {
 }
 
 // Buttons (простые утилиты)
-.btn { 
-  display: inline-flex; 
-  align-items: center; 
-  justify-content: center; 
-  gap: 10px; 
-  padding: 36px 66px; 
-  border-radius: 16px; 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 36px 66px;
+  border-radius: 16px;
   font-family: 'Inter', sans-serif;
-  font-weight: 700; 
-  font-size: 1.6rem; 
-  line-height: 1em; 
-  text-decoration: none; 
-  
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1em;
+  text-decoration: none;
+
   &__icon {
     width: 25px;
     height: 25px;
@@ -842,21 +856,21 @@ main {
   }
 }
 
-.btn--primary { 
-  background:#05aca4; 
-  color:#fff; 
-  box-shadow:0 8px 32px rgba(0,0,0,.15); 
-  
+.btn--primary {
+  background:#05aca4;
+  color:#fff;
+  box-shadow:0 8px 32px rgba(0,0,0,.15);
+
   .btn__icon {
     // Для белой иконки на цветном фоне
     filter: brightness(0) saturate(100%) invert(1);
   }
 }
 
-.btn--secondary { 
-  background:#fff; 
-  color:#282828; 
-  
+.btn--secondary {
+  background:#fff;
+  color:#282828;
+
   .btn__icon {
     // Для темной иконки на белом фоне
     filter: brightness(0) saturate(100%) invert(0);
@@ -865,7 +879,7 @@ main {
 
 // ADMIN PANEL
 .ls-admin {
-  padding-top: 16vw;
+  padding-top: 5vw;
 
   &__head {
     display: flex;
@@ -873,7 +887,7 @@ main {
     gap: 0.5rem;
     margin-bottom: 24px;
   }
-  
+
   &__title {
     font-size: 3.5vw;
     font-weight: 800;
@@ -883,24 +897,24 @@ main {
       font-size: 5.5vw;
       margin-left: 5vw;
     }
-    
+
     @media (max-width: 570px) {
       font-size: 7.5vw;
       margin-left: 7.5vw;
     }
-    
+
     span {
       color: #05aca4;
     }
   }
-  
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 20px;
     grid-auto-flow: row dense;
-    
+
     @media (max-width: 1000px) {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
@@ -911,7 +925,7 @@ main {
       gap: 16px;
     }
   }
-  
+
   &__card {
     display: flex;
     flex-direction: row-reverse;
@@ -928,14 +942,14 @@ main {
       gap: 10px;
     }
   }
-  
+
   &__icon {
     width: 4vw;
     height: 4vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     img {
       width: 100%;
       height: 100%;
@@ -958,7 +972,7 @@ main {
       height: 12vw;
     }
   }
-  
+
   &__text {
     margin: 0;
     font-size: 16px;
@@ -977,7 +991,7 @@ main {
       font-size: 3.5vw;
     }
   }
-  
+
   &__highlight {
     grid-column: 3 / 5;
     grid-row: 1 / 5;
@@ -992,7 +1006,7 @@ main {
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
-    
+
     @media (max-width: 1000px) {
       /* баннер занимает две колонки сверху */
       grid-column: 1 / -1;
@@ -1015,7 +1029,7 @@ main {
       height: 55vw;
     }
   }
-  
+
   &__shturval,
   &__shturval2,
   &__logo {
@@ -1025,7 +1039,7 @@ main {
     object-fit: contain;
     pointer-events: none;
   }
-  
+
   &__shturval {
     width: 45vw;
     height: 45vw;
@@ -1033,7 +1047,7 @@ main {
     left: -16vw;
     z-index: 0;
 
-    @media (max-width: 1000px) {  
+    @media (max-width: 1000px) {
       width: 495px;
       height: 495px;
       bottom: -18vw;
@@ -1064,7 +1078,7 @@ main {
       width: 91vw;
     }
   }
-  
+
   &__shturval2 {
     width: 14vw;
     height: 14vw;
@@ -1081,7 +1095,7 @@ main {
       display: none;
     }
   }
-  
+
   &__logo {
     width: 3vw;
     height: 3vw;
@@ -1103,7 +1117,7 @@ main {
       left: 4vw;
     }
   }
-  
+
   &__big {
     margin: 0;
     font-size: 1.6vw;
@@ -1113,11 +1127,11 @@ main {
     margin-top: 0;
     font-weight: 300;
     width: 50%;
-    
+
     strong {
       font-weight: 700;
     }
-    
+
     @media (max-width: 1000px) {
       font-size: 22px;
     }
@@ -1138,15 +1152,15 @@ main {
 
 // CUSTOMIZATION
 .ls-customization {
-  padding-top: 16vw;
-  
+  padding-top: 5vw;
+
   &__head {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
     margin-bottom: 40px;
   }
-  
+
   &__title {
     font-size: 3.5vw;
     font-weight: 800;
@@ -1157,7 +1171,7 @@ main {
       font-size: 5.5vw;
       margin-left: 5vw;
     }
-    
+
     @media (max-width: 850px) {
       font-size: 40px;
       margin-left: 60px;
@@ -1167,12 +1181,12 @@ main {
       font-size: 8vw;
       margin-left: 8vw;
     }
-    
+
     span {
       color: #05aca4;
     }
   }
-  
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1182,7 +1196,7 @@ main {
       grid-template-columns: 1fr;
     }
   }
-  
+
   &__card {
     background: #fff;
     border-radius: 20px;
@@ -1197,14 +1211,14 @@ main {
       padding: 7vw;
     }
   }
-  
+
   &__card-head {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-bottom: 1vw;
   }
-  
+
   &__icon {
     width: 4vw;
     height: 4vw;
@@ -1212,31 +1226,31 @@ main {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    
+
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
 
-    @media (max-width: 1440px) {  
+    @media (max-width: 1440px) {
       width: 50px;
       height: 50px;
     }
 
-    @media (max-width: 470px) { 
+    @media (max-width: 470px) {
       width: 12vw;
       height: 12vw;
     }
   }
-  
+
   &__card-title {
     font-size: 1.5vw;
     font-weight: 700;
     color: #393939;
     margin-left: 1vw;
 
-    @media (max-width: 1440px) {  
+    @media (max-width: 1440px) {
       font-size: 22px;
     }
 
@@ -1244,7 +1258,7 @@ main {
       font-size: 5vw;
     }
   }
-  
+
   &__list {
     list-style: none;
     padding: 0;
@@ -1253,7 +1267,7 @@ main {
     flex-direction: column;
     gap: 1.5vw;
   }
-  
+
   &__list li {
     display: flex;
     align-items: center;
@@ -1271,7 +1285,7 @@ main {
       font-size: 3.5vw;
     }
   }
-  
+
   &__check {
     width: 20px;
     height: 20px;
@@ -1288,8 +1302,8 @@ main {
 
 // PRICING
 .ls-pricing {
-  padding-top: 16vw;
-  
+  padding-top: 5vw;
+
   &__head {
     display: flex;
     align-items: baseline;
@@ -1297,13 +1311,13 @@ main {
     gap: 12px;
     margin-bottom: 24px;
   }
-  
+
   &__title-wrapper {
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   &__title {
     font-size: 3.5vw;
     font-weight: 800;
@@ -1319,17 +1333,17 @@ main {
       font-size: 5.5vw;
       margin-left: 5vw;
     }
-    
+
     @media (max-width: 570px) {
       font-size: 7.5vw;
       margin-left: 7.5vw;
     }
-    
+
     span {
       color: #05aca4;
     }
   }
-  
+
   &__subtitle {
     color: #757575;
     font-size: 1.2vw;
@@ -1349,7 +1363,7 @@ main {
       width: 100%;
     }
   }
-  
+
   &__main {
     position: relative;
     border-radius: 20px;
@@ -1360,7 +1374,7 @@ main {
     display: flex;
     flex-direction: column;
   }
-  
+
   &__crown {
     position: absolute;
     top: -14vw;
@@ -1392,7 +1406,7 @@ main {
       right: -5vw;
     }
   }
-  
+
   &__price {
     font-size: 1.8vw;
     margin-bottom: 20px;
@@ -1400,7 +1414,7 @@ main {
     position: relative;
     z-index: 1;
     border-bottom: 1px solid #999;
-    
+
     strong {
       font-family: 'Anton', sans-serif;
       font-weight: 400;
@@ -1420,7 +1434,7 @@ main {
       }
     }
   }
-  
+
   &__big-title {
     font-size: 3vw;
     font-weight: 800;
@@ -1428,7 +1442,7 @@ main {
     line-height: 1.2;
     position: relative;
     z-index: 1;
-    
+
     &-light {
       font-weight: 300;
     }
@@ -1441,7 +1455,7 @@ main {
       font-size: 4vw;
     }
   }
-  
+
   &__features {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1449,7 +1463,7 @@ main {
     margin-bottom: 40px;
     position: relative;
     z-index: 1;
-    
+
     @media (max-width: 1100px) {
       grid-template-columns: 1fr 1fr;
     }
@@ -1458,7 +1472,7 @@ main {
       gap: 12px;
     }
   }
-  
+
   &__feature {
     display: flex;
     flex-direction: column;
@@ -1469,7 +1483,7 @@ main {
       gap: 10px;
     }
   }
-  
+
   &__feature-title {
     font-size: 1.5vw;
     font-weight: 700;
@@ -1483,7 +1497,7 @@ main {
       display: none;
     }
   }
-  
+
   &__feature-text {
     font-size: 1vw;
     font-weight: 300;
@@ -1509,7 +1523,7 @@ main {
       }
     }
   }
-  
+
   &__button {
     position: relative;
     z-index: 1;
@@ -1522,13 +1536,13 @@ main {
     box-shadow: none;
     align-self: flex-start;
     order: 2; /* кнопка перед notices по умолчанию (>1100px) */
-    
+
     @media (max-width: 700px) {
       margin: 20px auto 24px; /* центр и чуть компактнее на мобильных */
       align-self: center;
       order: 3; /* на мобилке после notices */
     }
-    
+
     html[lang="ru"] & {
       font-size: 18px;
       padding: 1vw 4vw;
@@ -1557,12 +1571,12 @@ main {
         height: 20px;
       }
     }
-    
+
     &:hover {
       background: rgba(255, 255, 255, 0.95) !important;
     }
   }
-  
+
   &__notices {
     display: flex;
     flex-direction: row;
@@ -1577,11 +1591,11 @@ main {
       gap: 12px;
       margin-bottom: 20px; /* отступ до кнопки */
     }
-    @media (max-width: 700px) { 
+    @media (max-width: 700px) {
       order: 2; /* на мобилке перед кнопкой */
     }
   }
-  
+
   &__notice {
     display: flex;
     align-items: center;
@@ -1599,7 +1613,7 @@ main {
 
   &__pre-notices {
     display: none;
-    
+
     @media (max-width: 700px) {
       display: block;
       border-top: 1px solid rgba(255, 255, 255, 0.8);
@@ -1607,7 +1621,7 @@ main {
       order: 1; /* линия между features и notices на мобилке */
     }
   }
-  
+
   &__notice-icon {
     width: 1.25vw;
     height: 1.25vw;
@@ -1624,19 +1638,19 @@ main {
 
 // SOLUTIONS (Three pricing cards)
 .ls-solutions {
-  padding-top: 16vw;
-  
+  padding-top: 5vw;
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2vw;
-    
+
     @media (max-width: 1000px) {
       grid-template-columns: 1fr;
       gap: 24px;
     }
   }
-  
+
   &__card {
     background: #fff;
     border-radius: 20px;
@@ -1646,14 +1660,14 @@ main {
     flex-direction: column;
     gap: 0;
   }
-  
+
   &__price-wrapper {
     display: flex;
     flex-direction: column;
     gap: 0;
     margin-bottom: 10px;
   }
-  
+
   &__from {
     font-size: 1.7vw;
     color: #757575;
@@ -1667,7 +1681,7 @@ main {
       font-size: 3vw;
     }
   }
-  
+
   &__price {
     font-family: 'Anton', sans-serif;
     font-weight: 400;
@@ -1683,21 +1697,21 @@ main {
       font-size: 8vw;
     }
   }
-  
+
   &__divider {
     width: 100%;
     height: 2px;
     background: #f0f0f0;
     margin-bottom: 10px;
   }
-  
+
   &__content {
     display: flex;
     flex-direction: column;
     gap: 10px;
     flex-grow: 1;
   }
-  
+
   &__title {
     font-size: 1.8vw;
     font-weight: 800;
@@ -1713,7 +1727,7 @@ main {
       font-size: 6vw;
     }
   }
-  
+
   &__description {
     font-size: 1vw;
     font-weight: 400;
@@ -1725,7 +1739,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: .5vw;
-    
+
     &-line {
       display: block;
     }
@@ -1738,12 +1752,12 @@ main {
       font-size: 4vw;
     }
   }
-  
+
   &__button {
     margin-top: auto;
     padding: 20px;
     font-weight: 500;
-    
+
     .btn__icon {
       scale: 1.1;
       filter: brightness(0) saturate(100%) invert(1);
@@ -1770,12 +1784,12 @@ main {
 
 // FINAL CTA
 .ls-final {
-  padding-top: 16vw;
-  
+  padding-top: 5vw;
+
   &__box {
     position: relative;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     height: 18vw;
     gap: 16px;
     padding: 32px;
@@ -1783,11 +1797,11 @@ main {
     color: #fff;
     background: linear-gradient(135deg, #07171B 0%, #16464A 100%);
     overflow: hidden;
-    
+
     @media (max-width: 1150px) {
       gap: 115px;
       height: 340px;
-      flex-direction: column; 
+      flex-direction: column;
     }
 
     @media (max-width: 850px) {
@@ -1812,7 +1826,7 @@ main {
       gap: 19.5vw;
     }
   }
-  
+
   &__rockets {
     position: absolute;
     left: 27.5%;
@@ -1830,18 +1844,18 @@ main {
       scale: 2;
     }
   }
-  
+
   &__text {
     position: relative;
     z-index: 1;
     margin-left: 1vw;
   }
-  
+
   &__title {
     margin: 0;
     font-weight: 500;
     font-size: 2vw;
-    
+
     span {
       background: linear-gradient(135deg, #9A885D 0%, #FFEEB4 100%);
       -webkit-background-clip: text;
@@ -1865,7 +1879,7 @@ main {
       font-size: 4.15vw;
     }
   }
-  
+
   &__desc {
     color: #F7F8FA;
     opacity: 0.8;
@@ -1890,7 +1904,7 @@ main {
       font-size: 2.5vw;
     }
   }
-  
+
   &__actions {
     display: flex;
     gap: 1vw;

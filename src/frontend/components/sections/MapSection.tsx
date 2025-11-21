@@ -33,7 +33,7 @@ export default function MapSection() {
 
   const markerTargets = ['belgium', 'germany', 'czech-republic'];
   const markerOffsets = {
-    belgium: { x: -2, y: 0 },
+    belgium: { x: -0.3, y: 3 },
     germany: { x: 0.4, y: -2.8 },
     'czech-republic': { x: 4.3, y: -0 },
   };
@@ -181,7 +181,9 @@ export default function MapSection() {
         <div className="map-section__header">
           <h2 className="map-section__title title">
             <img src="/images/map-icon.svg" alt="" />
-            {t('title')} <strong>{t('titleStrong')}</strong>
+            <span className="title__text">
+              {t('title')} <strong>{t('titleStrong')}</strong>
+            </span>
           </h2>
           <p className="map-section__text">{t('text')}</p>
           <span className="map-section__label label">{t('label')}</span>

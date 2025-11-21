@@ -442,16 +442,16 @@
 
 .aff-header {
   position: relative;
-  min-height: 1080px;
+  // min-height: 1080px;
   overflow: visible;
   background-image: url('/assets/card-header.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  @media (max-width: 1450px) {
-    min-height: 75vw;
-  }
+  // @media (max-width: 1450px) {
+  //   min-height: 75vw;
+  // }
 
   .header-nav-wrapper {
     position: relative;
@@ -503,7 +503,7 @@
     gap: 0;
 
     @media (max-width: 1450px) {
-      padding: 7.5vw 5vw 5vw;
+      padding: 2.5vw 3vw 3vw;
     }
 
     @media (max-width: 1024px) {
@@ -1675,7 +1675,7 @@
         }
 
         @media (max-width: 1024px) {
-          inset: 40px 40px 40px 40px;
+          inset: 30px 30px 30px 30px;
           gap: 14px;
         }
 

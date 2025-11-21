@@ -23,7 +23,9 @@ export default function WhySection() {
         <div className="why-section__header">
           <h2 className="why-section__title title">
             <img src="/images/why-icon.svg" alt="" />
-            {t('title')} <strong>{t('titleStrong')}</strong>
+            <span className="title__text">
+              {t('title')} <strong>{t('titleStrong')}</strong>
+            </span>
           </h2>
           <p className="why-section__text">{t('text')}</p>
           <span className="why-section__label label">{t('label')}</span>

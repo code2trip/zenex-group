@@ -32,7 +32,9 @@ export default function NumbersSection() {
             />
             <span className="numbers-section__item-label">{t('since')}</span>
             <h3 className="numbers-section__item-title">{t('sinceValue')}</h3>
-            <p className="numbers-section__item-text">{t('sinceText')}</p>
+            <div className="numbers-section__item-text-wrapper">
+              <p className="numbers-section__item-text">{t('sinceText')}</p>
+            </div>
           </li>
           <li className="numbers-section__item">
             <img
@@ -41,7 +43,24 @@ export default function NumbersSection() {
               className="numbers-section__item-img"
             />
             <h3 className="numbers-section__item-title">{t('brands')}</h3>
-            <p className="numbers-section__item-text">{t('brandsText')}</p>
+            <div className="numbers-section__item-text-wrapper">
+              <p className="numbers-section__item-text">
+                {(() => {
+                  const text = t('brandsText');
+                  const match = text.match(/^(.+?)\s*\((.+)\)$/);
+                  return match ? match[1] : text;
+                })()}
+              </p>
+              {(() => {
+                const text = t('brandsText');
+                const match = text.match(/^(.+?)\s*\((.+)\)$/);
+                return match ? (
+                  <p className="numbers-section__item-text numbers-section__item-text--sub">
+                    ({match[2]})
+                  </p>
+                ) : null;
+              })()}
+            </div>
           </li>
           <li className="numbers-section__item">
             <img
@@ -50,7 +69,9 @@ export default function NumbersSection() {
               className="numbers-section__item-img"
             />
             <h3 className="numbers-section__item-title">{t('countries')}</h3>
-            <p className="numbers-section__item-text">{t('countriesText')}</p>
+            <div className="numbers-section__item-text-wrapper">
+              <p className="numbers-section__item-text">{t('countriesText')}</p>
+            </div>
           </li>
           <li className="numbers-section__item">
             <img
@@ -59,7 +80,9 @@ export default function NumbersSection() {
               className="numbers-section__item-img"
             />
             <h3 className="numbers-section__item-title">{t('team')}</h3>
-            <p className="numbers-section__item-text">{t('teamText')}</p>
+            <div className="numbers-section__item-text-wrapper">
+              <p className="numbers-section__item-text">{t('teamText')}</p>
+            </div>
           </li>
         </ul>
       </div>

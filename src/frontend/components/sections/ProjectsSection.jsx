@@ -288,7 +288,7 @@ export default function ProjectsSection() {
             <img src="/images/project-icon.svg" alt="" />
             {t('title')}
           </h2>
-          <p className="projects-section__text">{t('text')}</p>
+          {/* <p className="projects-section__text">{t('text')}</p> */}
           <span className="projects-section__label label">{t('label')}</span>
         </div>
 

@@ -42,8 +42,11 @@ export default function Footer() {
             <a href={`/${locale}/contact`} className="menuLink">
               {tNav('contact')}
             </a>
-            <Link href={`/${locale}/privacy-policy`} className="menuLink">
+            <Link href={`/${locale}/privacy`} className="menuLink">
               {t('privacyPolicy')}
+            </Link>
+            <Link href={`/${locale}/terms`} className="menuLink">
+              {t('termsOfService')}
             </Link>
           </nav>
 

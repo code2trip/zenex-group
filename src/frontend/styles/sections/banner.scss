@@ -104,6 +104,18 @@
             }
         }
     }
+    .banner__bg {
+      bottom: -15% !important;
+      top: auto !important;
+    }
+    .banner__inner {
+      overflow: hidden;
+      background-color: #0c2226;
+      border-radius: 20px;
+    }
+    .banner__bg img {
+      object-position: bottom !important;
+    }
 }
 
 @media (min-width: 768px) {
