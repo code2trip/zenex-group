@@ -4,7 +4,7 @@
     box-shadow: 0px 4px 36.8px 0px rgba(0, 0, 0, 0.05);
     padding: 2rem;
     display: grid;
-    grid-template-columns: 1fr 8rem;
+    grid-template-columns: 1.1fr 5rem;
     gap: 1rem;
     align-items: center;
     height: 100%;
@@ -32,7 +32,7 @@
 }
 
 .why-big-card {
-    min-height: 26.4rem;
+    min-height: 21.12rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -71,11 +71,11 @@
 
 @media (min-width: 768px) {
     .why-card {
-        padding: 2.5rem;
+        padding: 1rem;
         height: 100%;
         display: grid;
         grid-template-rows: auto auto 1fr;
-        gap: 2.5rem;
+        gap: 1rem;
         align-items: start;
 
         &__icon {
@@ -100,7 +100,7 @@
             margin: 0;
             grid-row: 1;
             line-height: 1.2;
-            min-height: 7.2rem;
+            min-height: 3.76rem;
             display: flex;
             align-items: flex-start;
         }
@@ -114,7 +114,7 @@
     .why-big-card {
         height: 100%;
         background-image: url(/images/webp/why-big-card-bg-d.webp);
-        padding: 4rem;
+        padding: 3.2rem;
 
         &__title {
             font-size: 2.7rem;

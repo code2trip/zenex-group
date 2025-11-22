@@ -166,44 +166,85 @@
   &__field {
     position: relative;
     width: 100%;
-    height: 5.6rem;
+    min-height: 5.6rem;
+    display: flex;
+    align-items: flex-end;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 0.1rem solid #757575;
+      transition: 0.3s;
+    }
+
+    &.focus {
+      &::after {
+        border-bottom: 0.2rem solid #05ACA4;
+      }
+
+      .contact-section__label {
+        top: 0.4rem;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        color: #05ACA4;
+      }
+    }
+
+    &.fill {
+      .contact-section__label {
+        top: 0.4rem;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+      }
+    }
+
+    &.error {
+      &::after {
+        border-bottom-color: #E85143;
+      }
+    }
   }
 
   &__input,
   &__textarea {
     width: 100%;
-    height: 100%;
-    padding: 1.6rem;
-    padding-top: 2.8rem;
+    border: none;
+    background-color: #fff;
+    color: #282828;
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
-    color: #282828;
-    border: none;
-    border-bottom: 1px solid #757575;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.05rem;
+    padding: 0 0 0.8rem 0;
     outline: none;
     resize: none;
-    background: transparent;
+  }
+
+  &__textarea {
+    margin-top: 2.4rem;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 3.2rem;
   }
 
   &__label {
     position: absolute;
-    left: 0.8rem;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 1.6rem;
+    left: 0;
+    color: #757575;
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
-    color: #757575;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.05rem;
+    transition: 0.3s;
     pointer-events: none;
-    transition: all 0.2s ease;
-  }
-
-  &__input:focus + &__label,
-  &__input:not(:placeholder-shown) + &__label,
-  &__textarea:focus + &__label,
-  &__textarea:not(:placeholder-shown) + &__label {
-    top: 0.4rem;
-    transform: none;
-    font-size: 1.2rem;
   }
 
   &__submit {

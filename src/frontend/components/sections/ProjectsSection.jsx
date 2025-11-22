@@ -69,8 +69,8 @@ const projects = [
     },
     status: 'active',
     domain: {
-      en: 'zenex-coin.com • zenexhub.com',
-      ru: 'zenex-coin.com • zenexhub.com',
+      en: {1: 'zenex-coin.com', 2: ' zenexhub.com'},
+      ru: {1: 'zenex-coin.com', 2: ' zenexhub.com'},
     },
     url: 'https://zenex-coin.com',
     image: '/images/webp/project-card-img-1.webp',
@@ -107,7 +107,7 @@ const projects = [
       ru: 'whiterabbit.casino',
     },
     url: 'https://whiterabbit.casino',
-    image: '/images/webp/project-card-img-5.webp',
+    image: '/images/webp/project-card-img-4.webp',
   },
   {
     title: {
@@ -124,7 +124,7 @@ const projects = [
       ru: 'wrbet.ke',
     },
     url: 'https://wrbet.ke',
-    image: '/images/webp/project-card-img-4.webp',
+    image: '/images/webp/project-card-img-5.webp',
   },
   {
     title: {
@@ -145,7 +145,7 @@ const projects = [
       ru: '',
     },
     url: '',
-    image: '/images/webp/project-card-img-5.webp',
+    image: '/images/betshop-finance-project.png',
   },
   {
     title: {
@@ -307,9 +307,35 @@ export default function ProjectsSection() {
                       </span>
                       <div className="project-card__row">
                         <span className="project-card__domain">
-                          {typeof project.domain === 'string'
-                            ? project.domain
-                            : project.domain[locale] || project.domain.en}
+                          {typeof project.domain === 'string' ? (
+                            project.domain
+                          ) : (() => {
+                            const domainValue = project.domain[locale] || project.domain.en;
+                            if (typeof domainValue === 'string') {
+                              return domainValue;
+                            } else if (typeof domainValue === 'object' && domainValue !== null) {
+                              const domainEntries = Object.values(domainValue).filter(Boolean);
+                              return domainEntries.map((domainText, index) => {
+                                const cleanDomain = domainText.trim();
+                                const domainUrl = `https://${cleanDomain}`;
+                                return (
+                                  <span key={index}>
+                                    <a
+                                      href={domainUrl}
+                                      onClick={(e) => e.stopPropagation()}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="project-card__domain-link"
+                                    >
+                                      {cleanDomain}
+                                    </a>
+                                    {index < domainEntries.length - 1 && ' • '}
+                                  </span>
+                                );
+                              });
+                            }
+                            return null;
+                          })()}
                         </span>
                         <span className="project-card__arrow" style={{ display: project.status === 'active' ? 'block' : 'none' }}>
                           <svg

@@ -12,7 +12,7 @@
     }
 
     &__inner {
-        padding: 3.5rem 3.2rem 2.5rem;
+        padding: 2.5rem 2.2rem 1.5rem;
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -31,6 +31,9 @@
         font-weight: 700;
         line-height: 100%;
         margin-bottom: 1rem;
+        display: inline-block;
+        width: fit-content;
+        min-height: 2.7rem;
     }
 
     &__text {
@@ -51,15 +54,18 @@
 
     &__status {
         height: 3.2rem;
+        min-height: 3.2rem;
         padding: 0 1rem;
         font-size: 1.2rem;
         font-style: normal;
         font-weight: 700;
-        line-height: 150%;
+        line-height: 1;
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         border-radius: 2.2rem;
         margin-bottom: 2.5rem;
+        box-sizing: border-box;
 
         &.active {
             color: #05ACA4;
@@ -87,6 +93,15 @@
         font-style: normal;
         font-weight: 500;
         line-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+    }
+
+    &__domain-link {
+        color: #282828;
+        text-decoration: none;
+        transition: color 0.3s;
     }
 
     &__arrow {
@@ -98,5 +113,12 @@
             height: auto;
         }
     }
+}
 
+@media (min-width: 1024px) {
+    .project-card {
+        &__inner {
+            min-height: 20rem;
+        }
+    }
 }

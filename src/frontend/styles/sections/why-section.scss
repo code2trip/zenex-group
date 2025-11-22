@@ -51,7 +51,7 @@
 
 @media (min-width: 768px) {
     .why-section {
-        padding-top: 15rem;
+        padding-top: 10rem;
         position: relative;
 
         &__decor {
@@ -75,7 +75,7 @@
 
         &__list {
             grid-template-columns: 1fr 32.4rem 32.4rem;
-            gap: 2.5rem;
+            gap: 1.9rem;
             align-items: stretch;
         }
 

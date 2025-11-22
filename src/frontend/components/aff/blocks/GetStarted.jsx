@@ -100,10 +100,10 @@ export default function GetStarted() {
             </div>
           </div>
           <div className="cta-right">
-            <button type="button">
+            <a href="https://t.me/Kate_Sales_NextOn" target="_blank" rel="noopener noreferrer">
               <span>{t('cta.button')}</span>
               <img src="/assets/contacts_arrow.svg" alt="" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

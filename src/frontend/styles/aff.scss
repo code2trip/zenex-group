@@ -2556,6 +2556,10 @@
         height: 85px;
         margin: 0;
 
+        @media (min-width: 1025px) and (max-width: 1500px) {
+          margin-right: 5%;
+        }
+
         @media (max-width: 1450px) {
           gap: 1.8vw;
           width: 22.8vw;
@@ -2577,7 +2581,8 @@
       justify-content: flex-end;
     }
 
-        button {
+        button,
+        a {
           background: white;
           border-radius: 16px;
           padding: 15px 54px;
@@ -2591,6 +2596,7 @@
           border: none;
           cursor: pointer;
           transition: background 0.3s;
+          text-decoration: none;
 
           @media (max-width: 1450px) {
             padding: 1.2vw 3.2vw;
