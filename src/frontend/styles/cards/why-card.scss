@@ -96,7 +96,7 @@
         }
 
         &__title {
-            font-size: 3rem;
+            font-size: 26px;
             margin: 0;
             grid-row: 1;
             line-height: 1.2;
@@ -108,6 +108,7 @@
         &__text {
             margin: 0;
             grid-row: 2;
+            font-size: 16px;
         }
     }
 
