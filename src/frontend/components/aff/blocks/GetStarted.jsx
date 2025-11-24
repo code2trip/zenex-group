@@ -75,6 +75,11 @@ function highlightTitleSegments(title, segments) {
 
 export default function GetStarted() {
   const t = useTranslations('aff.getStarted');
+  const handleCtaClick = () => {
+    if (typeof window !== 'undefined') {
+      window.open('https://t.me/Kate_Sales_NextOn', '_blank', 'noopener,noreferrer');
+    }
+  };
 
   const ctaTitle = t('cta.title');
   const accentPhrase = t('cta.titleAccentPhrase');
@@ -100,10 +105,10 @@ export default function GetStarted() {
             </div>
           </div>
           <div className="cta-right">
-            <a href="https://t.me/Kate_Sales_NextOn" target="_blank" rel="noopener noreferrer">
+            <button type="button" onClick={handleCtaClick}>
               <span>{t('cta.button')}</span>
               <img src="/assets/contacts_arrow.svg" alt="" />
-            </a>
+            </button>
           </div>
         </div>
       </div>

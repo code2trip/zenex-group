@@ -1,29 +1,30 @@
-'use client';
+"use client";
 
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import '@/styles/sections/banner.scss';
 
-export default function BannerSection({ variant = 'style-1' }) {
+const BannerSection = ({ variant = 'style-1' }) => {
   const t = useTranslations(`home.banner${variant === 'style-1' ? '1' : '2'}`);
   const pathname = usePathname();
   const locale = pathname.split('/')[1] || 'ru';
+  const bannerImageSuffix = variant === 'style-1' ? '1' : '2';
+  const desktopBannerImage = `/images/webp/banner-${bannerImageSuffix}-bg-d.webp`;
+  const mobileBannerImage = `/images/webp/banner-${bannerImageSuffix}-bg-m.webp`;
 
   return (
     <section className={`banner banner--${variant}`}>
       <div className="container">
         <div className="banner__inner">
-          <picture className="banner__bg">
+          <picture className={`banner__bg banner__bg--${variant}`}>
             <source
-              srcSet={`/images/webp/banner-${variant === 'style-1' ? '1' : '2'}-bg-d.webp`}
+              srcSet={desktopBannerImage}
               type="image/webp"
               media="(min-width: 768px)"
             />
-            <img
-              src={`/images/webp/banner-${variant === 'style-1' ? '1' : '2'}-bg-m.webp`}
-              alt=""
-            />
+            <img src={mobileBannerImage} alt="" />
           </picture>
           <div className="banner__content">
             <h2 className="banner__title">
@@ -50,5 +51,7 @@ export default function BannerSection({ variant = 'style-1' }) {
       </div>
     </section>
   );
-}
+};
+
+export default BannerSection;
 

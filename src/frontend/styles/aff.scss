@@ -527,12 +527,12 @@
       align-items: flex-start;
       gap: 48px;
       flex: 0 1 auto;
-      width: 52%;
+      width: 60%;
       padding-left: 74px;
       transform: translateY(-10%);
 
       @media (max-width: 1450px) {
-        padding-left: 5vw;
+        padding-left: 1vw;
         gap: 3.2vw;
       }
 
@@ -735,12 +735,12 @@
     .hero-right {
       position: relative;
       flex: 0 0 auto;
-      width: 46%;
+      width: 47%;
       display: flex;
       justify-content: flex-start;
       align-items: center;
       transform: translateY(-10%);
-      margin-left: -50px;
+      margin-left: -40px;
       overflow: visible;
       z-index: 5;
 
@@ -764,20 +764,35 @@
 
       .aff-hero-image {
         display: block;
-        width: 646px;
-        height: 773px;
+        width: 775px;
+        height: 877px;
         object-fit: contain;
         max-width: none;
         pointer-events: none;
+        transform-origin: center;
 
-        @media (max-width: 1450px) {
-          width: 46vw;
-          height: 56vw;
+        @media (min-width: 1025px) {
+          transform: scale(1.1);
+        }
+
+        @media (max-width: 1600px) {
+          width: 700px;
+          height: 792px;
+        }
+
+        @media (max-width: 1366px) {
+          width: 640px;
+          height: 724px;
+        }
+
+        @media (max-width: 1200px) {
+          width: 600px;
+          height: 680px;
         }
 
         @media (max-width: 1024px) {
-          width: 646px;
-          height: 594px;
+          width: 560px;
+          height: 635px;
         }
 
         @media (max-width: 768px) {

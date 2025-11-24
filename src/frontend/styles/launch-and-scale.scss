@@ -22,8 +22,7 @@ main {
   position: relative;
   padding: 40px 0;
   background: #000;
-  min-height: 100vh !important;
-  height: auto;
+  height: 905px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -110,7 +109,8 @@ main {
     top: 0;
     left: 50%;
     width: 120vw;
-    height: 120vh;
+    height: 100%;
+    min-height: 100%;
     transform: translateX(-50%);
     pointer-events: none;
     z-index: 0.5; // Между фоном (0) и медиа-элементами (1)
@@ -136,7 +136,7 @@ main {
       width: 658px;
       height: 658px;
       transform-origin: center;
-      bottom: -2%;
+      bottom: 0;
       left: 0%;
       scale: 1.3;
     }
