@@ -43,7 +43,7 @@ export default function OurSolution() {
         <div className="solution-card card-approval">
           <div className="solution-card-text">
             <h3>{t('features.approval.title')}</h3>
-            <p>{t('features.approval.description')}</p>
+            <p className="description-approval">{t('features.approval.description')}</p>
           </div>
           {/* Group 48100371 - изображение */}
           <div className="card-image-approval">

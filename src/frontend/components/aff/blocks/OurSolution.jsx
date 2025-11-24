@@ -122,11 +122,9 @@ export default function OurSolution() {
               <div className="our-solution-card" key={key}>
                 <div className="card-text">
                   <p>
-                    <strong>
                       {before}
                       {highlight}
                       {after}
-                    </strong>
                   </p>
                 </div>
                 <div className={`card-icon-box ${gradientMap[key] || ''}`}>

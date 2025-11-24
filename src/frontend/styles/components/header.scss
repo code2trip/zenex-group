@@ -116,14 +116,16 @@
     text-decoration: none;
     white-space: nowrap;
     transition: background 0.3s;
+    align-self: center;
+    box-sizing: border-box;
 
     &:hover {
         background-color: #04968F;
     }
 }
 
-// Скрываем CTA кнопку на планшете и мобиле
-@media (max-width: 1023px) {
+// Скрываем CTA кнопку только на мобиле
+@media (max-width: 767px) {
     .header-cta-button {
         display: none !important;
     }
@@ -134,11 +136,16 @@
     display: flex;
     gap: 0.8rem;
     align-items: center;
+    justify-content: center;
     margin-right: 0.8rem;
+    height: 4.5rem;
+    align-self: center;
+    box-sizing: border-box;
 
     button {
         width: 4.5rem;
         height: 4.5rem;
+        flex-shrink: 0;
         background-color: #fff;
         border: 0.1rem solid #05ACA4;
         border-radius: 1rem;
@@ -254,8 +261,8 @@
 @media (min-width: 1024px) {
     .header {
         &__logo {
-            width: 22rem;
-            min-width: 22rem;
+            width: 202.3px;
+            min-width: 24px;
         }
     }
 }
