@@ -19,11 +19,6 @@ export default function PrimaryNav() {
   const gsapRef = useRef(null);
 
   useEffect(() => {
-    const menuInnerElement = document.querySelector('.menu__inner');
-    if (menuInnerElement) {
-      setMenuInnerHeight(menuInnerElement.offsetHeight);
-    }
-
     let mounted = true;
     getGsap().then((instance) => {
       if (mounted) {
@@ -33,6 +28,9 @@ export default function PrimaryNav() {
 
     return () => {
       mounted = false;
+      if (typeof document !== 'undefined') {
+        document.body.classList.remove('menu-open');
+      }
     };
   }, []);
 
@@ -40,20 +38,38 @@ export default function PrimaryNav() {
     const gsap = gsapRef.current;
     if (!gsap) return;
     const menu = document.querySelector('.menu');
+    const menuInnerElement = document.querySelector('.menu__inner');
     const header = document.querySelector('.header');
     const overlay = document.querySelector('.overlay');
     const headerMenuButton = document.querySelector('.header__menu-button');
+    const body = typeof document !== 'undefined' ? document.body : null;
+
+    let actualHeight = menuInnerHeight;
+    if (menuInnerElement) {
+      const contentHeight = menuInnerElement.scrollHeight;
+      if (menu) {
+        const computedStyle = window.getComputedStyle(menu);
+        const topOffset = parseFloat(computedStyle.top) || 0;
+        const bottomOffset = parseFloat(computedStyle.bottom) || 0;
+        const viewportLimit = window.innerHeight - topOffset - bottomOffset;
+        actualHeight = Math.min(contentHeight, viewportLimit);
+      } else {
+        actualHeight = contentHeight;
+      }
+      setMenuInnerHeight(actualHeight);
+    }
 
     headerMenuButton?.classList.add('active');
     header?.classList.add('active');
     overlay?.classList.add('active');
     menu?.classList.add('active');
+    body?.classList.add('menu-open');
     setMenuOpen(true);
 
     gsap.to(menu, {
       duration: 0.5,
       ease: 'power2.out',
-      height: menuInnerHeight,
+      height: actualHeight,
     });
   };
 
@@ -64,11 +80,13 @@ export default function PrimaryNav() {
     const header = document.querySelector('.header');
     const overlay = document.querySelector('.overlay');
     const headerMenuButton = document.querySelector('.header__menu-button');
+    const body = typeof document !== 'undefined' ? document.body : null;
 
     headerMenuButton?.classList.remove('active');
     header?.classList.remove('active');
     overlay?.classList.remove('active');
     menu?.classList.remove('active');
+    body?.classList.remove('menu-open');
     setMenuOpen(false);
 
     gsap.to(menu, {
@@ -127,15 +145,56 @@ export default function PrimaryNav() {
           {tCommon('becomePartner')}
         </Link>
 
-        <button className="header__menu-button" onClick={handleMenuToggle} type="button">
-          <svg width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15.5 17H31.5" stroke="#05ACA4" strokeWidth="2" strokeLinecap="round" />
-            <path d="M15.5 23H31.5" stroke="#05ACA4" strokeWidth="2" strokeLinecap="round" />
-            <path d="M15.5 29H31.5" stroke="#05ACA4" strokeWidth="2" strokeLinecap="round" />
+        <button
+          className="header__menu-button"
+          onClick={handleMenuToggle}
+          type="button"
+        >
+          <svg
+            width="47"
+            height="46"
+            viewBox="0 0 47 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.5 17H31.5"
+              stroke="#05ACA4"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <path
+              d="M15.5 23H31.5"
+              stroke="#05ACA4"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <path
+              d="M15.5 29H31.5"
+              stroke="#05ACA4"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
           </svg>
-          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 28.3137L28.3137 17" stroke="#05ACA4" strokeWidth="2" strokeLinecap="round" />
-            <path d="M17.3428 17.3431L28.6565 28.6568" stroke="#05ACA4" strokeWidth="2" strokeLinecap="round" />
+          <svg
+            width="46"
+            height="46"
+            viewBox="0 0 46 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 28.3137L28.3137 17"
+              stroke="#05ACA4"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <path
+              d="M17.3428 17.3431L28.6565 28.6568"
+              stroke="#05ACA4"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
           </svg>
         </button>
       </header>
@@ -193,4 +252,3 @@ export default function PrimaryNav() {
     </>
   );
 }
-
