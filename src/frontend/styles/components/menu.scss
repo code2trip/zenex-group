@@ -20,16 +20,25 @@
     position: fixed;
     top: 1rem;
     left: 2rem;
-    width: calc(100% - 4rem);
+    right: 2rem;
+    bottom: 1rem;
+    width: auto;
     background-color: #fff;
     box-shadow: 0px 4px 36.8px 0px rgba(0, 0, 0, 0.05);
     z-index: 9;
     border-radius: 1.7rem;
     height: 0;
     overflow: hidden;
+    max-height: calc(100vh - 2rem);
+    display: flex;
+    flex-direction: column;
 
     &__inner {
-        padding: 10rem 3.5rem 4.3rem;
+        padding: 10rem 3.5rem 2.4rem;
+        height: 100%;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
     }
 
     &__nav {
@@ -71,6 +80,13 @@
             }
         }
 
+        li:last-child {
+            a {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+        }
+
         li {
             &.active {
                 a {
@@ -82,5 +98,16 @@
                 }
             }
         }
+    }
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .menu,
+    .overlay {
+        display: none;
     }
 }
