@@ -69,7 +69,7 @@ export default function OurSolution() {
           <div className="icon-box">
             <img src="/assets/Benefits-icon.svg" alt="" />
           </div>
-          <p className="title-text">{titleContent}</p>
+          <p className="title-text section-heading">{titleContent}</p>
         </div>
         <div className="solution-description">
           <p>{t('description')}</p>

@@ -16,7 +16,7 @@ export default function OurSolution() {
           <div className="icon-box">
             <img src="/assets/User-Centricity-icon.svg" alt="" />
           </div>
-          <p className="title-text">
+          <p className="title-text section-heading">
             <span className="dark">{titleFirst}</span>
             <span className="accent">{titleSecond}</span>
           </p>

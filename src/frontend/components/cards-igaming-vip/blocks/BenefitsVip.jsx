@@ -22,7 +22,7 @@ export default function BenefitsVip() {
           <div className="icon-box">
             <img src="/assets/Excellence-icon.svg" alt="" />
           </div>
-          <p className="title-text">
+          <p className="title-text section-heading">
             <span className="dark">{t('title').split(' ').slice(0, 2).join(' ')} </span>
             <span className="accent">{t('title').split(' ').slice(2).join(' ')}</span>
           </p>

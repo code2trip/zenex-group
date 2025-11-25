@@ -45,7 +45,7 @@ export default function Pricing() {
             <span className="ls-badge">
               <img src="/images/rocket.svg" alt="" />
             </span>
-            <h2 className="ls-pricing__title"><span>{t('title').split(' ').slice(0, 4).join(' ')}</span> {t('title').split(' ').slice(4).join(' ')}</h2>
+            <h2 className="ls-pricing__title section-heading"><span>{t('title').split(' ').slice(0, 4).join(' ')}</span> {t('title').split(' ').slice(4).join(' ')}</h2>
           </div>
           <p className="ls-pricing__subtitle">{t('subtitle')}</p>
         </div>
@@ -68,7 +68,7 @@ export default function Pricing() {
               </>
             )}
           </h3>
-          
+
           <div className="ls-pricing__features">
             {features.map((feature, index) => (
               <div key={index} className="ls-pricing__feature">

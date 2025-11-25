@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 export default function AboutProduct() {
   const t = useTranslations('launchAndScale.about');
   const locale = useLocale();
-  
+
   const items = [
     { icon: '/images/analytics.svg', titleKey: 'dashboards' },
     { icon: '/images/devices_other.svg', titleKey: 'crossPlatform' },
@@ -20,7 +20,7 @@ export default function AboutProduct() {
           <span className="ls-badge" aria-hidden>
             <img src="/images/medal.svg" alt="" />
           </span>
-          <h2 className="ls-about__title">
+          <h2 className="ls-about__title section-heading">
             {locale === 'en' ? (
               <>
                 {t('title').split(' ').slice(0, 2).join(' ')} <span>{t('title').split(' ').slice(2).join(' ')}</span>

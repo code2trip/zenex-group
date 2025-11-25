@@ -380,10 +380,10 @@
       }
     },
     "benefitsBusiness": {
-      "title": "Преимущества для Вашего бизнеса",
+      "title": "Что получает",
       "titleAccentWords": [
-        "вашего",
-        "бизнеса"
+        "ваш",
+        "бизнес?"
       ],
       "benefits": {
         "customization": {

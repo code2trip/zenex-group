@@ -42,6 +42,10 @@
     }
 }
 
+.section-heading {
+    @extend .title;
+}
+
 .label {
     height: 2.8rem;
     padding: 0 1rem;

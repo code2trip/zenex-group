@@ -18,6 +18,7 @@ export default function BenefitsBusiness() {
       : null;
 
   const titleContent = [];
+  const normalizedTitle = titleFull.toLowerCase();
 
   if (highlightRegex) {
     let lastIndex = 0;
@@ -55,6 +56,20 @@ export default function BenefitsBusiness() {
       </span>
     );
   }
+  if (accentWords.length > 0) {
+    accentWords.forEach((word, index) => {
+      const trimmed = word?.toString().trim();
+      if (!trimmed) return;
+      if (normalizedTitle.includes(trimmed.toLowerCase())) return;
+
+      titleContent.push(
+        <span key={`accent-extra-${index}`} className="accent">
+          {`${titleContent.length ? ' ' : ''}${trimmed}`}
+        </span>
+      );
+    });
+  }
+
   const benefits = t.raw('benefits');
   const benefitOrder = ['customization', 'unlimited', 'communication', 'loyalty', 'analytics', 'support'];
 
@@ -69,7 +84,7 @@ export default function BenefitsBusiness() {
           <div className="icon-box">
             <img src="/assets/Benefits-icon.svg" alt="" />
           </div>
-          <p className="title-text">{titleContent}</p>
+          <p className="title-text section-heading">{titleContent}</p>
         </div>
       </div>
 

@@ -400,28 +400,11 @@
 
 .title-text {
   font-family: Inter, sans-serif;
-  font-size: 50px;
   font-weight: 700;
   text-align: left;
-  line-height: 50px;
   flex: 1 1 auto;
   margin: 0;
   padding: 0;
-
-  @media (max-width: 1450px) {
-    font-size: 3.5vw;
-    line-height: 3.5vw;
-  }
-
-  @media (max-width: 1024px) {
-    font-size: 40px;
-    line-height: 40px;
-  }
-
-  @media (max-width: 600px) {
-    font-size: 7.2vw;
-    line-height: 8.2vw;
-  }
 
   .accent {
     color: #05aca4;
