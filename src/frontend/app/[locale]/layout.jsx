@@ -3,7 +3,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import '@/styles/settings/common.scss';
-import PrimaryNav from '../../components/PrimaryNav';
+import Header from '@/components/Header';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -23,7 +23,7 @@ export default async function LocaleLayout({ children, params }) {
     <html lang={locale}>
       <body suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
-          <PrimaryNav />
+          <Header />
           {children}
         </NextIntlClientProvider>
       </body>

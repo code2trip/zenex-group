@@ -254,6 +254,10 @@
   &:hover {
     text-decoration: underline;
   }
+
+  @media (max-width: 500px) {
+    color: #07C2B9;
+  }
 }
 
 .menuLink {
@@ -367,4 +371,15 @@
   width: 273px;
   margin: 0;
   padding: 0;
+}
+
+.footerLogo {
+  display: none;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+
+  @media (max-width: 500px) {
+    display: block;
+  }
 }

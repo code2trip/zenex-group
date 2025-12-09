@@ -2,12 +2,15 @@
     position: relative;
 
     &__inner {
-        padding: 3rem 2rem;
+        padding: 0 4.583vw;
         position: relative;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
-        min-height: 50rem;
+        align-items: center;
+        min-height: 19.096vw;
+        overflow: hidden;
+        border-radius: 1.389vw;
     }
 
     &__bg {
@@ -16,11 +19,25 @@
         left: 0;
         width: 100%;
         height: 100%;
+        background-image: url(/assets/main_banner_2.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    }
+
+    &--style-1 {
+        .banner__bg {
+            background-image: none;
+
+            img {
+                display: block;
+            }
         }
     }
 
@@ -31,12 +48,12 @@
 
     &__title {
         color: #FFF;
-        font-size: 2.7rem;
+        font-size: 1.875vw;
         font-style: normal;
         font-weight: 700;
         line-height: 100%;
-        margin-bottom: 0.9rem;
-        max-width: 26.9rem;
+        margin-bottom: 1.389vw;
+        max-width: unset;
 
         strong {
             background: linear-gradient(90deg, #9A885D -2.39%, #FFEEB4 71.51%);
@@ -48,22 +65,23 @@
 
     &__text {
         color: #757575;
-        font-size: 1.6rem;
+        font-size: 1.111vw;
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
     }
 
     &__button {
-        height: 6.5rem;
+        width: 19.583vw;
+        height: 5.902vw;
         background-color: #fff;
-        border-radius: 1.6rem;
+        border-radius: 1.111vw;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.694vw;
         color: #282828;
-        font-size: 1.6rem;
+        font-size: 1.111vw;
         font-style: normal;
         font-weight: 700;
         line-height: 100%;
@@ -72,95 +90,153 @@
         animation: pulseAnimation 1.5s infinite;
 
         svg {
-            width: 2.4rem;
+            width: 1.667vw;
             height: auto;
         }
     }
 
     &--style-1 {
-        padding-top: 7rem;
+        padding-top: 3.472vw;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: calc(100% + 2.778vw);
+            right: -27.569vw;
+            width: 70.764vw;
+            height: 39.164vw;
+            border-radius: 70.764vw;
+            background: rgba(76, 221, 212, 0.26);
+            filter: blur(150px);
+            transform: translateZ(0);
+        }
     }
 
     &--style-2 {
-        padding-top: 1rem;
-        padding-bottom: 7rem;
-    }
-}
+        padding-top: 2.778vw;
+        padding-bottom: 10.416vw;
 
-@media (max-width: 767px) {
-    .banner {
-        &--style-1 {
-            &::before {
-                content: '';
-                position: absolute;
-                left: -41.3rem;
-                bottom: 48rem;
-                width: 55.6rem;
-                height: 44.9rem;
-                border-radius: 55.6rem;
-                background: rgba(0, 202, 190, 0.26);
-                filter: blur(150px);
-                transform: translateZ(0);
+        .banner {
+            &__content {
+                max-width: 30.139vw;
             }
         }
     }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1023px) {
     .banner {
 
         &__inner {
-            min-height: 27.5rem;
-            flex-direction: row;
-            align-items: center;
-            padding: 0 6.6rem;
-            overflow: hidden;
-            border-radius: 2rem;
+            padding: 0;
+            padding-left: 2.25vw;
+            min-height: 50vw;
+            border-radius: 3.3vw;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: space-around;
         }
 
         &__title {
-            font-size: 2.7rem;
-            max-width: unset;
-            margin-bottom: 2rem;
+            font-size: 4vw;
+            margin-bottom: 2vw;
+        }
+
+        &__text {
+            font-size: 2.4vw;
         }
 
         &__button {
-            width: 28.2rem;
-            height: 8.5rem;
+            width: 36vw;
+            height: 10vw;
+            border-radius: 2vw;
+            gap: 1vw;
+            font-size: 2vw;
+
+            svg {
+                width: 3.2vw;
+            }
         }
 
         &--style-1 {
-            padding-top: 5rem;
-
-            .banner {
-                &__content {
-                    max-width: 29.5rem;
-                }
-            }
+            padding-top: 0;
 
             &::before {
-                content: '';
-                position: absolute;
-                bottom: calc(100% + 4rem);
-                right: -39.7rem;
-                width: 101.9rem;
-                height: 56.4rem;
-                border-radius: 101.9rem;
-                background: rgba(76, 221, 212, 0.26);
-                filter: blur(150px);
-                transform: translateZ(0);
+                display: none;
             }
         }
 
         &--style-2 {
-            padding-top: 4rem;
-            padding-bottom: 15rem;
+            padding-top: 53px;
+            padding-bottom: 53px;
 
             .banner {
+
+                &__title {
+                    font-size: 3.6vw;
+                }
+
                 &__content {
-                    max-width: 43.4rem;
+                    max-width: 579px;
+                }
+
+                &__text {
+                    font-size: 2vw;
+                    width: 80%
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    html[lang="ru"] .banner {
+        &--style-2 {
+            .banner {
+                &__text {
+                    width: 56vw;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .banner {
+        &__inner {
+            padding-left: 5.5vw;
+            padding-right: 5.5vw;
+            min-height: 128vw;
+        }
+
+        &--style-1, &--style-2 {
+            .banner {
+                &__title {
+                    display: none;
+                }
+        
+                &__text {
+                    display: none;
+                }
+
+                &__button {
+                    animation: none;
+                    width: 100%;
+                    font-size: 4vw;
+                    border-radius: 4vw;
+                    height: 15vw;
+                    margin-top: 80vw;
+                    gap: 2vw;
+
+                    svg {
+                        width: 6.2vw;
+                    }
+                }
+            }
+        }
+
+        &--style-2 {
+            padding-top: 3vw;
         }
     }
 }

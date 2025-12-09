@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/sections/HeroSection';
 import NumbersSection from '@/components/sections/NumbersSection';
@@ -15,7 +14,6 @@ export default function HomePage() {
   return (
     <>
       <Loader />
-      <Header />
       <main>
         <HeroSection />
         <NumbersSection />

@@ -51,7 +51,7 @@
     "banner1": {
       "title": "We open the way",
       "titleStrong": "for your ideas!",
-      "text": "We build fast and smart. Let’s make it happen — contact us!",
+      "text": "We build fast and smart. Let's make it happen — contact us!",
       "button": "Contact us"
     },
     "map": {
@@ -711,7 +711,7 @@
   "launchAndScale": {
     "hero": {
       "title": "Launch and scale your business in 96 hours",
-      "subtitle": "A complete set of tools for working with fiat and cryptocurrency assets and creating financial products under your brand.",
+      "subtitle": "A complete set of tools to work with fiat and crypto assets and create financial products under your own brand.",
       "requestDemo": "Request a Demo",
       "getOffer": "Get an Offer"
     },

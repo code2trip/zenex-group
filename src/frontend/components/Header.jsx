@@ -100,7 +100,10 @@ export default function Header() {
       <div className="overlay" onClick={closeMenu} />
       <header className="header">
         <Link href={`/${locale}`} className="header__logo">
-          <img src="/assets/ZENEX-Logo.svg" alt="Zenex Group" />
+          <picture>
+            <source media="(max-width: 640px)" srcSet="/assets/ZENEX-Logo-2.png" />
+            <img src="/assets/ZENEX-Logo.svg" alt="Zenex Group" />
+          </picture>
         </Link>
 
         <ul className="header__nav">

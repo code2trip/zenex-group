@@ -110,11 +110,11 @@ export default function BenefitsBusiness() {
           <div className={`benefit-card benefit-card-large ${gradientMap.customization}`}>
             <img src="/assets/lines-oursolution.svg" alt="" className="card-lines-decoration" />
             <div className="card-text">
-              <p>
-                {benefits.customization.before}
-                {benefits.customization.highlight}
-                {benefits.customization.after}
-              </p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: `${benefits.customization.before}${benefits.customization.highlight}${benefits.customization.after}`.replace(/\bneed\s+/gi, 'need<br />')
+                }}
+              />
               <div className="card-limits">
                 <p className="limit-item">
                   <span className="limit-amount">€5,000</span> per day

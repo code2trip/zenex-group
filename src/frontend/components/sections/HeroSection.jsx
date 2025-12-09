@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div className="hero-section__inner">
           <div className="hero-section__text">
             <img src="/images/hero-icon.svg" alt="" />
-            <p data-line-wrap-split>{t('description')}</p>
+            <p>{t('description')}</p>
           </div>
           <h1 className="hero-section__title" >
             {t('title')}

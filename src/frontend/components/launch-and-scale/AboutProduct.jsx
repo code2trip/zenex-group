@@ -33,7 +33,11 @@ export default function AboutProduct() {
 
         <div className="ls-about__grid">
           <div className="ls-about__hero">
-            <img src="/images/prod2.svg" alt="Product preview" className="ls-about__hero-img" />
+            <img 
+              src={locale === 'en' ? '/assets/ananas2.svg' : '/images/prod2.svg'} 
+              alt="Product preview" 
+              className="ls-about__hero-img" 
+            />
           </div>
 
           {items.map((it) => (

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -9,27 +10,142 @@ export default function BannerSection({ variant = 'style-1' }) {
   const t = useTranslations(`home.banner${variant === 'style-1' ? '1' : '2'}`);
   const pathname = usePathname();
   const locale = pathname.split('/')[1] || 'ru';
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  // Обработка текста для banner__text
+  const getBannerText = () => {
+    let text = t('text');
+    
+    if (locale === 'ru') {
+      if (variant === 'style-2' && !isLargeScreen) {
+        // Для style-2 на мобильных: перенос перед последним предложением
+        text = text.replace(/([.!?])\s+([А-ЯЁ][^.!?]+[.!?])\s*$/, '$1<br />$2');
+      } else {
+        text = text.replace(/^([^.!?]+[.!?])\s/, '$1<br />').replace(/бизнес\s/g, 'бизнес<br />').replace(/happen\s/g, isLargeScreen ? 'happen<br />' : 'happen ');
+      }
+    } else {
+      if (variant === 'style-1' && !isLargeScreen) {
+        text = text.replace(/Let['']s\s/g, (match) => match.replace(/\s/, '<br />')).replace(/happen\s/g, 'happen ');
+      } else if (variant === 'style-1' && isLargeScreen) {
+        text = text.replace(/happen\s/g, 'happen<br />');
+      } else if (variant === 'style-2' && !isLargeScreen) {
+        // Для style-2 на мобильных: перенос перед последним предложением
+        text = text.replace(/([.!?])\s+([A-Z][^.!?]+[.!?])\s*$/, '$1<br />$2');
+      } else {
+        text = text.replace(/happen\s/g, isLargeScreen ? 'happen<br />' : 'happen ');
+      }
+    }
+    
+    return text;
+  };
 
   return (
     <section className={`banner banner--${variant}`}>
       <div className="container">
         <div className="banner__inner">
           <picture className="banner__bg">
-            <source
-              srcSet={`/images/webp/banner-${variant === 'style-1' ? '1' : '2'}-bg-d.webp`}
-              type="image/webp"
-              media="(min-width: 768px)"
-            />
-            <img
-              src={`/images/webp/banner-${variant === 'style-1' ? '1' : '2'}-bg-m.webp`}
-              alt=""
-            />
+            {variant === 'style-1' ? (
+              <>
+                {locale === 'ru' ? (
+                  <>
+                    <source
+                      srcSet="/assets/lock.svg"
+                      media="(max-width: 499px)"
+                    />
+                    <source
+                      srcSet="/assets/234.svg"
+                      media="(max-width: 1023px)"
+                    />
+                    <img
+                      src="/assets/123.svg"
+                      alt=""
+                    />
+                  </>
+                ) : (
+                  <>
+                    <source
+                      srcSet="/assets/345.svg"
+                      media="(max-width: 499px)"
+                    />
+                    <source
+                      srcSet="/assets/234.svg"
+                      media="(max-width: 1023px)"
+                    />
+                    <img
+                      src="/assets/123.svg"
+                      alt=""
+                    />
+                  </>
+                )}
+              </>
+            ) : (
+              <>
+                {locale === 'ru' ? (
+                  <>
+                    <source
+                      srcSet="/assets/rocket.svg"
+                      media="(max-width: 499px)"
+                    />
+                    <source
+                      srcSet="/assets/main_banner_2.svg"
+                      media="(max-width: 1023px)"
+                    />
+                    <img
+                      src="/images/webp/banner-2-bg-d.webp"
+                      alt=""
+                    />
+                  </>
+                ) : (
+                  <>
+                    <source
+                      srcSet="/assets/main_banner_3.svg"
+                      media="(max-width: 499px)"
+                    />
+                    <source
+                      srcSet="/assets/main_banner_2.svg"
+                      media="(max-width: 1023px)"
+                    />
+                    <img
+                      src="/images/webp/banner-2-bg-d.webp"
+                      alt=""
+                    />
+                  </>
+                )}
+              </>
+            )}
           </picture>
           <div className="banner__content">
-            <h2 className="banner__title">
-              {t('title')} <strong>{t('titleStrong')}</strong>
-            </h2>
-            <p className="banner__text">{t('text')}</p>
+            <h2 
+              className="banner__title"
+              dangerouslySetInnerHTML={{
+                __html: variant === 'style-1' && locale === 'ru'
+                  ? isLargeScreen
+                    ? `${t('title')} <strong>${t('titleStrong')}</strong>`
+                    : `${t('title')}<br /><strong>${t('titleStrong').replace(/for\s/g, 'for<br />')}</strong>`
+                  : variant === 'style-1'
+                    ? isLargeScreen
+                      ? `${t('title')} <strong>${t('titleStrong').replace(/for\s/g, 'for<br />')}</strong>`
+                      : `${t('title')}<br /><strong>${t('titleStrong')}</strong>`
+                    : `${t('title')} <strong>${t('titleStrong').replace(/for\s/g, 'for<br />')}</strong>`
+              }}
+            />
+            <p 
+              className="banner__text"
+              dangerouslySetInnerHTML={{ 
+                __html: getBannerText()
+              }}
+            />
           </div>
           <Link href={`/${locale}/career#form`} className="button banner__button">
             {t('button')}

@@ -15,6 +15,13 @@ export default function Footer() {
     <footer className="w-full footer" id="footer">
       <div className="footerInner">
         <div className="footerContent">
+          {/* Logo - только для <500px */}
+          <img 
+            src="/assets/logo2.svg" 
+            alt="Logo" 
+            className="footerLogo"
+          />
+          
           {/* Title */}
           <div className="titleSection">
             <h2 className="titleHeading">

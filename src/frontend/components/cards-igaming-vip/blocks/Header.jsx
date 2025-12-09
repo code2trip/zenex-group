@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
@@ -9,6 +9,25 @@ export default function Header() {
   const pathname = usePathname();
   const locale = pathname?.split('/')[1] || 'en';
   const tCardsVip = useTranslations('cardsVip.header');
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 1024);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  const getSubtitleText = () => {
+    let text = tCardsVip('subtitle');
+    if (locale === 'en' && isSmallScreen) {
+      text = text.replace(/\s+for\s+/gi, '<br />for ');
+    }
+    return text;
+  };
 
   return (
     <div className="cards-vip-header">
@@ -20,7 +39,10 @@ export default function Header() {
               <div className="subtitle-icon-box">
                 <img src="/assets/card-header-icon.svg" alt="" />
               </div>
-              <p className="hero-subtitle">{tCardsVip('subtitle')}</p>
+              <p 
+                className="hero-subtitle"
+                dangerouslySetInnerHTML={{ __html: getSubtitleText() }}
+              />
             </div>
           </div>
           <Link href={`/${locale}/career#form`} className="hero-cta-button">

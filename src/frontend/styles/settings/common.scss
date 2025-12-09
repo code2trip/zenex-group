@@ -92,12 +92,8 @@ html.lenis body {
 }
 
 .container {
-  padding: 0 2rem;
+  padding: 0 4.5vw;
   width: 100%;
-
-  @media (min-width: 768px) {
-    padding: 0 7.5rem;
-  }
 }
 
 .line-wrap {
@@ -109,20 +105,20 @@ html.lenis body {
 }
 
 .pt {
-  padding-top: 16rem;
+  padding-top: 11.111vw;
 }
 
 .pb {
-  padding-bottom: 16rem;
+  padding-bottom: 11.111vw;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .pt {
-    padding-top: 25rem;
+    padding-top: 16rem;
   }
 
   .pb {
-    padding-bottom: 25rem;
+    padding-bottom: 16rem;
   }
 }
 

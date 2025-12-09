@@ -83,22 +83,7 @@ export default function GetStarted() {
   return (
     <div className="get-started-section section-container">
       <div className="cta-banner">
-        <div className="cta-card-visual-background">
-          <img
-            src="/assets/cta-aff.svg"
-            alt="Credit card mockup VIP"
-          />
-        </div>
-
         <div className="cta-content">
-          <div className="cta-left">
-            <div className="cta-logo">
-              <img src="/assets/logo_ns_cards.svg" alt="NS.CARDS" />
-            </div>
-            <div className="cta-text-group">
-              <h3>{titleContent}</h3>
-            </div>
-          </div>
           <div className="cta-right">
             <button type="button">
               <span>{t('cta.button')}</span>

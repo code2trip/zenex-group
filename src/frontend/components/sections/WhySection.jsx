@@ -1,10 +1,23 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { useState, useEffect } from 'react';
 import '@/styles/sections/why-section.scss';
 
 export default function WhySection() {
   const t = useTranslations('home.why');
+  const locale = useLocale();
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 1024);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
   const cards = [
     { key: 'clearPath', icon: '/images/why-icon-1.svg' },
     { key: 'web3', icon: '/images/why-icon-2.svg' },
@@ -32,7 +45,36 @@ export default function WhySection() {
           <li className="why-section__item">
             <article className="why-big-card">
               <h3 className="why-big-card__title">{t('fullCommitment.title')}</h3>
-              <p className="why-big-card__text">{t('fullCommitment.text')}</p>
+              <p
+                className="why-big-card__text"
+                dangerouslySetInnerHTML={{
+                  __html: (() => {
+                    let text = t('fullCommitment.text');
+                    
+                    if (locale === 'ru') {
+                      if (isSmallScreen) {
+                        // При <1024px перенос после "стратегически,"
+                        text = text.replace(/стратегически, /g, 'стратегически,<br />');
+                      } else {
+                        // По умолчанию перенос после "финансово," и "—"
+                        text = text.replace(/финансово, /g, 'финансово,<br />');
+                        text = text.replace(/ — /g, ' —<br />');
+                      }
+                    } else {
+                      // Английская версия
+                      if (isSmallScreen) {
+                        text = text.replace(/operationally, /g, 'operationally,<br />');
+                      } else {
+                        text = text.replace(/ — /g, ' —<br />')
+                          .replace(/operationally, /g, 'operationally,<br />')
+                          .replace(/creatively /g, 'creatively<br />');
+                      }
+                    }
+                    
+                    return text;
+                  })()
+                }}
+              />
               <svg
                 width="39"
                 height="38"
