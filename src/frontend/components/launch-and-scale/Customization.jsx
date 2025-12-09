@@ -19,7 +19,7 @@ export default function Customization() {
           <span className="ls-badge">
             <img src="/images/custom.svg" alt="" />
           </span>
-          <h2 className="ls-customization__title">
+        <h2 className="ls-customization__title section-heading">
             {t('title').split(' ')[0]} <span>{t('title').split(' ').slice(1).join(' ')}</span>
           </h2>
         </div>

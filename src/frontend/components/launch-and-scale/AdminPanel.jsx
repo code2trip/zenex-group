@@ -23,7 +23,7 @@ export default function AdminPanel() {
           <span className="ls-badge">
             <img src="/images/adminpanel.svg" alt="" />
           </span>
-          <h2 className="ls-admin__title">
+          <h2 className="ls-admin__title section-heading">
             {locale === 'ru' ? (
               <>
                 <span>{t('title').split(' ')[0]}</span> {t('title').split(' ').slice(1).join(' ')}

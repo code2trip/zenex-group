@@ -1,12 +1,11 @@
 'use client';
 
+import React from 'react';
 import { useTranslations } from 'next-intl';
 
 function highlightTitleSegments(title, segments) {
   const safeSegments = Array.isArray(segments)
-    ? segments
-      .map((segment) => segment?.toString().trim())
-      .filter(Boolean)
+    ? segments.map((segment) => segment?.toString().trim()).filter(Boolean)
     : [];
 
   if (safeSegments.length === 0) {
@@ -30,7 +29,8 @@ function highlightTitleSegments(title, segments) {
   while (cursor < title.length) {
     let bestMatch = null;
 
-    normalizedSegments.forEach((segment) => {
+    for (let i = 0; i < normalizedSegments.length; i += 1) {
+      const segment = normalizedSegments[i];
       const idx = lowerTitle.indexOf(segment.lower, cursor);
       if (idx !== -1) {
         if (
@@ -41,13 +41,13 @@ function highlightTitleSegments(title, segments) {
           bestMatch = { index: idx, segment };
         }
       }
-    });
+    }
 
     if (!bestMatch) {
       result.push(
         <span key={`plain-${cursor}`} className="title-text__plain">
           {title.slice(cursor)}
-        </span>
+        </span>,
       );
       break;
     }
@@ -56,7 +56,7 @@ function highlightTitleSegments(title, segments) {
       result.push(
         <span key={`plain-${cursor}`} className="title-text__plain">
           {title.slice(cursor, bestMatch.index)}
-        </span>
+        </span>,
       );
     }
 
@@ -64,13 +64,53 @@ function highlightTitleSegments(title, segments) {
     result.push(
       <span key={`accent-${bestMatch.index}`} className="accent">
         {title.slice(bestMatch.index, accentEnd)}
-      </span>
+      </span>,
     );
 
     cursor = accentEnd;
   }
 
   return result;
+}
+
+function moveWordToNewLine(nodes, targetWord = 'Hours') {
+  let moved = false;
+
+  return nodes.flatMap((node, index) => {
+    if (
+      !moved &&
+      React.isValidElement(node) &&
+      typeof node.props.children === 'string'
+    ) {
+      const text = node.props.children;
+      const marker = ` ${targetWord}`;
+      const splitIndex = text.lastIndexOf(marker);
+
+      if (splitIndex !== -1) {
+        moved = true;
+        const before = text.slice(0, splitIndex);
+        const beforeNode = before.length
+          ? React.cloneElement(node, {
+              key: `${node.key || index}-before`,
+              children: before,
+            })
+          : null;
+
+        const wordNode = React.cloneElement(
+          node,
+          {
+            key: `${node.key || index}-break`,
+            className: `${node.props.className || ''} title-text__break`.trim(),
+          },
+          targetWord,
+        );
+
+        return [beforeNode, wordNode].filter(Boolean);
+      }
+    }
+
+    return [node];
+  });
 }
 
 export default function GetStarted() {
@@ -97,7 +137,10 @@ export default function GetStarted() {
   ];
 
   const titleAccentSegments = t.raw('titleAccentSegments') ?? [];
-  const titleContent = highlightTitleSegments(t('title'), titleAccentSegments);
+  const titleContent = moveWordToNewLine(
+    highlightTitleSegments(t('title'), titleAccentSegments),
+    'Hours',
+  );
 
   return (
     <div className="get-started-section section-container">
@@ -107,7 +150,7 @@ export default function GetStarted() {
           <div className="icon-box">
             <img src="/assets/Career-icon.svg" alt="" />
           </div>
-          <p className="title-text">{titleContent}</p>
+          <p className="title-text section-heading">{titleContent}</p>
         </div>
       </div>
 

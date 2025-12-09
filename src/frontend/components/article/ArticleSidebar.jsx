@@ -16,7 +16,7 @@ export default function ArticleSidebar() {
       date: t('relatedArticles.article2.date'),
       title: t('relatedArticles.article2.title'),
       summary: t('relatedArticles.article2.summary'),
-      slug: 'zenex-2.0-revolutionizing-igaming'
+      url: 'https://europeangaming.eu/portal/latest-news/2025/01/27/174982/zenex-2-0-revolutionizing-the-igaming-industry-in-2025/'
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export default function ArticleSidebar() {
       date: t('relatedArticles.article3.date'),
       title: t('relatedArticles.article3.title'),
       summary: t('relatedArticles.article3.summary'),
-      slug: 'zenex-multi-million-investment-listing'
+      url: 'https://www.globenewswire.com/news-release/2025/02/03/3019818/0/en/Zenex-Secures-a-Multi-Million-Private-Investment-Deal-and-Heads-for-Listing-on-XT-com.html?utm_source=chatgpt.com'
     }
   ];
 
@@ -33,7 +33,7 @@ export default function ArticleSidebar() {
       <div className="article-sidebar__list">
         {relatedArticles.map((article) => (
           <article key={article.id} className="article-sidebar__item">
-            <Link href={`/${locale}/article/${article.slug}`} className="article-sidebar__link">
+            <Link href={`${article.url}`} className="article-sidebar__link">
               <picture className="article-sidebar__image">
                 <img src={article.image} alt={article.title} />
               </picture>

@@ -69,7 +69,7 @@ export default function OurSolution() {
           <div className="icon-box">
             <img src="/assets/Benefits-icon.svg" alt="" />
           </div>
-          <p className="title-text">{titleContent}</p>
+          <p className="title-text section-heading">{titleContent}</p>
         </div>
         <div className="solution-description">
           <p>{t('description')}</p>
@@ -122,11 +122,9 @@ export default function OurSolution() {
               <div className="our-solution-card" key={key}>
                 <div className="card-text">
                   <p>
-                    <strong>
                       {before}
                       {highlight}
                       {after}
-                    </strong>
                   </p>
                 </div>
                 <div className={`card-icon-box ${gradientMap[key] || ''}`}>

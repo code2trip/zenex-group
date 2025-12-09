@@ -1,10 +1,59 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import '@/styles/sections/contact-section.scss';
 
 export default function ContactSection() {
   const t = useTranslations('contact');
+  const formRef = useRef(null);
+
+  useEffect(() => {
+    const form = formRef.current;
+    if (!form) return;
+
+    const fields = form.querySelectorAll('.contact-section__field');
+    fields.forEach((field) => {
+      const input = field.querySelector('input.contact-section__input, textarea.contact-section__textarea');
+      if (!input) return;
+
+      const handleFocus = () => field.classList.add('focus');
+      const handleBlur = () => {
+        field.classList.remove('focus');
+        if (input.value.trim() !== '') {
+          field.classList.add('fill');
+        } else {
+          field.classList.remove('fill');
+        }
+      };
+      const handleInput = () => {
+        if (input.value.trim() !== '') {
+          field.classList.remove('error');
+        }
+      };
+
+      input.addEventListener('focus', handleFocus);
+      input.addEventListener('blur', handleBlur);
+      input.addEventListener('input', handleInput);
+
+      if (input.tagName === 'TEXTAREA') {
+        input.setAttribute('rows', '1');
+        input.style.overflow = 'hidden';
+        const resizeTextarea = () => {
+          input.style.height = 'auto';
+          input.style.height = `${input.scrollHeight}px`;
+        };
+        input.addEventListener('input', resizeTextarea);
+        resizeTextarea();
+      }
+
+      return () => {
+        input.removeEventListener('focus', handleFocus);
+        input.removeEventListener('blur', handleBlur);
+        input.removeEventListener('input', handleInput);
+      };
+    });
+  }, []);
 
   return (
     <section className="contact-section">
@@ -56,7 +105,7 @@ export default function ContactSection() {
             </div>
 
             <div className="contact-section__form-wrapper">
-              <form className="contact-section__form">
+              <form ref={formRef} className="contact-section__form">
                 <p className="contact-section__form-title">
                   {t('form.title')}
                 </p>

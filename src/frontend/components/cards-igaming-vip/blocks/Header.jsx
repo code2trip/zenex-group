@@ -45,7 +45,7 @@ export default function Header() {
               />
             </div>
           </div>
-          <Link href={`/${locale}/career#form`} className="hero-cta-button">
+          <Link href={`http://t.me/Kate_Sales_NextOn`} className="hero-cta-button">
             {tCardsVip('cta')}
             <img src="/images/right.png" alt="" aria-hidden="true" />
           </Link>

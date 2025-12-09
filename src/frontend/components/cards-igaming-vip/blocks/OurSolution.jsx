@@ -16,7 +16,7 @@ export default function OurSolution() {
           <div className="icon-box">
             <img src="/assets/User-Centricity-icon.svg" alt="" />
           </div>
-          <p className="title-text">
+          <p className="title-text section-heading">
             <span className="dark">{titleFirst}</span>
             <span className="accent">{titleSecond}</span>
           </p>
@@ -31,7 +31,7 @@ export default function OurSolution() {
         <div className="solution-card card-unlimited">
           <div className="solution-card-text">
             <h3>{t('features.unlimited.title')}</h3>
-            <p>{t('features.unlimited.description')}</p>
+            <p className="description-unlimited">{t('features.unlimited.description')}</p>
           </div>
           {/* Group 48100372 - изображение */}
           <div className="card-image-unlimited">
@@ -43,7 +43,7 @@ export default function OurSolution() {
         <div className="solution-card card-approval">
           <div className="solution-card-text">
             <h3>{t('features.approval.title')}</h3>
-            <p>{t('features.approval.description')}</p>
+            <p className="description-approval">{t('features.approval.description')}</p>
           </div>
           {/* Group 48100371 - изображение */}
           <div className="card-image-approval">
@@ -55,7 +55,7 @@ export default function OurSolution() {
         <div className="solution-card card-protection">
           <div className="solution-card-text">
             <h3>{t('features.protection.title')}</h3>
-            <p>{t('features.protection.description')}</p>
+            <p className="description-protection">{t('features.protection.description')}</p>
           </div>
           {/* Group 48100372 - изображение */}
           <div className="card-image-protection">
@@ -70,7 +70,7 @@ export default function OurSolution() {
         <div className="solution-card card-fees">
           <div className="solution-card-text">
             <h3>{t('features.fees.title')}</h3>
-            <p>{t('features.fees.description')}</p>
+            <p className="description-fees">{t('features.fees.description')}</p>
           </div>
           {/* Group 48100372 - монеты */}
           <div className="card-image-fees">

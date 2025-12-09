@@ -18,46 +18,46 @@ export default function Hero() {
 
       {/* Ellipses - под картинками, но над фоном */}
       <div className="ls-hero__ellipses">
-        <img 
-          className="ls-hero__ellipse ls-hero__ellipse--1" 
-          src="/images/ellipse1.png" 
-          alt="" 
-          aria-hidden="true" 
-          loading="lazy" 
+        <img
+          className="ls-hero__ellipse ls-hero__ellipse--1"
+          src="/images/ellipse1.png"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
         />
-        <img 
-          className="ls-hero__ellipse ls-hero__ellipse--2" 
-          src="/images/ellipse2.png" 
-          alt="" 
-          aria-hidden="true" 
-          loading="lazy" 
+        <img
+          className="ls-hero__ellipse ls-hero__ellipse--2"
+          src="/images/ellipse2.png"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
         />
       </div>
 
       {/* Media elements - outside container */}
       <div className="ls-hero__media">
         {/* Credit card mockup - слева */}
-        <img 
-          className="ls-hero__card" 
-          src="/images/creditcard.png" 
-          alt="Credit card mockup" 
-          loading="lazy" 
+        <img
+          className="ls-hero__card"
+          src="/images/creditcard.png"
+          alt="Credit card mockup"
+          loading="lazy"
         />
 
         {/* iPhone mockup - справа */}
-        <img 
-          className="ls-hero__iphone" 
-          src="/images/iphone.png" 
-          alt="iPhone mockup" 
-          loading="lazy" 
+        <img
+          className="ls-hero__iphone"
+          src="/images/iphone.png"
+          alt="iPhone mockup"
+          loading="lazy"
         />
 
         {/* Poker chip - внизу слева */}
-        <img 
-          className="ls-hero__chip" 
-          src="/images/chip.png" 
-          alt="Poker chip" 
-          loading="lazy" 
+        <img
+          className="ls-hero__chip"
+          src="/images/chip.png"
+          alt="Poker chip"
+          loading="lazy"
         />
 
         {/* Sparkles (stars) - разбросаны по фону с разными размерами */}
@@ -83,11 +83,11 @@ export default function Hero() {
               {t('subtitle')}
             </p>
             <div className="ls-hero__actions">
-              <a className="btn btn--secondary" href="#demo">
+              <a className="btn btn--secondary" href="https://t.me/Kate_Sales_NextOn">
                 {t('requestDemo')}
                 <img src="/images/right.png" alt="" aria-hidden="true" className="btn__icon" />
               </a>
-              <a className="btn btn--primary" href="#offer">
+              <a className="btn btn--primary" href="https://t.me/Kate_Sales_NextOn">
                 {t('getOffer')}
                 <img src="/images/right.png" alt="" aria-hidden="true" className="btn__icon" />
               </a>

@@ -20,7 +20,7 @@ export default function MarketProblem() {
           <div className="icon-box">
             <img src="/assets/problem-icon.svg" alt="" />
           </div>
-          <p className="title-text">
+          <p className="title-text section-heading">
             <span className="dark">{t('title').split(' ')[0]} </span>
             <span className="accent">{t('title').split(' ').slice(1).join(' ')}</span>
           </p>

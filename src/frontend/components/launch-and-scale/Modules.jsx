@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 export default function Modules() {
   const t = useTranslations('launchAndScale.modules');
   const locale = useLocale();
-  
+
   const modules = [
     {
       tone: 'gold',
@@ -33,7 +33,7 @@ export default function Modules() {
           <span className="ls-badge">
             <img src="/images/puzzle.svg" alt="" />
           </span>
-          <h2 className="ls-mod__title">
+          <h2 className="ls-mod__title section-heading">
             {locale === 'ru' ? (
               <>
                 <span>{t('title').split(' ')[0]}</span> {t('title').split(' ').slice(1).join(' ')}
@@ -50,7 +50,7 @@ export default function Modules() {
           {modules.map((m, moduleIndex) => {
             const items = t.raw(`${m.titleKey}.items`);
             const itemKeys = ['integration', 'exchange', 'wallets', 'staking', 'tokens'];
-            
+
             return (
               <div key={m.titleKey} className={`ls-mod__card ls-mod__card--${m.tone}`} style={{ backgroundImage: `url(${m.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="ls-mod__card-head">

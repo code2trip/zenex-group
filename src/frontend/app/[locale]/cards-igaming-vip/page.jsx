@@ -1,5 +1,6 @@
 import '@/styles/cards-igaming-vip.scss';
-import { Header, MarketProblem, OurSolution, BenefitsBusiness, BenefitsVip, GetStarted } from '@/components/cards-igaming-vip/blocks';
+import { Header as HeroHeader, MarketProblem, OurSolution, BenefitsBusiness, BenefitsVip, GetStarted } from '@/components/cards-igaming-vip/blocks';
+import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { setRequestLocale } from 'next-intl/server';
 
@@ -11,6 +12,7 @@ export default async function CardsIGamingVipPage({ params }) {
   return (
     <div id="cards-igaming-vip">
       <Header />
+      <HeroHeader />
       <MarketProblem />
       <OurSolution />
       {/* Левый glow между Our Solution и Benefits Business */}

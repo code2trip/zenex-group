@@ -17,3 +17,5 @@
 .env*.local
 .next
 standalone
+aff.html
+/archive

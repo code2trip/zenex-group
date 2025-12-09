@@ -45,7 +45,7 @@ export default function BenefitsVip() {
           <div className="icon-box">
             <img src="/assets/Values.svg" alt="" />
           </div>
-          <p className="title-text">
+          <p className="title-text section-heading">
             <span className="accent">{t('titleAccent')}</span>
             <span className="dark">{t('titleRest')}</span>
           </p>
@@ -65,23 +65,23 @@ export default function BenefitsVip() {
               )}
             </h3>
           </div>
-          <img 
-            src="/assets/hand.svg" 
-            alt="" 
+          <img
+            src="/assets/hand.svg"
+            alt=""
             className="exclusive-hand-image"
           />
-          <img 
-            src="/assets/logo.svg" 
-            alt="" 
+          <img
+            src="/assets/logo.svg"
+            alt=""
             className="exclusive-logo"
           />
         </div>
 
         {/* Second column */}
         <div className="exclusive-column-right">
-          <img 
-            src="/assets/demicircle.svg" 
-            alt="" 
+          <img
+            src="/assets/demicircle.svg"
+            alt=""
             className="exclusive-demicircle"
           />
           <ul className="exclusive-features-list">
